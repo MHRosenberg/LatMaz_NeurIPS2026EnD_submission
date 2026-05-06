@@ -40,5 +40,6 @@ dist/
 /z_*
 /audit_*
 /*_audit_*
+/DELTA_*
 *.bak
 *.bak*.z_archive*

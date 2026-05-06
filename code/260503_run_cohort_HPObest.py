@@ -42,7 +42,7 @@ import pandas as pd
 PROJECT_ROOT = Path('<REPO_ROOT>')
 CODE_DIR = Path(__file__).parent
 sys.path.insert(0, str(CODE_DIR))
-sys.path.insert(0, str(PROJECT_ROOT / 'code0_init-readOnly' / 'code'))
+sys.path.insert(0, str(PROJECT_ROOT / 'code'))
 sys.path.insert(0, str(PROJECT_ROOT))
 
 # ---- Cohort definition ----

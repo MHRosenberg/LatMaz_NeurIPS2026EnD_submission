@@ -42,7 +42,8 @@
     "separator": "cr:separator",
     "source": "cr:source",
     "subField": "cr:subField",
-    "transform": "cr:transform"
+    "transform": "cr:transform",
+    "prov": "http://www.w3.org/ns/prov#"
   },
   "@type": "sc:Dataset",
   "name": "LatMaz",
@@ -124,7 +125,9 @@
       "@id": "raw_session_csvs",
       "name": "Raw session event-log CSVs",
       "description": "FileSet of 359 raw event-log CSVs (one per unique session) at data_released/raw_session_csvs/, indexed by raw_session_manifest.csv (which provides the per-file sha256 and exp_moment mapping). Each event-log CSV row is one action attempt with columns: time, action_idx, lights_on, state, rewarded_states, choice, action, reward_time, n_rewards, mouse_rotation, maze_rotation, note, adjacency_file, st_positions_file, start_state.",
-      "containedIn": {"@id": "raw_session_manifest"},
+      "containedIn": {
+        "@id": "raw_session_manifest"
+      },
       "encodingFormat": "text/csv",
       "includes": "*.csv"
     },
@@ -142,7 +145,9 @@
       "@id": "maze_files",
       "name": "Maze adjacency and state-position files",
       "description": "FileSet of per-maze adjacency matrix and state-position CSVs inside mazes.zip.",
-      "containedIn": {"@id": "maze_files_archive"},
+      "containedIn": {
+        "@id": "maze_files_archive"
+      },
       "encodingFormat": "text/csv",
       "includes": "*-adjacency.csv|*-state_positions.csv"
     },
@@ -258,7 +263,7 @@
       "@type": "cr:FileObject",
       "@id": "rerun452_csv",
       "name": "c260505-120513_rerun452_corrected_8agents.csv",
-      "description": "Rerun-452 (corrected): HPO-best configs of 8 model-free RL agents (DQN, DRQN_seq, DRQN_rand, A2C, PPO, QRDQN, TRPO, RecurrentPPO) re-evaluated on a held-out cohort of 452 sessions x 5 seeds (18,080 rows). Tests generalization of canonical-60 HPO-best configs to wider animal/maze coverage. Supersedes the earlier c260504-143902 file (archived) which had two latent issues that caused agents to run with AlgoConfig defaults instead of HPO-best.",
+      "description": "Rerun-452 (corrected): HPO-best configs of 8 model-free RL agents (DQN, DRQN_seq, DRQN_rand, A2C, PPO, QRDQN, TRPO, RecurrentPPO) re-evaluated on a held-out cohort of 452 sessions x 5 seeds (18,080 rows). Tests generalization of canonical-60 HPO-best configs to wider animal/maze coverage. Supersedes the earlier c260504-143902 file (archived) which had two latent bugs that caused agents to run with AlgoConfig defaults instead of HPO-best.",
       "contentUrl": "https://anonymous.4open.science/r/LatMaz_NeurIPS2026EnD_submission_055C/data_released/results/c260505-120513_rerun452_corrected_8agents.csv",
       "encodingFormat": "text/csv",
       "sha256": "db09400f813bddc575eb57cafd56d3340b5f974d6b16f806a7a3f43db6cd8509"
@@ -287,8 +292,12 @@
           "description": "Project-internal mouse identifier (zero-padded 3-digit string, e.g. '031', '033'). Not linked to external identity.",
           "dataType": "sc:Text",
           "source": {
-            "fileObject": {"@id": "yoked_sessions"},
-            "extract": {"column": "animal_ID"}
+            "fileObject": {
+              "@id": "yoked_sessions"
+            },
+            "extract": {
+              "column": "animal_ID"
+            }
           }
         },
         {
@@ -298,8 +307,12 @@
           "description": "Relative path to the bundled raw event-log CSV for this session (./data_released/raw_session_csvs/{basename}). Encodes the session timestamp YYMMDD-HHMMSS in the filename.",
           "dataType": "sc:Text",
           "source": {
-            "fileObject": {"@id": "yoked_sessions"},
-            "extract": {"column": "csv_data_path"}
+            "fileObject": {
+              "@id": "yoked_sessions"
+            },
+            "extract": {
+              "column": "csv_data_path"
+            }
           }
         },
         {
@@ -309,8 +322,12 @@
           "description": "Sequence of latent-graph node indices visited in chronological order during the session (Python-list literal stored as text).",
           "dataType": "sc:Text",
           "source": {
-            "fileObject": {"@id": "yoked_sessions"},
-            "extract": {"column": "states_visited"}
+            "fileObject": {
+              "@id": "yoked_sessions"
+            },
+            "extract": {
+              "column": "states_visited"
+            }
           }
         },
         {
@@ -320,8 +337,12 @@
           "description": "Filename of the maze adjacency CSV the session was run on (resolves under data_in/mazes/).",
           "dataType": "sc:Text",
           "source": {
-            "fileObject": {"@id": "yoked_sessions"},
-            "extract": {"column": "adj_file"}
+            "fileObject": {
+              "@id": "yoked_sessions"
+            },
+            "extract": {
+              "column": "adj_file"
+            }
           }
         },
         {
@@ -331,8 +352,12 @@
           "description": "Filename of the state-position CSV (planar coordinates of nodes for visualisation).",
           "dataType": "sc:Text",
           "source": {
-            "fileObject": {"@id": "yoked_sessions"},
-            "extract": {"column": "st_pos_file"}
+            "fileObject": {
+              "@id": "yoked_sessions"
+            },
+            "extract": {
+              "column": "st_pos_file"
+            }
           }
         },
         {
@@ -342,8 +367,12 @@
           "description": "Total rewards collected by the mouse during the session.",
           "dataType": "sc:Integer",
           "source": {
-            "fileObject": {"@id": "yoked_sessions"},
-            "extract": {"column": "n_rewards"}
+            "fileObject": {
+              "@id": "yoked_sessions"
+            },
+            "extract": {
+              "column": "n_rewards"
+            }
           }
         },
         {
@@ -353,8 +382,12 @@
           "description": "Index of the starting node in the latent graph at session onset.",
           "dataType": "sc:Integer",
           "source": {
-            "fileObject": {"@id": "yoked_sessions"},
-            "extract": {"column": "start_state"}
+            "fileObject": {
+              "@id": "yoked_sessions"
+            },
+            "extract": {
+              "column": "start_state"
+            }
           }
         },
         {
@@ -364,8 +397,12 @@
           "description": "Number of state visits in the session (length of states_visited; agent action budget is n_states_visited - 1).",
           "dataType": "sc:Integer",
           "source": {
-            "fileObject": {"@id": "yoked_sessions"},
-            "extract": {"column": "n_states_visited"}
+            "fileObject": {
+              "@id": "yoked_sessions"
+            },
+            "extract": {
+              "column": "n_states_visited"
+            }
           }
         },
         {
@@ -375,8 +412,12 @@
           "description": "Per-state empirical action probability table (mouse's egocentric-frame action distribution conditioned on state). Python-dict literal stored as text. Used to construct the Mouse-bias_ego baseline agent.",
           "dataType": "sc:Text",
           "source": {
-            "fileObject": {"@id": "yoked_sessions"},
-            "extract": {"column": "prob_dict_ego"}
+            "fileObject": {
+              "@id": "yoked_sessions"
+            },
+            "extract": {
+              "column": "prob_dict_ego"
+            }
           }
         },
         {
@@ -386,8 +427,12 @@
           "description": "Per-state empirical action probability table (allocentric-real frame; physical sensor identity at the apparatus). Used to construct the Mouse-bias_allo_real baseline.",
           "dataType": "sc:Text",
           "source": {
-            "fileObject": {"@id": "yoked_sessions"},
-            "extract": {"column": "prob_dict_allo_real"}
+            "fileObject": {
+              "@id": "yoked_sessions"
+            },
+            "extract": {
+              "column": "prob_dict_allo_real"
+            }
           }
         },
         {
@@ -397,11 +442,19 @@
           "description": "Per-state empirical action probability table (allocentric-latent frame; compass directions on the latent lattice). Used to construct the Mouse-bias_allo_latent baseline.",
           "dataType": "sc:Text",
           "source": {
-            "fileObject": {"@id": "yoked_sessions"},
-            "extract": {"column": "prob_dict_allo_latent"}
+            "fileObject": {
+              "@id": "yoked_sessions"
+            },
+            "extract": {
+              "column": "prob_dict_allo_latent"
+            }
           }
         }
       ]
     }
-  ]
+  ],
+  "rai:dataBiases": "Several factors may bias downstream analyses: (1) the canonical-60 set is drawn from 2 animals (a031, a033); the expanded 152- and 422-session sets cover 12 animals from a single colony, limiting between-individual and between-colony generalisation; (2) all sessions use one laboratory apparatus (four-arm radial maze with motorised gates), constraining the action space and observation interface to a 4-bit egocentric vector with 4 discrete actions; (3) the maze topologies released here are a small fixed family (latMaz100, 101, 103 in the canonical set; latMaz007 in the 41-node R=0 subset), and rank-orderings shown to invert under different reward-rebait variants (sec:reward_fn_sens) may not generalise to arbitrary graph topologies; (4) sex, strain, age, and other demographic features were not stratified; per-session metadata records animal-ID for downstream filtering but no systematic demographic-bias audit has been performed; (5) action-budget assignments are drawn from the empirical mouse session distribution and may interact with agent performance differently than uniformly-allocated budgets would.",
+  "rai:hasSyntheticData": true,
+  "prov:wasDerivedFrom": "The processed mouse trajectories are derived from raw event logs collected by the apparatus microcontroller (Raspberry Pi 4) during 2024-2026 mouse-experiment sessions in the four-arm radial maze; raw events were parsed into latent-graph trajectories using the released animal-data analysis code. Maze adjacency files are derived from the experiment configuration files used to drive each session's gate-state schedule. The 20 agent simulation result CSVs are derived from the 422 yoked mouse sessions: each agent run replays the same maze, start state, action budget, and reward dynamics as the corresponding mouse session. Synthetic scaling-sweep mazes (V=36..4000) are derived from random square-lattice subgraphs after edge dropout.",
+  "prov:wasGeneratedBy": "Mouse behavioral data were generated by chronic 24-hour sessions of freely-moving mice navigating a four-arm radial maze with motorised gates that instantiates arbitrary latent graphs through the single physical four-arm junction; mice were trained on a head-fixed pre-task and free-water schedule before transitioning to the closed-loop apparatus. Animal procedures were approved by the governing Institutional Animal Care and Use Committee. Agent simulation results were generated by running 20 baseline agent variants (fixed policies, mouse-derived bias policies, finite-state controllers, model-free RL with hyperparameter optimisation, recurrent meta-RL, privileged planners, online graph-discovery planners) inside a Gymnasium-compatible graph-maze environment yoked to each mouse session's maze, start state, action budget, and reward process; per-agent CSV outputs were produced by the runner scripts shipped in the released artifact. Synthetic scaling-sweep mazes were generated by the make_lattice_subgraph_maze helper (random edge dropout on a square lattice, largest connected component retained)."
 }

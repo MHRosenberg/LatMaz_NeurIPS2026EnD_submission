@@ -41,7 +41,7 @@ import networkx as nx
 # Locate project root + sys.path setup
 PROJECT_ROOT = Path('<REPO_ROOT>')
 sys.path.insert(0, str(PROJECT_ROOT))
-sys.path.insert(0, str(PROJECT_ROOT / 'code0_init-readOnly' / 'code'))
+sys.path.insert(0, str(PROJECT_ROOT / 'code'))
 sys.path.insert(0, str(Path(__file__).parent))
 
 # Imports from the existing codebase

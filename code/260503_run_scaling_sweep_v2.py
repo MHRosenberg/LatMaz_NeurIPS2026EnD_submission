@@ -59,7 +59,7 @@ import networkx as nx
 
 PROJECT_ROOT = Path('<REPO_ROOT>')
 sys.path.insert(0, str(PROJECT_ROOT))
-sys.path.insert(0, str(PROJECT_ROOT / 'code0_init-readOnly' / 'code'))
+sys.path.insert(0, str(PROJECT_ROOT / 'code'))
 sys.path.insert(0, str(Path(__file__).parent))
 
 # Canonical agent dispatcher — single source of truth for synthetic

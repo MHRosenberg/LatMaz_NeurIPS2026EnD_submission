@@ -19,7 +19,7 @@ matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 import pandas as pd
 
-PROJECT_ROOT = '<REPO_ROOT>'
+PROJECT_ROOT = os.environ.get('LATMAZ_REPO_ROOT', os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.join(PROJECT_ROOT, 'code'))
 
@@ -48,7 +48,20 @@ REFERENCE_LINES = [
 
 def main():
     yo, _, sessions = load_data()
-    sub = yo[yo['exp_moment'].isin(sessions)].copy()
+    # Restrict to the canonical 60-session set (the same 60 sessions used
+    # for HPO + Table 1). Mouse data has grown since first generation;
+    # without this restriction the figure would show all 166 currently
+    # filterable sessions, contradicting the "canonical 60-session set"
+    # caption (PDF review #98 fix; cld 2026-05-06).
+    canonical60_path = os.path.join(
+        PROJECT_ROOT, 'data_released', 'results',
+        'c260316-171035_hpo_tuning_FIXED.csv')
+    canonical60 = set(pd.read_csv(canonical60_path, low_memory=False,
+                                   usecols=['exp_moment'])['exp_moment'].dropna().unique())
+    canonical_sessions = set(sessions) & canonical60
+    print(f'load_data() returned {len(sessions)} sessions; '
+          f'restricting to {len(canonical_sessions)} canonical-60 intersect.', flush=True)
+    sub = yo[yo['exp_moment'].isin(canonical_sessions)].copy()
     sub['rpa'] = sub['n_rewards'] / (sub['n_states_visited'] - 1).clip(lower=1)
     sub['nns'] = 100.0 * (sub['rpa'] - RANDOM_RPA) / DENOM
     print(f'n sessions = {len(sub)}')
@@ -76,18 +89,24 @@ def main():
 
     ax1.set_xlabel('Session rank (descending RPA)', fontsize=10)
     ax1.set_ylabel('Reward Per Action (RPA)', fontsize=10)
-    ax1.set_xlim(-1, len(rpa_sorted) + 18)  # leave room for labels
+    # Wider right margin so reference labels fit alongside dots without
+    # competing with the upper-right legend (PDF review #98 fix).
+    ax1.set_xlim(-1, len(rpa_sorted) + 26)
     ax1.set_ylim(0, 0.95)
     ax1.set_title('Per-session mouse RPA (canonical-60), ranked', fontsize=10)
     ax1.spines['top'].set_visible(False)
     ax1.spines['right'].set_visible(False)
     ax1.grid(axis='y', linestyle='-', linewidth=0.3, alpha=0.4, zorder=0)
-    # Animal legend
+    # Animal legend — moved to lower-right so it does not cover the
+    # high-RPA reference labels (Greedy 0.878, NoBk+FullFwd 0.576,
+    # RecSAC-causal 0.555). Lower-right is empty: only Random floor at
+    # 0.178 lives that low and its label is to the right of the legend.
     from matplotlib.patches import Patch
     ax1.legend(handles=[
         Patch(color='#1f77b4', label='a031'),
         Patch(color='#d62728', label='a033'),
-    ], loc='upper right', fontsize=8, frameon=True)
+    ], loc='lower right', fontsize=8, frameon=True,
+       bbox_to_anchor=(1.0, 0.02))
 
     # --- right panel: NNS distribution histogram + percentile markers ---
     nns_vals = sub['nns'].values
@@ -99,14 +118,24 @@ def main():
         ('p95', np.quantile(nns_vals, 0.95), '#a50f15', '--'),
         ('max', np.max(nns_vals), '#a50f15', ':'),
     ]
-    for label, x, color, ls in pct_marks:
+    # Stagger label y-positions so close-by percentiles (mean/median,
+    # p90/p95) do not stack on top of each other (PDF review #98 fix).
+    # Rotate to vertical and add a white background box so labels never
+    # sit on top of histogram bars.
+    y_levels = [0.95, 0.78, 0.95, 0.78, 0.95]
+    for (label, x, color, ls), y_frac in zip(pct_marks, y_levels):
         ax2.axvline(x, linestyle=ls, color=color, linewidth=1.2, zorder=3)
-        ax2.text(x, ax2.get_ylim()[1] * 0.92, f'  {label}={x:.0f}%',
-                 rotation=0, va='top', ha='left', fontsize=8, color=color)
+        y_top = ax2.get_ylim()[1]
+        ax2.text(x, y_top * y_frac, f'{label}={x:.0f}%',
+                 rotation=90, va='top', ha='right', fontsize=7, color=color,
+                 bbox=dict(facecolor='white', edgecolor='none',
+                           alpha=0.85, pad=0.5))
     ax2.set_xlabel('Normalized Navigation Score (NNS, %)', fontsize=10)
     ax2.set_ylabel('Session count', fontsize=10)
     ax2.set_title('Mouse NNS distribution', fontsize=10)
-    ax2.set_xlim(-15, 60)
+    # Slightly wider x-range so vertical labels at the right edge (max)
+    # are not clipped by the spine (PDF review #98 fix).
+    ax2.set_xlim(-15, 65)
     ax2.spines['top'].set_visible(False)
     ax2.spines['right'].set_visible(False)
     ax2.grid(axis='y', linestyle='-', linewidth=0.3, alpha=0.4, zorder=0)

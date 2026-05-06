@@ -28,7 +28,7 @@ import pandas as pd
 from tqdm import tqdm
 
 PROJECT_ROOT = Path('<REPO_ROOT>')
-sys.path.insert(0, str(PROJECT_ROOT / 'code0_init-readOnly' / 'code'))
+sys.path.insert(0, str(PROJECT_ROOT / 'code'))
 
 from utils_latMaz import (
     extract_animal_IDs, convert_action_words_to_chars,

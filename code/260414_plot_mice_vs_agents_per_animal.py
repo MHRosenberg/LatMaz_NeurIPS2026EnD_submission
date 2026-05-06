@@ -49,7 +49,7 @@ FIG_DIR      = PROJECT_ROOT / 'reports' / 'figures'
 FIG_DIR.mkdir(parents=True, exist_ok=True)
 
 sys.path.insert(0, str(SCRIPT_DIR))
-sys.path.insert(0, str(PROJECT_ROOT / 'code0_init-readOnly' / 'code'))
+sys.path.insert(0, str(PROJECT_ROOT / 'code'))
 
 from experiment_config import load_yoking_df, filter_sessions
 from utils_latMaz import get_most_recent_file
