@@ -49,7 +49,7 @@
   "description": "LatMaz (Latent Maze) is a yoked-comparison benchmark and dataset for evaluating reinforcement learning (RL) agents against real lab-mouse navigation on partially-observed graph mazes. Mouse data come from a freely-moving virtual-reality apparatus that instantiates arbitrary latent graphs at a single physical four-arm junction, eliminating path-integration and landmark cues. The release covers 359 unique sessions across 13 mice on 16+ maze topologies. Each session record provides: animal ID, session timestamp, maze adjacency file, state-position file, start state, action budget, full action sequence, marginal action distributions in three coordinate frames, observation sequences, and reward layout. Designed for yoked evaluation of RL algorithms and probing of within-episode memory contributions to navigation under extreme partial observability.",
   "conformsTo": "http://mlcommons.org/croissant/1.0",
   "license": "https://creativecommons.org/licenses/by/4.0/",
-  "url": "https://anonymous.4open.science/r/LatMaz-0769",
+  "url": "https://anonymous.4open.science/r/LatMaz_NeurIPS2026EnD_submission_055C",
   "version": "1.0.0-review",
   "datePublished": "2026-05-07",
   "creator": [
@@ -106,7 +106,7 @@
       "@id": "yoked_sessions",
       "name": "c260504-143724_yoked_sessions.csv",
       "description": "Canonical de-duplicated yoking dataframe, one row per mouse session (359 rows). Columns: animal_ID, csv_data_path, states_visited, adj_file, st_pos_file, n_rewards, start_state, n_states_visited, prob_dict_allo_real, prob_dict_allo_latent, prob_dict_ego.",
-      "contentUrl": "https://anonymous.4open.science/r/LatMaz-0769/data_released/yoked_dfs/c260504-143724_yoked_sessions.csv",
+      "contentUrl": "https://anonymous.4open.science/r/LatMaz_NeurIPS2026EnD_submission_055C/data_released/yoked_dfs/c260504-143724_yoked_sessions.csv",
       "encodingFormat": "text/csv",
       "sha256": "d2ab8693eb96f06b269d3639f835744a2d1afdadf240f18e18894c6d7a3937aa"
     },
@@ -115,7 +115,7 @@
       "@id": "raw_session_manifest",
       "name": "raw_session_manifest.csv",
       "description": "Manifest mapping each unique session basename to the bundled raw event-log CSV, with per-file sha256 and size. Columns: exp_moment, animal_ID, bundled_filename, original_paths, n_yoking_df_rows, sha256, file_size_bytes.",
-      "contentUrl": "https://anonymous.4open.science/r/LatMaz-0769/data_released/raw_session_csvs/raw_session_manifest.csv",
+      "contentUrl": "https://anonymous.4open.science/r/LatMaz_NeurIPS2026EnD_submission_055C/data_released/raw_session_csvs/raw_session_manifest.csv",
       "encodingFormat": "text/csv",
       "sha256": "81fa588680bb9337e5b30c5ba719f99f6d7677b218f7376a171534cff331fcc2"
     },
@@ -133,7 +133,7 @@
       "@id": "maze_files_archive",
       "name": "mazes.zip",
       "description": "ZIP archive of per-maze adjacency matrix and state-position files defining the maze topologies the mice ran on (also referenced by the yoked_sessions adj_file / st_pos_file columns). ~25 files, ~50 KB unzipped.",
-      "contentUrl": "https://anonymous.4open.science/r/LatMaz-0769/data_released/mazes.zip",
+      "contentUrl": "https://anonymous.4open.science/r/LatMaz_NeurIPS2026EnD_submission_055C/data_released/mazes.zip",
       "encodingFormat": "application/zip",
       "sha256": "474b82f18ff7478bc360892cb1274a9b62d119f3665a5dc538e1db7f8418087d"
     },
@@ -151,7 +151,7 @@
       "@id": "hpo_tuning_csv",
       "name": "c260316-171035_hpo_tuning_FIXED.csv",
       "description": "HPO sweep results: 9 model-free RL agents (DQN, A2C, PPO, TRPO, QRDQN, RecurrentPPO, DRQN_seq, DRQN_rand) plus POMCP with 3-4 configurations each, evaluated on the canonical 60 sessions x 5 seeds (9,600 rows). Source for paper Table 1 RL and POMCP RPAs (HPO-best per model).",
-      "contentUrl": "https://anonymous.4open.science/r/LatMaz-0769/data_released/results/c260316-171035_hpo_tuning_FIXED.csv",
+      "contentUrl": "https://anonymous.4open.science/r/LatMaz_NeurIPS2026EnD_submission_055C/data_released/results/c260316-171035_hpo_tuning_FIXED.csv",
       "encodingFormat": "text/csv",
       "sha256": "143af5740f2b1b7f62604e734344ce820b41f4c1d625d656d596330cbf36d0f6"
     },
@@ -160,7 +160,7 @@
       "@id": "baseline_heuristics_csv",
       "name": "c260318-144507_baseline_heuristics.csv",
       "description": "Random, Random_forward, and Greedy_oracle baselines on canonical 60 sessions x 5 seeds (900 rows).",
-      "contentUrl": "https://anonymous.4open.science/r/LatMaz-0769/data_released/results/c260318-144507_baseline_heuristics.csv",
+      "contentUrl": "https://anonymous.4open.science/r/LatMaz_NeurIPS2026EnD_submission_055C/data_released/results/c260318-144507_baseline_heuristics.csv",
       "encodingFormat": "text/csv",
       "sha256": "784b1d8b234a14dfb1713da5259ebc8783613f829cc6889c20dbc48a46a1d057"
     },
@@ -169,7 +169,7 @@
       "@id": "intermediate_agents_csv",
       "name": "c260318-144446_intermediate_agents.csv",
       "description": "FSC_bio, OOI, and VarMarkov agents on canonical 60 sessions x 5 seeds (900 rows).",
-      "contentUrl": "https://anonymous.4open.science/r/LatMaz-0769/data_released/results/c260318-144446_intermediate_agents.csv",
+      "contentUrl": "https://anonymous.4open.science/r/LatMaz_NeurIPS2026EnD_submission_055C/data_released/results/c260318-144446_intermediate_agents.csv",
       "encodingFormat": "text/csv",
       "sha256": "57f0b3f66167bbe9e3cf667fc7a0e26ef80838205182d85991d276222191e07f"
     },
@@ -178,7 +178,7 @@
       "@id": "recsac_d32_csv",
       "name": "c260315-020734_recurrent_sac_d32_benchmark.csv",
       "description": "RecurrentSAC D=32 oracle baseline (trained meta-RL style across all canonical 60 sessions) x 5 seeds (300 rows). Source for the RecSAC RPA macro.",
-      "contentUrl": "https://anonymous.4open.science/r/LatMaz-0769/data_released/results/c260315-020734_recurrent_sac_d32_benchmark.csv",
+      "contentUrl": "https://anonymous.4open.science/r/LatMaz_NeurIPS2026EnD_submission_055C/data_released/results/c260315-020734_recurrent_sac_d32_benchmark.csv",
       "encodingFormat": "text/csv",
       "sha256": "1f8f5b3a10fd4dfba145d24b422d91f38732c0f546725435e9418253414be22b"
     },
@@ -187,7 +187,7 @@
       "@id": "recsac_causal_csv",
       "name": "c260327-172440_recurrent_sac_causal.csv",
       "description": "RecurrentSAC causal variant (trained only on prior sessions of the same animal, eliminating train/test leakage). 60 sessions x 3 seeds (180 rows). Source for the within-animal RecSacCausal baseline.",
-      "contentUrl": "https://anonymous.4open.science/r/LatMaz-0769/data_released/results/c260327-172440_recurrent_sac_causal.csv",
+      "contentUrl": "https://anonymous.4open.science/r/LatMaz_NeurIPS2026EnD_submission_055C/data_released/results/c260327-172440_recurrent_sac_causal.csv",
       "encodingFormat": "text/csv",
       "sha256": "2e67014c17ae8c159c940c702ea7027349b96f6fc4cb8124d1da88d1dc22f4c2"
     },
@@ -196,7 +196,7 @@
       "@id": "fsc_bio_correct_params_csv",
       "name": "c260331-200128_fsc_bio_correct_params.csv",
       "description": "FSC_bio with the paper-canonical (timeout=1, greediness=3) parameters on canonical 60 x 5 seeds (300 rows). Supersedes earlier FSC_bio rows in the intermediate_agents_csv for headline FSC_bio numbers.",
-      "contentUrl": "https://anonymous.4open.science/r/LatMaz-0769/data_released/results/c260331-200128_fsc_bio_correct_params.csv",
+      "contentUrl": "https://anonymous.4open.science/r/LatMaz_NeurIPS2026EnD_submission_055C/data_released/results/c260331-200128_fsc_bio_correct_params.csv",
       "encodingFormat": "text/csv",
       "sha256": "402e0319d71a19e36e4d9666bc89898be703dc4fdab7ee350c4bf26a8f1a54b6"
     },
@@ -205,7 +205,7 @@
       "@id": "pomcp_bio_csv",
       "name": "c260316-171035_pomcp_bio_FIXED.csv",
       "description": "Frontier-Plan (POMCP_bio) on canonical 60 x 5 seeds (300 rows). Source for the PomcpBio / Frontier-Plan RPA.",
-      "contentUrl": "https://anonymous.4open.science/r/LatMaz-0769/data_released/results/c260316-171035_pomcp_bio_FIXED.csv",
+      "contentUrl": "https://anonymous.4open.science/r/LatMaz_NeurIPS2026EnD_submission_055C/data_released/results/c260316-171035_pomcp_bio_FIXED.csv",
       "encodingFormat": "text/csv",
       "sha256": "47515cf43edb295cea17ca3500524cd975482f1e52b8dab99c0b90e9ae124747"
     },
@@ -214,7 +214,7 @@
       "@id": "pretrain_csv",
       "name": "c260316-171035_pretrain_FIXED.csv",
       "description": "Pretrained variants of DQN, DRQN_seq, DRQN_rand using prior sessions of the same animal-and-maze, evaluated on canonical 60 x 5 seeds (1,710 rows). Source for the DqnPre / DrqnSeqPre / DrqnRandPre RPAs.",
-      "contentUrl": "https://anonymous.4open.science/r/LatMaz-0769/data_released/results/c260316-171035_pretrain_FIXED.csv",
+      "contentUrl": "https://anonymous.4open.science/r/LatMaz_NeurIPS2026EnD_submission_055C/data_released/results/c260316-171035_pretrain_FIXED.csv",
       "encodingFormat": "text/csv",
       "sha256": "8ee58f4fba76eb4398ab5af6c856f6cede8cc8fddc03c66df4b3b5acb9f429fa"
     },
@@ -223,7 +223,7 @@
       "@id": "target_session_pretrain_csv",
       "name": "c260316-171035_target_session_pretrain_FIXED.csv",
       "description": "Per-target-session pretraining dose-response sweep (variable number of prior same-animal-and-maze sessions). Used in Appendix pretraining-dose figures and the dose-response Spearman correlation.",
-      "contentUrl": "https://anonymous.4open.science/r/LatMaz-0769/data_released/results/c260316-171035_target_session_pretrain_FIXED.csv",
+      "contentUrl": "https://anonymous.4open.science/r/LatMaz_NeurIPS2026EnD_submission_055C/data_released/results/c260316-171035_target_session_pretrain_FIXED.csv",
       "encodingFormat": "text/csv",
       "sha256": "feea22ba7ee754d6b52b15c8d995995a12b06d7e7c9baa85e294cc7ab7a94052"
     },
@@ -232,7 +232,7 @@
       "@id": "cloning_agents_csv",
       "name": "c260413-103634_cloning_agents.csv",
       "description": "Mouse-bias / behavioural-cloning agents (Clone_ego, Clone_allo_real, Clone_allo_latent) plus FullFwd and NoBkFullFwd heuristics on canonical 60 x 5 seeds x 5 agents (1,500 rows). Source for the Clone* and FullFwd / NoBkFullFwd RPAs.",
-      "contentUrl": "https://anonymous.4open.science/r/LatMaz-0769/data_released/results/c260413-103634_cloning_agents.csv",
+      "contentUrl": "https://anonymous.4open.science/r/LatMaz_NeurIPS2026EnD_submission_055C/data_released/results/c260413-103634_cloning_agents.csv",
       "encodingFormat": "text/csv",
       "sha256": "b76cd8ff7ff7d24c2d6adb215e6252e4bd4fa06256810f3422b13b08bdf14c44"
     },
@@ -241,7 +241,7 @@
       "@id": "unified152_csv",
       "name": "c260419-143924_152sess_14agents_unified.csv",
       "description": "152-session expanded multi-animal benchmark: 14 no-training agents (heuristics + cloning + intermediate + POMCP/Frontier-Plan + FSC_bio) x 152 sessions x 5 seeds. Provides per-animal coverage beyond canonical-60.",
-      "contentUrl": "https://anonymous.4open.science/r/LatMaz-0769/data_released/results/c260419-143924_152sess_14agents_unified.csv",
+      "contentUrl": "https://anonymous.4open.science/r/LatMaz_NeurIPS2026EnD_submission_055C/data_released/results/c260419-143924_152sess_14agents_unified.csv",
       "encodingFormat": "text/csv",
       "sha256": "75aa983349cc11acb91ec3abe84e30f07abe8927a6fda5887e544936692822d9"
     },
@@ -250,7 +250,7 @@
       "@id": "scaling_sweep_csv",
       "name": "c260502-124509_scaling_sweep_v36_to_v4000.csv",
       "description": "Synthetic-maze scaling sweep V in {36, 100, 225, 400, 900, 1500, 2500, 4000} nodes, 7 agents (Random, Random_forward, Greedy_oracle, POMCP, Frontier-Plan allo + ego, FSC_bio), 3 maze instances x 5 seeds per cell. Wall-clock-bounded (5min/seed primary, 10x per-cell fail-safe).",
-      "contentUrl": "https://anonymous.4open.science/r/LatMaz-0769/data_released/results/c260502-124509_scaling_sweep_v36_to_v4000.csv",
+      "contentUrl": "https://anonymous.4open.science/r/LatMaz_NeurIPS2026EnD_submission_055C/data_released/results/c260502-124509_scaling_sweep_v36_to_v4000.csv",
       "encodingFormat": "text/csv",
       "sha256": "4d42b411c249492e139cce5537b55247d301f77d7773f1980a219744a99a2a8c"
     },
@@ -259,7 +259,7 @@
       "@id": "rerun452_csv",
       "name": "c260505-120513_rerun452_corrected_8agents.csv",
       "description": "Rerun-452 (corrected): HPO-best configs of 8 model-free RL agents (DQN, DRQN_seq, DRQN_rand, A2C, PPO, QRDQN, TRPO, RecurrentPPO) re-evaluated on a held-out cohort of 452 sessions x 5 seeds (18,080 rows). Tests generalization of canonical-60 HPO-best configs to wider animal/maze coverage. Supersedes the earlier c260504-143902 file (archived) which had two latent issues that caused agents to run with AlgoConfig defaults instead of HPO-best.",
-      "contentUrl": "https://anonymous.4open.science/r/LatMaz-0769/data_released/results/c260505-120513_rerun452_corrected_8agents.csv",
+      "contentUrl": "https://anonymous.4open.science/r/LatMaz_NeurIPS2026EnD_submission_055C/data_released/results/c260505-120513_rerun452_corrected_8agents.csv",
       "encodingFormat": "text/csv",
       "sha256": "db09400f813bddc575eb57cafd56d3340b5f974d6b16f806a7a3f43db6cd8509"
     },
@@ -268,7 +268,7 @@
       "@id": "a044_allo_no_training_csv",
       "name": "c260504-152527_a044_allo_no_training_agents.csv",
       "description": "No-training agents (heuristics + cloning + FSC_bio) on the in-progress allocentric subset (a044 entirely, plus a033 sessions from 2026-03-14 onward; 29 sessions total). Reported separately from the egocentric main benchmark.",
-      "contentUrl": "https://anonymous.4open.science/r/LatMaz-0769/data_released/results/c260504-152527_a044_allo_no_training_agents.csv",
+      "contentUrl": "https://anonymous.4open.science/r/LatMaz_NeurIPS2026EnD_submission_055C/data_released/results/c260504-152527_a044_allo_no_training_agents.csv",
       "encodingFormat": "text/csv",
       "sha256": "99269aaaa86bf4b55044fdfb9e8c154e8f398523151a66e6eca1347fe979f910"
     }

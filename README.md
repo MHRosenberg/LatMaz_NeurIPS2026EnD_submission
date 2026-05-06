@@ -1,6 +1,6 @@
 # LatMaz: A Dataset and Evaluation Benchmark for Biological and Artificial Navigation on Abstract Graphs
 
-**NeurIPS 2026 Evaluations and Datasets Track** (under review). Anonymous mirror: <https://anonymous.4open.science/r/LatMaz-0769>.
+**NeurIPS 2026 Evaluations and Datasets Track** (under review). Anonymous mirror: <https://anonymous.4open.science/r/LatMaz_NeurIPS2026EnD_submission_055C>.
 
 LatMaz is a yoked (per-session matched) lab-mouse vs. synthetic RL-agent benchmark for partially-observed graph navigation. Mouse data come from a freely-moving virtual-reality apparatus that instantiates arbitrary latent graphs at a single physical four-arm junction, eliminating path-integration and landmark cues. Agents inherit the mouse's exact graph topology, start state, reward configuration, rebait threshold, and action budget per session.
 

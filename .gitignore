@@ -41,4 +41,4 @@ dist/
 /audit_*
 /*_audit_*
 *.bak
-*.bak.z_archive*
+*.bak*.z_archive*
