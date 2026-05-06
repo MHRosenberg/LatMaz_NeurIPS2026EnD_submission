@@ -1,0 +1,267 @@
+time,action_idx,lights_on,state,rewarded_states,choice,action,reward_time,n_rewards,mouse_rotation,maze_rotation,note,adjacency_file,st_positions_file,start_state
+240307_183522,0,"[False, True, False, True]",9,[12],"['S', 10]",backwards,NA,0,180,0,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_183537,1,"[False, True, True, False]",10,[12],"['W', 11]",left,240307_183537,1,90,90,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_183550,2,"[True, True, True, False]",19,[12],"['S', 10]",right,240307_183550,2,180,0,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_183602,3,"[True, True, True, True]",28,[12],"['N', 2]",forwards,NA,2,180,180,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_183611,4,"[True, False, True, False]",27,[12],"['W', 11]",right,NA,2,270,90,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_183617,5,"[True, True, True, False]",18,[12],"['S', 10]",right,NA,2,0,0,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_183623,6,"[False, True, False, True]",19,[12],"['E', 14]",right,NA,2,90,270,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_183635,7,"[True, True, True, True]",28,[12],"['N', 2]",right,NA,2,180,180,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_183642,8,"[True, False, True, False]",27,[12],"['W', 11]",right,NA,2,270,90,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_183649,9,"[True, True, True, False]",18,[12],"['S', 10]",right,NA,2,0,0,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_183653,10,"[False, True, False, True]",19,[12],"['E', 14]",right,NA,2,90,270,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_183719,11,"[True, True, True, True]",10,[12],"['S', 10]",left,NA,2,0,0,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_183724,12,"[True, True, True, False]",1,[12],"['N', 2]",forwards,NA,2,0,180,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_183734,13,"[True, False, False, True]",0,[12],"['E', 14]",left,NA,2,270,270,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_183806,14,"[False, True, False, True]",9,[12],"['S', 10]",left,NA,2,180,0,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_183819,15,"[False, True, True, False]",10,[12],"['W', 11]",left,NA,2,90,90,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_183827,16,"[True, True, True, False]",1,[12],"['N', 2]",left,NA,2,0,180,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_183833,17,"[True, False, False, True]",0,[12],"['E', 14]",left,NA,2,270,270,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_183842,18,"[False, True, False, True]",9,[12],"['S', 10]",left,NA,2,180,0,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_183900,19,"[False, True, True, False]",10,[12],"['W', 11]",left,NA,2,90,90,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_183906,20,"[True, True, True, False]",19,[12],"['S', 10]",right,NA,2,180,0,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_183939,21,"[True, True, True, True]",28,[12],"['N', 2]",forwards,NA,2,180,180,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_183945,22,"[True, False, True, False]",27,[12],"['W', 11]",right,NA,2,270,90,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_183951,23,"[True, True, True, False]",18,[12],"['S', 10]",right,NA,2,0,0,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_183959,24,"[False, True, False, True]",19,[12],"['E', 14]",right,NA,2,90,270,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_184014,25,"[True, True, True, True]",10,[12],"['S', 10]",left,NA,2,0,0,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_184021,26,"[True, True, True, False]",9,[12],"['W', 11]",left,NA,2,270,90,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_184026,27,"[False, True, True, False]",0,[12],"['S', 10]",right,NA,2,0,0,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_184033,28,"[False, True, False, True]",1,[12],"['E', 14]",right,NA,2,90,270,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_184040,29,"[True, False, False, True]",10,[12],"['N', 2]",right,NA,2,180,180,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_184049,30,"[True, True, True, False]",19,[12],"['S', 10]",forwards,NA,2,180,0,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_184104,31,"[True, True, True, True]",28,[12],"['N', 2]",forwards,NA,2,180,180,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_184121,32,"[True, False, True, False]",27,[12],"['W', 11]",right,NA,2,270,90,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_184135,33,"[True, True, True, False]",36,[12],"['N', 2]",left,NA,2,180,180,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_184144,34,"[True, False, False, True]",37,[12],"['E', 14]",left,NA,2,90,270,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_184155,35,"[False, False, True, True]",38,[12],"['W', 11]",forwards,NA,2,90,90,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_184203,36,"[True, False, True, False]",29,[12],"['N', 2]",left,240307_184203,3,0,180,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_184225,37,"[True, True, True, False]",20,[12],"['S', 10]",forwards,240307_184225,4,0,0,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_184237,38,"[True, True, True, False]",11,[12],"['N', 2]",forwards,NA,4,0,180,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_184243,39,"[True, True, False, False]",2,[12],"['S', 10]",forwards,NA,4,0,0,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_184248,40,"[False, True, False, True]",3,[12],"['E', 14]",right,240307_184248,5,90,270,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_184302,41,"[True, False, True, True]",4,[12],"['W', 11]",forwards,NA,5,90,90,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_184447,42,"[False, False, True, False]",3,[12],"['W', 11]",backwards,NA,5,270,90,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_184453,43,"[True, False, True, True]",2,[12],"['E', 14]",forwards,NA,5,270,270,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_184504,44,"[False, True, False, True]",11,[12],"['S', 10]",left,NA,5,180,0,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_184509,45,"[True, True, False, False]",20,[12],"['N', 2]",forwards,NA,5,180,180,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_184516,46,"[True, True, True, False]",29,[12],"['S', 10]",forwards,NA,5,180,0,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_184524,47,"[True, True, True, False]",38,[12],"['N', 2]",forwards,NA,5,180,180,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_184533,48,"[True, False, True, False]",37,[12],"['W', 11]",right,NA,5,270,90,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_184540,49,"[False, False, True, True]",36,[12],"['E', 14]",forwards,NA,5,270,270,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_184548,50,"[True, False, False, True]",27,[12],"['N', 2]",right,NA,5,0,180,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_184555,51,"[True, True, True, False]",18,[12],"['S', 10]",forwards,NA,5,0,0,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_184602,52,"[False, True, False, True]",19,[12],"['E', 14]",right,NA,5,90,270,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_184613,53,"[True, True, True, True]",20,[12],"['W', 11]",forwards,NA,5,90,90,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_184624,54,"[True, True, True, False]",29,[12],"['S', 10]",right,NA,5,180,0,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_184638,55,"[True, True, True, False]",30,[12],"['W', 11]",left,240307_184638,6,90,90,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_184658,56,"[False, True, True, False]",39,[12],"['S', 10]",right,NA,6,180,0,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_184705,57,"[False, True, True, False]",40,[12],"['W', 11]",left,NA,6,90,90,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_184713,58,"[True, False, True, False]",31,[12],"['N', 2]",left,NA,6,0,180,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_184724,59,"[True, False, True, False]",32,[12],"['W', 11]",right,240307_184724,7,90,90,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_184739,60,"[True, True, True, True]",33,[12],"['E', 14]",forwards,240307_184739,8,90,270,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_184755,61,"[True, False, False, True]",42,[12],"['N', 2]",right,240307_184755,9,180,180,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_184808,62,"[True, False, True, True]",43,[12],"['E', 14]",left,240307_184808,10,90,270,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_184824,63,"[False, True, False, True]",34,[12],"['S', 10]",left,240307_184824,11,0,0,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_184836,64,"[True, True, False, True]",35,[12],"['E', 14]",right,240307_184836,12,90,270,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_184850,65,"[True, False, False, True]",44,[12],"['N', 2]",right,240307_184850,13,180,180,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_184935,66,"[True, False, False, False]",35,[12],"['N', 2]",backwards,NA,13,0,180,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_184941,67,"[True, False, False, True]",34,[12],"['E', 14]",left,NA,13,270,270,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_184948,68,"[True, True, False, True]",25,[12],"['N', 2]",right,240307_184948,14,0,180,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_184959,69,"[True, True, True, True]",16,[12],"['S', 10]",forwards,240307_184959,15,0,0,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_185013,70,"[True, True, False, True]",7,[12],"['N', 2]",forwards,240307_185013,16,0,180,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_185028,71,"[True, False, False, True]",6,[12],"['E', 14]",left,240307_185028,17,270,270,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_185040,72,"[False, False, True, True]",5,[12],"['W', 11]",forwards,240307_185040,18,270,90,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_185049,73,"[True, False, True, False]",14,[12],"['N', 2]",left,240307_185049,19,180,180,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_185104,74,"[True, True, True, True]",23,[12],"['S', 10]",forwards,240307_185104,20,180,0,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_185117,75,"[True, True, False, False]",32,[12],"['N', 2]",forwards,NA,20,180,180,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_185124,76,"[True, True, True, True]",33,[12],"['E', 14]",left,NA,20,90,270,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_185131,77,"[True, False, False, True]",42,[12],"['N', 2]",right,NA,20,180,180,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_185137,78,"[True, False, True, True]",43,[12],"['E', 14]",left,NA,20,90,270,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_185142,79,"[False, True, False, True]",34,[12],"['S', 10]",left,NA,20,0,0,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_185150,80,"[True, True, False, True]",25,[12],"['N', 2]",forwards,NA,20,0,180,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_185155,81,"[True, True, True, True]",16,[12],"['S', 10]",forwards,NA,20,0,0,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_185208,82,"[True, True, False, True]",17,[12],"['E', 14]",right,240307_185208,21,90,270,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_185224,83,"[True, True, False, True]",26,[12],"['N', 2]",right,240307_185224,22,180,180,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_185238,84,"[True, False, True, False]",25,[12],"['W', 11]",right,NA,22,270,90,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_185244,85,"[True, True, True, True]",16,[12],"['S', 10]",right,NA,22,0,0,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_185250,86,"[True, True, False, True]",17,[12],"['E', 14]",right,NA,22,90,270,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_185255,87,"[True, True, False, True]",26,[12],"['N', 2]",right,NA,22,180,180,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_185301,88,"[True, False, True, False]",25,[12],"['W', 11]",right,NA,22,270,90,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_185306,89,"[True, True, True, True]",24,[12],"['E', 14]",forwards,240307_185306,23,270,270,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_185323,90,"[True, False, False, True]",15,[12],"['N', 2]",right,240307_185323,24,0,180,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_185336,91,"[True, False, False, True]",14,[12],"['E', 14]",left,NA,24,270,270,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_185342,92,"[True, True, True, True]",23,[12],"['S', 10]",left,NA,24,180,0,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_185348,93,"[True, True, False, False]",32,[12],"['N', 2]",forwards,NA,24,180,180,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_185355,94,"[True, True, True, True]",41,[12],"['S', 10]",forwards,240307_185355,25,180,0,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_185416,95,"[False, True, True, False]",42,[12],"['W', 11]",left,NA,25,90,90,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_185421,96,"[True, False, True, True]",43,[12],"['E', 14]",forwards,NA,25,90,270,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_185430,97,"[False, True, False, True]",34,[12],"['S', 10]",left,NA,25,0,0,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_185442,98,"[True, True, False, True]",25,[12],"['N', 2]",forwards,NA,25,0,180,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_185449,99,"[True, True, True, True]",16,[12],"['S', 10]",forwards,NA,25,0,0,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_185459,100,"[True, True, False, True]",17,[12],"['E', 14]",right,NA,25,90,270,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_185508,101,"[True, True, False, True]",26,[12],"['N', 2]",right,NA,25,180,180,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_185517,102,"[True, False, True, False]",25,[12],"['W', 11]",right,NA,25,270,90,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_185523,103,"[True, True, True, True]",24,[12],"['E', 14]",forwards,NA,25,270,270,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_185529,104,"[True, False, False, True]",15,[12],"['N', 2]",right,NA,25,0,180,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_185536,105,"[True, False, False, True]",14,[12],"['E', 14]",left,NA,25,270,270,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_185541,106,"[True, True, True, True]",23,[12],"['S', 10]",left,NA,25,180,0,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_185550,107,"[True, True, False, False]",32,[12],"['N', 2]",forwards,NA,25,180,180,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_185556,108,"[True, True, True, True]",41,[12],"['S', 10]",forwards,NA,25,180,0,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_185603,109,"[False, True, True, False]",42,[12],"['W', 11]",left,NA,25,90,90,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_185632,110,"[True, False, True, True]",43,[12],"['E', 14]",forwards,NA,25,90,270,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_185703,111,"[False, True, False, True]",34,[12],"['S', 10]",left,NA,25,0,0,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_185722,112,"[True, True, False, True]",35,[12],"['E', 14]",right,NA,25,90,270,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_185737,113,"[True, False, False, True]",44,[12],"['N', 2]",right,NA,25,180,180,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_185828,114,"[True, False, False, False]",35,[12],"['N', 2]",backwards,NA,25,0,180,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_185849,115,"[True, False, False, True]",34,[12],"['E', 14]",left,NA,25,270,270,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_185911,116,"[True, True, False, True]",25,[12],"['N', 2]",right,NA,25,0,180,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_185917,117,"[True, True, True, True]",26,[12],"['W', 11]",right,NA,25,90,90,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_185924,118,"[True, False, True, False]",17,[12],"['N', 2]",left,NA,25,0,180,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_185928,119,"[True, True, False, True]",8,[12],"['S', 10]",forwards,240307_185928,26,0,0,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_190138,120,"[False, True, False, False]",17,[12],"['S', 10]",backwards,NA,26,180,0,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_190146,121,"[True, True, False, True]",16,[12],"['E', 14]",right,NA,26,270,270,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_190159,122,"[True, True, False, True]",7,[12],"['N', 2]",right,NA,26,0,180,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_190204,123,"[True, False, False, True]",6,[12],"['E', 14]",left,NA,26,270,270,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_190212,124,"[False, False, True, True]",5,[12],"['W', 11]",forwards,NA,26,270,90,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_190220,125,"[True, False, True, False]",14,[12],"['N', 2]",left,NA,26,180,180,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_190229,126,"[True, True, True, True]",23,[12],"['S', 10]",forwards,NA,26,180,0,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_190238,127,"[True, True, False, False]",32,[12],"['N', 2]",forwards,NA,26,180,180,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_190243,128,"[True, True, True, True]",33,[12],"['E', 14]",left,NA,26,90,270,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_190252,129,"[True, False, False, True]",42,[12],"['N', 2]",right,NA,26,180,180,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_190257,130,"[True, False, True, True]",43,[12],"['E', 14]",left,NA,26,90,270,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_190303,131,"[False, True, False, True]",34,[12],"['S', 10]",left,NA,26,0,0,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_190315,132,"[True, True, False, True]",25,[12],"['N', 2]",forwards,NA,26,0,180,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_190322,133,"[True, True, True, True]",26,[12],"['W', 11]",right,NA,26,90,90,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_190329,134,"[True, False, True, False]",17,[12],"['N', 2]",left,NA,26,0,180,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_190334,135,"[True, True, False, True]",16,[12],"['E', 14]",left,NA,26,270,270,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_190341,136,"[True, True, False, True]",25,[12],"['S', 10]",left,NA,26,180,0,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_190633,137,"[True, True, True, True]",26,[12],"['W', 11]",left,NA,26,90,90,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_190638,138,"[True, False, True, False]",17,[12],"['N', 2]",left,NA,26,0,180,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_190651,139,"[True, True, False, True]",16,[12],"['E', 14]",left,NA,26,270,270,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_190700,140,"[True, True, False, True]",7,[12],"['N', 2]",right,NA,26,0,180,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_190706,141,"[True, False, False, True]",6,[12],"['E', 14]",left,NA,26,270,270,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_190713,142,"[False, False, True, True]",5,[12],"['W', 11]",forwards,NA,26,270,90,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_190721,143,"[True, False, True, False]",14,[12],"['N', 2]",left,NA,26,180,180,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_190727,144,"[True, True, True, True]",23,[12],"['S', 10]",forwards,NA,26,180,0,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_190732,145,"[True, True, False, False]",32,[12],"['N', 2]",forwards,NA,26,180,180,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_190737,146,"[True, True, True, True]",31,[12],"['W', 11]",right,NA,26,270,90,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_190745,147,"[True, False, True, False]",40,[12],"['N', 2]",left,NA,26,180,180,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_190751,148,"[True, False, True, False]",39,[12],"['W', 11]",right,NA,26,270,90,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_190757,149,"[False, True, True, False]",30,[12],"['S', 10]",right,NA,26,0,0,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_190802,150,"[False, True, True, False]",29,[12],"['W', 11]",left,NA,26,270,90,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_190808,151,"[True, True, True, False]",38,[12],"['N', 2]",left,NA,26,180,180,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_190814,152,"[True, False, True, False]",37,[12],"['W', 11]",right,NA,26,270,90,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_190819,153,"[False, False, True, True]",36,[12],"['E', 14]",forwards,NA,26,270,270,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_190827,154,"[True, False, False, True]",27,[12],"['N', 2]",right,NA,26,0,180,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_190832,155,"[True, True, True, False]",18,[12],"['S', 10]",forwards,NA,26,0,0,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_190911,156,"[False, True, False, True]",19,[12],"['E', 14]",right,NA,26,90,270,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_191221,157,"[True, True, True, True]",20,[12],"['W', 11]",forwards,NA,26,90,90,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_191228,158,"[True, True, True, False]",29,[12],"['S', 10]",right,NA,26,180,0,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_191235,159,"[True, True, True, False]",30,[12],"['W', 11]",left,NA,26,90,90,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_191243,160,"[False, True, True, False]",39,[12],"['S', 10]",right,NA,26,180,0,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_191251,161,"[False, True, True, False]",40,[12],"['W', 11]",left,NA,26,90,90,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_191258,162,"[True, False, True, False]",31,[12],"['N', 2]",left,NA,26,0,180,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_191304,163,"[True, False, True, False]",32,[12],"['W', 11]",right,NA,26,90,90,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_191309,164,"[True, True, True, True]",33,[12],"['E', 14]",forwards,NA,26,90,270,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_191318,165,"[True, False, False, True]",42,[12],"['N', 2]",right,NA,26,180,180,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_191327,166,"[True, False, True, True]",43,[12],"['E', 14]",left,NA,26,90,270,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_191337,167,"[False, True, False, True]",34,[12],"['S', 10]",left,NA,26,0,0,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_191342,168,"[True, True, False, True]",35,[12],"['E', 14]",right,NA,26,90,270,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_191356,169,"[True, False, False, True]",44,[12],"['N', 2]",right,NA,26,180,180,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_191459,170,"[True, False, False, False]",35,[12],"['N', 2]",backwards,NA,26,0,180,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_191506,171,"[True, False, False, True]",34,[12],"['E', 14]",left,NA,26,270,270,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_191520,172,"[True, True, False, True]",25,[12],"['N', 2]",right,NA,26,0,180,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_191525,173,"[True, True, True, True]",26,[12],"['W', 11]",right,NA,26,90,90,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_191531,174,"[True, False, True, False]",17,[12],"['N', 2]",left,NA,26,0,180,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_191536,175,"[True, True, False, True]",8,[12],"['S', 10]",forwards,NA,26,0,0,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_191848,176,"[False, True, False, False]",17,[12],"['S', 10]",backwards,NA,26,180,0,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_191857,177,"[True, True, False, True]",16,[12],"['E', 14]",right,NA,26,270,270,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_192122,178,"[True, True, False, True]",7,[12],"['N', 2]",right,NA,26,0,180,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_192130,179,"[True, False, False, True]",6,[12],"['E', 14]",left,NA,26,270,270,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_192213,180,"[False, False, True, True]",5,[12],"['W', 11]",forwards,NA,26,270,90,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_192220,181,"[True, False, True, False]",14,[12],"['N', 2]",left,NA,26,180,180,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_192225,182,"[True, True, True, True]",23,[12],"['S', 10]",forwards,NA,26,180,0,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_192311,183,"[True, True, False, False]",14,[12],"['S', 10]",backwards,NA,26,0,0,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_192402,184,"[True, True, True, True]",13,[12],"['W', 11]",left,240307_192402,27,270,90,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_192417,185,"[True, False, True, True]",12,"[0, 1, 4, 36, 37, 38, 9, 18, 27, 28]","['E', 14]",forwards,240307_192417,28,270,270,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_192431,186,"[True, True, False, True]",21,"[0, 1, 4, 36, 37, 38, 9, 18, 27, 28]","['S', 10]",left,240307_192431,29,180,0,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_192442,187,"[False, True, True, False]",22,"[0, 1, 4, 36, 37, 38, 9, 18, 27, 28]","['W', 11]",left,240307_192442,30,90,90,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_192451,188,"[True, False, True, False]",13,"[0, 1, 4, 36, 37, 38, 9, 18, 27, 28]","['N', 2]",left,NA,30,0,180,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_192457,189,"[True, False, True, True]",12,"[0, 1, 4, 36, 37, 38, 9, 18, 27, 28]","['E', 14]",left,NA,30,270,270,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_192504,190,"[True, True, False, True]",3,"[0, 1, 4, 36, 37, 38, 9, 18, 27, 28]","['N', 2]",right,NA,30,0,180,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_192511,191,"[True, False, True, True]",2,"[0, 1, 4, 36, 37, 38, 9, 18, 27, 28]","['E', 14]",left,240307_192511,31,270,270,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_192524,192,"[False, True, False, True]",11,"[0, 1, 4, 36, 37, 38, 9, 18, 27, 28]","['S', 10]",left,240307_192524,32,180,0,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_192538,193,"[True, True, False, False]",20,"[0, 1, 4, 36, 37, 38, 9, 18, 27, 28]","['N', 2]",forwards,NA,32,180,180,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_192546,194,"[True, True, True, False]",29,"[0, 1, 4, 36, 37, 38, 9, 18, 27, 28]","['S', 10]",forwards,NA,32,180,0,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_192552,195,"[True, True, True, False]",30,"[0, 1, 4, 36, 37, 38, 9, 18, 27, 28]","['W', 11]",left,NA,32,90,90,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_192558,196,"[False, True, True, False]",39,"[0, 1, 4, 36, 37, 38, 9, 18, 27, 28]","['S', 10]",right,240307_192558,33,180,0,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_192612,197,"[False, True, True, False]",40,"[0, 1, 4, 36, 37, 38, 9, 18, 27, 28]","['W', 11]",left,240307_192612,34,90,90,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_192623,198,"[True, False, True, False]",31,"[0, 1, 4, 36, 37, 38, 9, 18, 27, 28]","['N', 2]",left,240307_192623,35,0,180,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_192636,199,"[True, False, True, False]",32,"[0, 1, 4, 36, 37, 38, 9, 18, 27, 28]","['W', 11]",right,NA,35,90,90,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_192643,200,"[True, True, True, True]",33,"[0, 1, 4, 36, 37, 38, 9, 18, 27, 28]","['E', 14]",forwards,NA,35,90,270,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_192649,201,"[True, False, False, True]",42,"[0, 1, 4, 36, 37, 38, 9, 18, 27, 28]","['N', 2]",right,NA,35,180,180,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_192655,202,"[True, False, True, True]",43,"[0, 1, 4, 36, 37, 38, 9, 18, 27, 28]","['E', 14]",left,NA,35,90,270,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_192700,203,"[False, True, False, True]",34,"[0, 1, 4, 36, 37, 38, 9, 18, 27, 28]","['S', 10]",left,NA,35,0,0,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_192706,204,"[True, True, False, True]",25,"[0, 1, 4, 36, 37, 38, 9, 18, 27, 28]","['N', 2]",forwards,NA,35,0,180,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_192712,205,"[True, True, True, True]",26,"[0, 1, 4, 36, 37, 38, 9, 18, 27, 28]","['W', 11]",right,NA,35,90,90,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_192718,206,"[True, False, True, False]",17,"[0, 1, 4, 36, 37, 38, 9, 18, 27, 28]","['N', 2]",left,NA,35,0,180,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_192723,207,"[True, True, False, True]",8,"[0, 1, 4, 36, 37, 38, 9, 18, 27, 28]","['S', 10]",forwards,NA,35,0,0,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_193008,208,"[False, True, False, False]",17,"[0, 1, 4, 36, 37, 38, 9, 18, 27, 28]","['S', 10]",backwards,NA,35,180,0,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_193014,209,"[True, True, False, True]",16,"[0, 1, 4, 36, 37, 38, 9, 18, 27, 28]","['E', 14]",right,NA,35,270,270,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_193020,210,"[True, True, False, True]",7,"[0, 1, 4, 36, 37, 38, 9, 18, 27, 28]","['N', 2]",right,NA,35,0,180,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_193025,211,"[True, False, False, True]",6,"[0, 1, 4, 36, 37, 38, 9, 18, 27, 28]","['E', 14]",left,NA,35,270,270,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_193031,212,"[False, False, True, True]",5,"[0, 1, 4, 36, 37, 38, 9, 18, 27, 28]","['W', 11]",forwards,NA,35,270,90,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_193037,213,"[True, False, True, False]",14,"[0, 1, 4, 36, 37, 38, 9, 18, 27, 28]","['N', 2]",left,NA,35,180,180,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_193044,214,"[True, True, True, True]",15,"[0, 1, 4, 36, 37, 38, 9, 18, 27, 28]","['E', 14]",left,NA,35,90,270,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_193105,215,"[True, False, False, True]",24,"[0, 1, 4, 36, 37, 38, 9, 18, 27, 28]","['N', 2]",right,NA,35,180,180,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_193110,216,"[True, False, False, True]",25,"[0, 1, 4, 36, 37, 38, 9, 18, 27, 28]","['E', 14]",left,NA,35,90,270,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_193120,217,"[True, True, True, True]",26,"[0, 1, 4, 36, 37, 38, 9, 18, 27, 28]","['W', 11]",forwards,NA,35,90,90,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_193129,218,"[True, False, True, False]",17,"[0, 1, 4, 36, 37, 38, 9, 18, 27, 28]","['N', 2]",left,NA,35,0,180,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_193134,219,"[True, True, False, True]",8,"[0, 1, 4, 36, 37, 38, 9, 18, 27, 28]","['S', 10]",forwards,NA,35,0,0,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_193337,220,"[False, True, False, False]",17,"[0, 1, 4, 36, 37, 38, 9, 18, 27, 28]","['S', 10]",backwards,NA,35,180,0,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_193345,221,"[True, True, False, True]",26,"[0, 1, 4, 36, 37, 38, 9, 18, 27, 28]","['N', 2]",forwards,NA,35,180,180,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_193351,222,"[True, False, True, False]",25,"[0, 1, 4, 36, 37, 38, 9, 18, 27, 28]","['W', 11]",right,NA,35,270,90,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_193357,223,"[True, True, True, True]",24,"[0, 1, 4, 36, 37, 38, 9, 18, 27, 28]","['E', 14]",forwards,NA,35,270,270,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_193410,224,"[True, False, False, True]",15,"[0, 1, 4, 36, 37, 38, 9, 18, 27, 28]","['N', 2]",right,NA,35,0,180,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_193416,225,"[True, False, False, True]",14,"[0, 1, 4, 36, 37, 38, 9, 18, 27, 28]","['E', 14]",left,NA,35,270,270,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_193903,226,"[True, True, True, True]",13,"[0, 1, 4, 36, 37, 38, 9, 18, 27, 28]","['W', 11]",forwards,NA,35,270,90,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_193913,227,"[True, False, True, True]",12,"[0, 1, 4, 36, 37, 38, 9, 18, 27, 28]","['E', 14]",forwards,NA,35,270,270,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_193934,228,"[True, True, False, True]",21,"[0, 1, 4, 36, 37, 38, 9, 18, 27, 28]","['S', 10]",left,NA,35,180,0,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_193946,229,"[False, True, True, False]",22,"[0, 1, 4, 36, 37, 38, 9, 18, 27, 28]","['W', 11]",left,NA,35,90,90,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_193955,230,"[True, False, True, False]",13,"[0, 1, 4, 36, 37, 38, 9, 18, 27, 28]","['N', 2]",left,NA,35,0,180,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_194000,231,"[True, False, True, True]",12,"[0, 1, 4, 36, 37, 38, 9, 18, 27, 28]","['E', 14]",left,NA,35,270,270,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_194858,232,"[True, True, False, True]",21,"[0, 1, 4, 36, 37, 38, 9, 18, 27, 28]","['S', 10]",left,NA,35,180,0,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_194909,233,"[False, True, True, False]",22,"[0, 1, 4, 36, 37, 38, 9, 18, 27, 28]","['W', 11]",left,NA,35,90,90,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_194915,234,"[True, False, True, False]",13,"[0, 1, 4, 36, 37, 38, 9, 18, 27, 28]","['N', 2]",left,NA,35,0,180,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_194922,235,"[True, False, True, True]",12,"[0, 1, 4, 36, 37, 38, 9, 18, 27, 28]","['E', 14]",left,NA,35,270,270,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_195033,236,"[True, True, False, True]",21,"[0, 1, 4, 36, 37, 38, 9, 18, 27, 28]","['S', 10]",left,NA,35,180,0,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_195042,237,"[False, True, True, False]",22,"[0, 1, 4, 36, 37, 38, 9, 18, 27, 28]","['W', 11]",left,NA,35,90,90,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_195047,238,"[True, False, True, False]",13,"[0, 1, 4, 36, 37, 38, 9, 18, 27, 28]","['N', 2]",left,NA,35,0,180,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_195052,239,"[True, False, True, True]",12,"[0, 1, 4, 36, 37, 38, 9, 18, 27, 28]","['E', 14]",left,NA,35,270,270,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_195100,240,"[True, True, False, True]",21,"[0, 1, 4, 36, 37, 38, 9, 18, 27, 28]","['S', 10]",left,NA,35,180,0,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_195112,241,"[False, True, True, False]",22,"[0, 1, 4, 36, 37, 38, 9, 18, 27, 28]","['W', 11]",left,NA,35,90,90,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_195118,242,"[True, False, True, False]",13,"[0, 1, 4, 36, 37, 38, 9, 18, 27, 28]","['N', 2]",left,NA,35,0,180,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_195123,243,"[True, False, True, True]",12,"[0, 1, 4, 36, 37, 38, 9, 18, 27, 28]","['E', 14]",left,NA,35,270,270,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_195409,244,"[True, True, False, True]",21,"[0, 1, 4, 36, 37, 38, 9, 18, 27, 28]","['S', 10]",left,NA,35,180,0,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_200342,245,"[False, True, True, False]",12,"[0, 1, 4, 36, 37, 38, 9, 18, 27, 28]","['S', 10]",backwards,NA,35,0,0,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_200408,246,"[True, True, False, True]",13,"[0, 1, 4, 36, 37, 38, 9, 18, 27, 28]","['E', 14]",right,NA,35,90,270,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_200419,247,"[True, False, True, True]",14,"[0, 1, 4, 36, 37, 38, 9, 18, 27, 28]","['W', 11]",forwards,NA,35,90,90,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_200432,248,"[True, True, True, True]",5,"[0, 1, 4, 36, 37, 38, 9, 18, 27, 28]","['N', 2]",left,NA,35,0,180,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_200445,249,"[True, False, True, False]",6,"[0, 1, 4, 36, 37, 38, 9, 18, 27, 28]","['W', 11]",right,NA,35,90,90,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_200451,250,"[False, False, True, True]",7,"[0, 1, 4, 36, 37, 38, 9, 18, 27, 28]","['E', 14]",forwards,NA,35,90,270,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_200539,251,"[True, False, False, True]",16,"[0, 1, 4, 36, 37, 38, 9, 18, 27, 28]","['N', 2]",right,NA,35,180,180,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_200606,252,"[True, True, False, True]",17,"[0, 1, 4, 36, 37, 38, 9, 18, 27, 28]","['E', 14]",left,NA,35,90,270,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_200638,253,"[True, True, False, True]",26,"[0, 1, 4, 36, 37, 38, 9, 18, 27, 28]","['N', 2]",right,NA,35,180,180,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_200713,254,"[True, False, True, False]",25,"[0, 1, 4, 36, 37, 38, 9, 18, 27, 28]","['W', 11]",right,NA,35,270,90,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_200727,255,"[True, True, True, True]",24,"[0, 1, 4, 36, 37, 38, 9, 18, 27, 28]","['E', 14]",forwards,NA,35,270,270,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_200826,256,"[True, False, False, True]",15,"[0, 1, 4, 36, 37, 38, 9, 18, 27, 28]","['N', 2]",right,NA,35,0,180,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_200834,257,"[True, False, False, True]",14,"[0, 1, 4, 36, 37, 38, 9, 18, 27, 28]","['E', 14]",left,NA,35,270,270,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_201001,258,"[True, True, True, True]",23,"[0, 1, 4, 36, 37, 38, 9, 18, 27, 28]","['S', 10]",left,NA,35,180,0,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_201018,259,"[True, True, False, False]",32,"[0, 1, 4, 36, 37, 38, 9, 18, 27, 28]","['N', 2]",forwards,NA,35,180,180,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_201036,260,"[True, True, True, True]",41,"[0, 1, 4, 36, 37, 38, 9, 18, 27, 28]","['S', 10]",forwards,NA,35,180,0,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_201048,261,"[False, True, True, False]",42,"[0, 1, 4, 36, 37, 38, 9, 18, 27, 28]","['W', 11]",left,NA,35,90,90,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_201055,262,"[True, False, True, True]",43,"[0, 1, 4, 36, 37, 38, 9, 18, 27, 28]","['E', 14]",forwards,NA,35,90,270,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_201310,263,"[False, True, False, True]",34,"[0, 1, 4, 36, 37, 38, 9, 18, 27, 28]","['S', 10]",left,NA,35,0,0,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_201317,264,"[True, True, False, True]",25,"[0, 1, 4, 36, 37, 38, 9, 18, 27, 28]","['N', 2]",forwards,NA,35,0,180,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0
+240307_201323,265,"[True, True, True, True]",24,"[0, 1, 4, 36, 37, 38, 9, 18, 27, 28]","['E', 14]",left,NA,35,270,270,,240218_intuition_maze_003-adjacency.csv,240218_intuition_maze_003-state_positions.csv,0

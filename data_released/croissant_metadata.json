@@ -1,0 +1,407 @@
+{
+  "@context": {
+    "@language": "en",
+    "@vocab": "https://schema.org/",
+    "citeAs": "cr:citeAs",
+    "column": "cr:column",
+    "conformsTo": "dct:conformsTo",
+    "cr": "http://mlcommons.org/croissant/",
+    "rai": "http://mlcommons.org/croissant/RAI/",
+    "data": {
+      "@id": "cr:data",
+      "@type": "@json"
+    },
+    "dataType": {
+      "@id": "cr:dataType",
+      "@type": "@vocab"
+    },
+    "dct": "http://purl.org/dc/terms/",
+    "examples": {
+      "@id": "cr:examples",
+      "@type": "@json"
+    },
+    "extract": "cr:extract",
+    "field": "cr:field",
+    "fileProperty": "cr:fileProperty",
+    "fileObject": "cr:fileObject",
+    "fileSet": "cr:fileSet",
+    "format": "cr:format",
+    "includes": "cr:includes",
+    "isLiveDataset": "cr:isLiveDataset",
+    "jsonPath": "cr:jsonPath",
+    "key": "cr:key",
+    "md5": "cr:md5",
+    "parentField": "cr:parentField",
+    "path": "cr:path",
+    "recordSet": "cr:recordSet",
+    "references": "cr:references",
+    "regex": "cr:regex",
+    "repeated": "cr:repeated",
+    "replace": "cr:replace",
+    "sc": "https://schema.org/",
+    "separator": "cr:separator",
+    "source": "cr:source",
+    "subField": "cr:subField",
+    "transform": "cr:transform"
+  },
+  "@type": "sc:Dataset",
+  "name": "LatMaz",
+  "description": "LatMaz (Latent Maze) is a yoked-comparison benchmark and dataset for evaluating reinforcement learning (RL) agents against real lab-mouse navigation on partially-observed graph mazes. Mouse data come from a freely-moving virtual-reality apparatus that instantiates arbitrary latent graphs at a single physical four-arm junction, eliminating path-integration and landmark cues. The release covers 359 unique sessions across 13 mice on 16+ maze topologies. Each session record provides: animal ID, session timestamp, maze adjacency file, state-position file, start state, action budget, full action sequence, marginal action distributions in three coordinate frames, observation sequences, and reward layout. Designed for yoked evaluation of RL algorithms and probing of within-episode memory contributions to navigation under extreme partial observability.",
+  "conformsTo": "http://mlcommons.org/croissant/1.0",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "url": "https://anonymous.4open.science/r/LatMaz-0769",
+  "version": "1.0.0-review",
+  "datePublished": "2026-05-07",
+  "creator": [
+    {
+      "@type": "sc:Person",
+      "name": "Anonymous Authors",
+      "affiliation": "Anonymized for double-blind review"
+    }
+  ],
+  "publisher": {
+    "@type": "sc:Organization",
+    "name": "Anonymized for double-blind review"
+  },
+  "keywords": [
+    "reinforcement learning",
+    "benchmark",
+    "dataset",
+    "mouse navigation",
+    "POMDP",
+    "partial observability",
+    "behavioral neuroscience",
+    "yoked benchmark",
+    "graph traversal",
+    "comparative cognition",
+    "evaluation"
+  ],
+  "citeAs": "Anonymous Authors (2026). LatMaz: A Dataset and Evaluation Benchmark for Biological and Artificial Navigation on Abstract Graphs. NeurIPS 2026 Evaluations & Datasets Track (under review).",
+  "rai:dataCollection": "Lab mice freely entered a four-arm radial maze with motorised gates from a connected home cage; each session lasted approximately 24 hours, interrupted only for daily weighing and apparatus cleaning. Reward was a small fluid reward (~0.02 mL) delivered on first-time pokes to a node within the current PacMan-style cycle. Sessions were recorded continuously from the apparatus microcontroller (Raspberry Pi 4) and parsed offline into latent-graph trajectories.",
+  "rai:dataCollectionType": "Behavioural recording from live animals (mice) in a controlled virtual-reality apparatus.",
+  "rai:dataCollectionTimeframe": "Sessions span 2024-02 through 2026-05; the canonical 60-session subset covers October 2025 onwards (date filter applied for canonical comparability across mice and maze topologies).",
+  "rai:dataAnnotationProtocol": "No human annotation. Action and observation sequences are derived deterministically from the apparatus event log via the canonical reward-rebait logic. Reward layouts are independently validated against PNG screenshots at 99.5% agreement on 133 sessions.",
+  "rai:dataPreprocessingImpact": "Canonical CSVs use the corrected reward-rebait logic; earlier CSV revisions are not part of this release. Action budgets and start states are taken verbatim from each mouse session and used as the per-session yoked horizon for artificial agents. Per-basename merge resolves 178 sessions that appeared twice in the source ingestion (path-1 + path-2 storage-location duplicates) by retaining the populated value column-by-column.",
+  "rai:dataUseCases": [
+    "Yoked evaluation of reinforcement-learning algorithms against a real animal reference trajectory.",
+    "Probing within-episode memory contributions to navigation under extreme partial observability.",
+    "Conditional behavioural cloning as a supervised test of mouse-policy learnability.",
+    "Studying the effect of prior maze experience via multi-session pretraining.",
+    "Scaling studies of partial-observability benchmarks beyond canonical mouse-experiment maze sizes.",
+    "Negative results and failure-mode analysis of HPO-tuned RL agents under held-out animal/maze/reward-function shifts."
+  ],
+  "rai:dataLimitations": [
+    "Two animals (a031, a033) in the canonical 60-session subset; statistical power capped accordingly.",
+    "Three maze topologies (latMaz100, latMaz101, latMaz103) in the canonical set; broader topology coverage requires the expanded 422-session main benchmark or the 29-session in-progress allocentric subset.",
+    "All observations are 4-bit MultiBinary (egocentric or allocentric); the dataset is unsuitable for vision-based benchmarks.",
+    "Sessions are recorded from a deliberately minimal sensory environment; results may not generalise to richer real-world navigation tasks.",
+    "Synthetic scaling-sweep mazes (V=36..4000) in the appendix are lattice subgraphs; not claimed to represent biologically plausible maze topologies."
+  ],
+  "rai:dataReleaseMaintenancePlan": "Canonical artifact released alongside the NeurIPS 2026 paper at the anonymous review URL during review, and at a permanent post-acceptance URL post-camera-ready. Versioning follows c{yymmdd-hhmmss}_ creation-moment prefixes; the c260504-143724 yoked-sessions dataframe is the canonical version for the NeurIPS 2026 submission. Errata and additional sessions will be added in tagged releases.",
+  "rai:dataSocialImpact": "Provides a controlled, biologically-grounded benchmark for RL methods in the partial-observability regime, addressing a long-standing gap between RL benchmarks (which typically supply rich sensory streams) and behavioural neuroscience (which uses minimal observation). No direct deployment risks; indirect positive impact via more rigorous animal-AI comparison practices.",
+  "rai:personalSensitiveInformation": "The dataset contains no human subject information. Mouse identifiers (a001, a002, ..., a188, a999) are project-internal and not linked to any external identity. All animal procedures were approved by the governing IACUC.",
+  "distribution": [
+    {
+      "@type": "cr:FileObject",
+      "@id": "yoked_sessions",
+      "name": "c260504-143724_yoked_sessions.csv",
+      "description": "Canonical de-duplicated yoking dataframe, one row per mouse session (359 rows). Columns: animal_ID, csv_data_path, states_visited, adj_file, st_pos_file, n_rewards, start_state, n_states_visited, prob_dict_allo_real, prob_dict_allo_latent, prob_dict_ego.",
+      "contentUrl": "https://anonymous.4open.science/r/LatMaz-0769/data_released/yoked_dfs/c260504-143724_yoked_sessions.csv",
+      "encodingFormat": "text/csv",
+      "sha256": "d2ab8693eb96f06b269d3639f835744a2d1afdadf240f18e18894c6d7a3937aa"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "raw_session_manifest",
+      "name": "raw_session_manifest.csv",
+      "description": "Manifest mapping each unique session basename to the bundled raw event-log CSV, with per-file sha256 and size. Columns: exp_moment, animal_ID, bundled_filename, original_paths, n_yoking_df_rows, sha256, file_size_bytes.",
+      "contentUrl": "https://anonymous.4open.science/r/LatMaz-0769/data_released/raw_session_csvs/raw_session_manifest.csv",
+      "encodingFormat": "text/csv",
+      "sha256": "81fa588680bb9337e5b30c5ba719f99f6d7677b218f7376a171534cff331fcc2"
+    },
+    {
+      "@type": "cr:FileSet",
+      "@id": "raw_session_csvs",
+      "name": "Raw session event-log CSVs",
+      "description": "FileSet of 359 raw event-log CSVs (one per unique session) at data_released/raw_session_csvs/, indexed by raw_session_manifest.csv (which provides the per-file sha256 and exp_moment mapping). Each event-log CSV row is one action attempt with columns: time, action_idx, lights_on, state, rewarded_states, choice, action, reward_time, n_rewards, mouse_rotation, maze_rotation, note, adjacency_file, st_positions_file, start_state.",
+      "containedIn": {"@id": "raw_session_manifest"},
+      "encodingFormat": "text/csv",
+      "includes": "*.csv"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "maze_files_archive",
+      "name": "mazes.zip",
+      "description": "ZIP archive of per-maze adjacency matrix and state-position files defining the maze topologies the mice ran on (also referenced by the yoked_sessions adj_file / st_pos_file columns). ~25 files, ~50 KB unzipped.",
+      "contentUrl": "https://anonymous.4open.science/r/LatMaz-0769/data_released/mazes.zip",
+      "encodingFormat": "application/zip",
+      "sha256": "474b82f18ff7478bc360892cb1274a9b62d119f3665a5dc538e1db7f8418087d"
+    },
+    {
+      "@type": "cr:FileSet",
+      "@id": "maze_files",
+      "name": "Maze adjacency and state-position files",
+      "description": "FileSet of per-maze adjacency matrix and state-position CSVs inside mazes.zip.",
+      "containedIn": {"@id": "maze_files_archive"},
+      "encodingFormat": "text/csv",
+      "includes": "*-adjacency.csv|*-state_positions.csv"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "hpo_tuning_csv",
+      "name": "c260316-171035_hpo_tuning_FIXED.csv",
+      "description": "HPO sweep results: 9 model-free RL agents (DQN, A2C, PPO, TRPO, QRDQN, RecurrentPPO, DRQN_seq, DRQN_rand) plus POMCP with 3-4 configurations each, evaluated on the canonical 60 sessions x 5 seeds (9,600 rows). Source for paper Table 1 RL and POMCP RPAs (HPO-best per model).",
+      "contentUrl": "https://anonymous.4open.science/r/LatMaz-0769/data_released/results/c260316-171035_hpo_tuning_FIXED.csv",
+      "encodingFormat": "text/csv",
+      "sha256": "143af5740f2b1b7f62604e734344ce820b41f4c1d625d656d596330cbf36d0f6"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "baseline_heuristics_csv",
+      "name": "c260318-144507_baseline_heuristics.csv",
+      "description": "Random, Random_forward, and Greedy_oracle baselines on canonical 60 sessions x 5 seeds (900 rows).",
+      "contentUrl": "https://anonymous.4open.science/r/LatMaz-0769/data_released/results/c260318-144507_baseline_heuristics.csv",
+      "encodingFormat": "text/csv",
+      "sha256": "784b1d8b234a14dfb1713da5259ebc8783613f829cc6889c20dbc48a46a1d057"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "intermediate_agents_csv",
+      "name": "c260318-144446_intermediate_agents.csv",
+      "description": "FSC_bio, OOI, and VarMarkov agents on canonical 60 sessions x 5 seeds (900 rows).",
+      "contentUrl": "https://anonymous.4open.science/r/LatMaz-0769/data_released/results/c260318-144446_intermediate_agents.csv",
+      "encodingFormat": "text/csv",
+      "sha256": "57f0b3f66167bbe9e3cf667fc7a0e26ef80838205182d85991d276222191e07f"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "recsac_d32_csv",
+      "name": "c260315-020734_recurrent_sac_d32_benchmark.csv",
+      "description": "RecurrentSAC D=32 oracle baseline (trained meta-RL style across all canonical 60 sessions) x 5 seeds (300 rows). Source for the RecSAC RPA macro.",
+      "contentUrl": "https://anonymous.4open.science/r/LatMaz-0769/data_released/results/c260315-020734_recurrent_sac_d32_benchmark.csv",
+      "encodingFormat": "text/csv",
+      "sha256": "1f8f5b3a10fd4dfba145d24b422d91f38732c0f546725435e9418253414be22b"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "recsac_causal_csv",
+      "name": "c260327-172440_recurrent_sac_causal.csv",
+      "description": "RecurrentSAC causal variant (trained only on prior sessions of the same animal, eliminating train/test leakage). 60 sessions x 3 seeds (180 rows). Source for the within-animal RecSacCausal baseline.",
+      "contentUrl": "https://anonymous.4open.science/r/LatMaz-0769/data_released/results/c260327-172440_recurrent_sac_causal.csv",
+      "encodingFormat": "text/csv",
+      "sha256": "2e67014c17ae8c159c940c702ea7027349b96f6fc4cb8124d1da88d1dc22f4c2"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "fsc_bio_correct_params_csv",
+      "name": "c260331-200128_fsc_bio_correct_params.csv",
+      "description": "FSC_bio with the paper-canonical (timeout=1, greediness=3) parameters on canonical 60 x 5 seeds (300 rows). Supersedes earlier FSC_bio rows in the intermediate_agents_csv for headline FSC_bio numbers.",
+      "contentUrl": "https://anonymous.4open.science/r/LatMaz-0769/data_released/results/c260331-200128_fsc_bio_correct_params.csv",
+      "encodingFormat": "text/csv",
+      "sha256": "402e0319d71a19e36e4d9666bc89898be703dc4fdab7ee350c4bf26a8f1a54b6"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "pomcp_bio_csv",
+      "name": "c260316-171035_pomcp_bio_FIXED.csv",
+      "description": "Frontier-Plan (POMCP_bio) on canonical 60 x 5 seeds (300 rows). Source for the PomcpBio / Frontier-Plan RPA.",
+      "contentUrl": "https://anonymous.4open.science/r/LatMaz-0769/data_released/results/c260316-171035_pomcp_bio_FIXED.csv",
+      "encodingFormat": "text/csv",
+      "sha256": "47515cf43edb295cea17ca3500524cd975482f1e52b8dab99c0b90e9ae124747"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "pretrain_csv",
+      "name": "c260316-171035_pretrain_FIXED.csv",
+      "description": "Pretrained variants of DQN, DRQN_seq, DRQN_rand using prior sessions of the same animal-and-maze, evaluated on canonical 60 x 5 seeds (1,710 rows). Source for the DqnPre / DrqnSeqPre / DrqnRandPre RPAs.",
+      "contentUrl": "https://anonymous.4open.science/r/LatMaz-0769/data_released/results/c260316-171035_pretrain_FIXED.csv",
+      "encodingFormat": "text/csv",
+      "sha256": "8ee58f4fba76eb4398ab5af6c856f6cede8cc8fddc03c66df4b3b5acb9f429fa"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "target_session_pretrain_csv",
+      "name": "c260316-171035_target_session_pretrain_FIXED.csv",
+      "description": "Per-target-session pretraining dose-response sweep (variable number of prior same-animal-and-maze sessions). Used in Appendix pretraining-dose figures and the dose-response Spearman correlation.",
+      "contentUrl": "https://anonymous.4open.science/r/LatMaz-0769/data_released/results/c260316-171035_target_session_pretrain_FIXED.csv",
+      "encodingFormat": "text/csv",
+      "sha256": "feea22ba7ee754d6b52b15c8d995995a12b06d7e7c9baa85e294cc7ab7a94052"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "cloning_agents_csv",
+      "name": "c260413-103634_cloning_agents.csv",
+      "description": "Mouse-bias / behavioural-cloning agents (Clone_ego, Clone_allo_real, Clone_allo_latent) plus FullFwd and NoBkFullFwd heuristics on canonical 60 x 5 seeds x 5 agents (1,500 rows). Source for the Clone* and FullFwd / NoBkFullFwd RPAs.",
+      "contentUrl": "https://anonymous.4open.science/r/LatMaz-0769/data_released/results/c260413-103634_cloning_agents.csv",
+      "encodingFormat": "text/csv",
+      "sha256": "b76cd8ff7ff7d24c2d6adb215e6252e4bd4fa06256810f3422b13b08bdf14c44"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "unified152_csv",
+      "name": "c260419-143924_152sess_14agents_unified.csv",
+      "description": "152-session expanded multi-animal benchmark: 14 no-training agents (heuristics + cloning + intermediate + POMCP/Frontier-Plan + FSC_bio) x 152 sessions x 5 seeds. Provides per-animal coverage beyond canonical-60.",
+      "contentUrl": "https://anonymous.4open.science/r/LatMaz-0769/data_released/results/c260419-143924_152sess_14agents_unified.csv",
+      "encodingFormat": "text/csv",
+      "sha256": "75aa983349cc11acb91ec3abe84e30f07abe8927a6fda5887e544936692822d9"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "scaling_sweep_csv",
+      "name": "c260502-124509_scaling_sweep_v36_to_v4000.csv",
+      "description": "Synthetic-maze scaling sweep V in {36, 100, 225, 400, 900, 1500, 2500, 4000} nodes, 7 agents (Random, Random_forward, Greedy_oracle, POMCP, Frontier-Plan allo + ego, FSC_bio), 3 maze instances x 5 seeds per cell. Wall-clock-bounded (5min/seed primary, 10x per-cell fail-safe).",
+      "contentUrl": "https://anonymous.4open.science/r/LatMaz-0769/data_released/results/c260502-124509_scaling_sweep_v36_to_v4000.csv",
+      "encodingFormat": "text/csv",
+      "sha256": "4d42b411c249492e139cce5537b55247d301f77d7773f1980a219744a99a2a8c"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "rerun452_csv",
+      "name": "c260505-120513_rerun452_corrected_8agents.csv",
+      "description": "Rerun-452 (corrected): HPO-best configs of 8 model-free RL agents (DQN, DRQN_seq, DRQN_rand, A2C, PPO, QRDQN, TRPO, RecurrentPPO) re-evaluated on a held-out cohort of 452 sessions x 5 seeds (18,080 rows). Tests generalization of canonical-60 HPO-best configs to wider animal/maze coverage. Supersedes the earlier c260504-143902 file (archived) which had two latent issues that caused agents to run with AlgoConfig defaults instead of HPO-best.",
+      "contentUrl": "https://anonymous.4open.science/r/LatMaz-0769/data_released/results/c260505-120513_rerun452_corrected_8agents.csv",
+      "encodingFormat": "text/csv",
+      "sha256": "db09400f813bddc575eb57cafd56d3340b5f974d6b16f806a7a3f43db6cd8509"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "a044_allo_no_training_csv",
+      "name": "c260504-152527_a044_allo_no_training_agents.csv",
+      "description": "No-training agents (heuristics + cloning + FSC_bio) on the in-progress allocentric subset (a044 entirely, plus a033 sessions from 2026-03-14 onward; 29 sessions total). Reported separately from the egocentric main benchmark.",
+      "contentUrl": "https://anonymous.4open.science/r/LatMaz-0769/data_released/results/c260504-152527_a044_allo_no_training_agents.csv",
+      "encodingFormat": "text/csv",
+      "sha256": "99269aaaa86bf4b55044fdfb9e8c154e8f398523151a66e6eca1347fe979f910"
+    }
+  ],
+  "recordSet": [
+    {
+      "@type": "cr:RecordSet",
+      "@id": "session",
+      "name": "Mouse session record",
+      "description": "One record per mouse session in the yoking dataframe.",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "session/animal_ID",
+          "name": "animal_ID",
+          "description": "Project-internal mouse identifier (zero-padded 3-digit string, e.g. '031', '033'). Not linked to external identity.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {"@id": "yoked_sessions"},
+            "extract": {"column": "animal_ID"}
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "session/csv_data_path",
+          "name": "csv_data_path",
+          "description": "Relative path to the bundled raw event-log CSV for this session (./data_released/raw_session_csvs/{basename}). Encodes the session timestamp YYMMDD-HHMMSS in the filename.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {"@id": "yoked_sessions"},
+            "extract": {"column": "csv_data_path"}
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "session/states_visited",
+          "name": "states_visited",
+          "description": "Sequence of latent-graph node indices visited in chronological order during the session (Python-list literal stored as text).",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {"@id": "yoked_sessions"},
+            "extract": {"column": "states_visited"}
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "session/adj_file",
+          "name": "adj_file",
+          "description": "Filename of the maze adjacency CSV the session was run on (resolves under data_in/mazes/).",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {"@id": "yoked_sessions"},
+            "extract": {"column": "adj_file"}
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "session/st_pos_file",
+          "name": "st_pos_file",
+          "description": "Filename of the state-position CSV (planar coordinates of nodes for visualisation).",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {"@id": "yoked_sessions"},
+            "extract": {"column": "st_pos_file"}
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "session/n_rewards",
+          "name": "n_rewards",
+          "description": "Total rewards collected by the mouse during the session.",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileObject": {"@id": "yoked_sessions"},
+            "extract": {"column": "n_rewards"}
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "session/start_state",
+          "name": "start_state",
+          "description": "Index of the starting node in the latent graph at session onset.",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileObject": {"@id": "yoked_sessions"},
+            "extract": {"column": "start_state"}
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "session/n_states_visited",
+          "name": "n_states_visited",
+          "description": "Number of state visits in the session (length of states_visited; agent action budget is n_states_visited - 1).",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileObject": {"@id": "yoked_sessions"},
+            "extract": {"column": "n_states_visited"}
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "session/prob_dict_ego",
+          "name": "prob_dict_ego",
+          "description": "Per-state empirical action probability table (mouse's egocentric-frame action distribution conditioned on state). Python-dict literal stored as text. Used to construct the Mouse-bias_ego baseline agent.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {"@id": "yoked_sessions"},
+            "extract": {"column": "prob_dict_ego"}
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "session/prob_dict_allo_real",
+          "name": "prob_dict_allo_real",
+          "description": "Per-state empirical action probability table (allocentric-real frame; physical sensor identity at the apparatus). Used to construct the Mouse-bias_allo_real baseline.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {"@id": "yoked_sessions"},
+            "extract": {"column": "prob_dict_allo_real"}
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "session/prob_dict_allo_latent",
+          "name": "prob_dict_allo_latent",
+          "description": "Per-state empirical action probability table (allocentric-latent frame; compass directions on the latent lattice). Used to construct the Mouse-bias_allo_latent baseline.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {"@id": "yoked_sessions"},
+            "extract": {"column": "prob_dict_allo_latent"}
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,2 @@
+exp_moment,animal_ID,bundled_filename,original_paths,reason
+240824-185403,000,240824-185403_a000_data.csv,./data_in/0_raw_exp_dirs_from_RPi/240824-185241_a000-FIRST_W_USER_PARAMS/240824-185403_a000_data.csv,all candidate paths missing on disk

@@ -1,0 +1,44 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+*.egg-info/
+.ipynb_checkpoints/
+
+# Editor / OS
+.DS_Store
+.idea/
+.vscode/
+*.swp
+*~
+
+# LaTeX build artefacts
+*.aux
+*.bbl
+*.blg
+*.log
+*.out
+*.toc
+*.synctex.gz
+*.fdb_latexmk
+*.fls
+
+# Working directories not part of the release
+data_in/
+data_out/
+
+# Python distribution / build
+build/
+dist/
+
+# audit / handoff artifacts (not part of the public submission)
+# Patterns are root-anchored ("/" prefix) so they only match at the repo
+# root and don't accidentally exclude legitimate timestamp-prefixed files
+# in subtrees (e.g. data_released/results/c260506-001624_paper_values.json).
+/*.zip
+/c260506-*
+/z_*
+/audit_*
+/*_audit_*
+*.bak
+*.bak.z_archive*

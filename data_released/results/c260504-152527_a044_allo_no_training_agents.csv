@@ -1,0 +1,1451 @@
+exp_moment,animal_ID,model,seed,total_reward,n_actions,rpa,status
+260314-234628,033,Random,0,,485,,"error: TypeError(""run_random_agent() got multiple values for argument 'seed'"")"
+260314-234628,033,Random_forward,0,,485,,"error: TypeError(""run_forward_random_agent() got multiple values for argument 'seed'"")"
+260314-234628,033,Greedy_oracle,0,,485,,"error: TypeError(""run_greedy_agent() got multiple values for argument 'seed'"")"
+260314-234628,033,FullFwd,0,16.0,485,0.032989690721649485,ok
+260314-234628,033,NoBkFullFwd,0,16.0,485,0.032989690721649485,ok
+260314-234628,033,FSC_bio,0,16.0,485,0.032989690721649485,ok
+260314-234628,033,Mouse-bias_ego,0,16.0,485,0.032989690721649485,ok
+260314-234628,033,Mouse-bias_allo_real,0,16.0,485,0.032989690721649485,ok
+260314-234628,033,Mouse-bias_allo_latent,0,16.0,485,0.032989690721649485,ok
+260314-234628,033,ConditionalClone_ego,0,16.0,485,0.032989690721649485,ok
+260314-234628,033,Random,1,,485,,"error: TypeError(""run_random_agent() got multiple values for argument 'seed'"")"
+260314-234628,033,Random_forward,1,,485,,"error: TypeError(""run_forward_random_agent() got multiple values for argument 'seed'"")"
+260314-234628,033,Greedy_oracle,1,,485,,"error: TypeError(""run_greedy_agent() got multiple values for argument 'seed'"")"
+260314-234628,033,FullFwd,1,16.0,485,0.032989690721649485,ok
+260314-234628,033,NoBkFullFwd,1,16.0,485,0.032989690721649485,ok
+260314-234628,033,FSC_bio,1,16.0,485,0.032989690721649485,ok
+260314-234628,033,Mouse-bias_ego,1,16.0,485,0.032989690721649485,ok
+260314-234628,033,Mouse-bias_allo_real,1,16.0,485,0.032989690721649485,ok
+260314-234628,033,Mouse-bias_allo_latent,1,16.0,485,0.032989690721649485,ok
+260314-234628,033,ConditionalClone_ego,1,16.0,485,0.032989690721649485,ok
+260314-234628,033,Random,2,,485,,"error: TypeError(""run_random_agent() got multiple values for argument 'seed'"")"
+260314-234628,033,Random_forward,2,,485,,"error: TypeError(""run_forward_random_agent() got multiple values for argument 'seed'"")"
+260314-234628,033,Greedy_oracle,2,,485,,"error: TypeError(""run_greedy_agent() got multiple values for argument 'seed'"")"
+260314-234628,033,FullFwd,2,16.0,485,0.032989690721649485,ok
+260314-234628,033,NoBkFullFwd,2,16.0,485,0.032989690721649485,ok
+260314-234628,033,FSC_bio,2,16.0,485,0.032989690721649485,ok
+260314-234628,033,Mouse-bias_ego,2,16.0,485,0.032989690721649485,ok
+260314-234628,033,Mouse-bias_allo_real,2,16.0,485,0.032989690721649485,ok
+260314-234628,033,Mouse-bias_allo_latent,2,16.0,485,0.032989690721649485,ok
+260314-234628,033,ConditionalClone_ego,2,16.0,485,0.032989690721649485,ok
+260314-234628,033,Random,3,,485,,"error: TypeError(""run_random_agent() got multiple values for argument 'seed'"")"
+260314-234628,033,Random_forward,3,,485,,"error: TypeError(""run_forward_random_agent() got multiple values for argument 'seed'"")"
+260314-234628,033,Greedy_oracle,3,,485,,"error: TypeError(""run_greedy_agent() got multiple values for argument 'seed'"")"
+260314-234628,033,FullFwd,3,16.0,485,0.032989690721649485,ok
+260314-234628,033,NoBkFullFwd,3,16.0,485,0.032989690721649485,ok
+260314-234628,033,FSC_bio,3,16.0,485,0.032989690721649485,ok
+260314-234628,033,Mouse-bias_ego,3,16.0,485,0.032989690721649485,ok
+260314-234628,033,Mouse-bias_allo_real,3,16.0,485,0.032989690721649485,ok
+260314-234628,033,Mouse-bias_allo_latent,3,16.0,485,0.032989690721649485,ok
+260314-234628,033,ConditionalClone_ego,3,16.0,485,0.032989690721649485,ok
+260314-234628,033,Random,4,,485,,"error: TypeError(""run_random_agent() got multiple values for argument 'seed'"")"
+260314-234628,033,Random_forward,4,,485,,"error: TypeError(""run_forward_random_agent() got multiple values for argument 'seed'"")"
+260314-234628,033,Greedy_oracle,4,,485,,"error: TypeError(""run_greedy_agent() got multiple values for argument 'seed'"")"
+260314-234628,033,FullFwd,4,16.0,485,0.032989690721649485,ok
+260314-234628,033,NoBkFullFwd,4,16.0,485,0.032989690721649485,ok
+260314-234628,033,FSC_bio,4,16.0,485,0.032989690721649485,ok
+260314-234628,033,Mouse-bias_ego,4,16.0,485,0.032989690721649485,ok
+260314-234628,033,Mouse-bias_allo_real,4,16.0,485,0.032989690721649485,ok
+260314-234628,033,Mouse-bias_allo_latent,4,16.0,485,0.032989690721649485,ok
+260314-234628,033,ConditionalClone_ego,4,16.0,485,0.032989690721649485,ok
+260316-000638,033,Random,0,,535,,"error: TypeError(""run_random_agent() got multiple values for argument 'seed'"")"
+260316-000638,033,Random_forward,0,,535,,"error: TypeError(""run_forward_random_agent() got multiple values for argument 'seed'"")"
+260316-000638,033,Greedy_oracle,0,,535,,"error: TypeError(""run_greedy_agent() got multiple values for argument 'seed'"")"
+260316-000638,033,FullFwd,0,16.0,535,0.029906542056074768,ok
+260316-000638,033,NoBkFullFwd,0,16.0,535,0.029906542056074768,ok
+260316-000638,033,FSC_bio,0,16.0,535,0.029906542056074768,ok
+260316-000638,033,Mouse-bias_ego,0,16.0,535,0.029906542056074768,ok
+260316-000638,033,Mouse-bias_allo_real,0,16.0,535,0.029906542056074768,ok
+260316-000638,033,Mouse-bias_allo_latent,0,16.0,535,0.029906542056074768,ok
+260316-000638,033,ConditionalClone_ego,0,16.0,535,0.029906542056074768,ok
+260316-000638,033,Random,1,,535,,"error: TypeError(""run_random_agent() got multiple values for argument 'seed'"")"
+260316-000638,033,Random_forward,1,,535,,"error: TypeError(""run_forward_random_agent() got multiple values for argument 'seed'"")"
+260316-000638,033,Greedy_oracle,1,,535,,"error: TypeError(""run_greedy_agent() got multiple values for argument 'seed'"")"
+260316-000638,033,FullFwd,1,16.0,535,0.029906542056074768,ok
+260316-000638,033,NoBkFullFwd,1,16.0,535,0.029906542056074768,ok
+260316-000638,033,FSC_bio,1,16.0,535,0.029906542056074768,ok
+260316-000638,033,Mouse-bias_ego,1,16.0,535,0.029906542056074768,ok
+260316-000638,033,Mouse-bias_allo_real,1,16.0,535,0.029906542056074768,ok
+260316-000638,033,Mouse-bias_allo_latent,1,16.0,535,0.029906542056074768,ok
+260316-000638,033,ConditionalClone_ego,1,16.0,535,0.029906542056074768,ok
+260316-000638,033,Random,2,,535,,"error: TypeError(""run_random_agent() got multiple values for argument 'seed'"")"
+260316-000638,033,Random_forward,2,,535,,"error: TypeError(""run_forward_random_agent() got multiple values for argument 'seed'"")"
+260316-000638,033,Greedy_oracle,2,,535,,"error: TypeError(""run_greedy_agent() got multiple values for argument 'seed'"")"
+260316-000638,033,FullFwd,2,16.0,535,0.029906542056074768,ok
+260316-000638,033,NoBkFullFwd,2,16.0,535,0.029906542056074768,ok
+260316-000638,033,FSC_bio,2,16.0,535,0.029906542056074768,ok
+260316-000638,033,Mouse-bias_ego,2,16.0,535,0.029906542056074768,ok
+260316-000638,033,Mouse-bias_allo_real,2,16.0,535,0.029906542056074768,ok
+260316-000638,033,Mouse-bias_allo_latent,2,16.0,535,0.029906542056074768,ok
+260316-000638,033,ConditionalClone_ego,2,16.0,535,0.029906542056074768,ok
+260316-000638,033,Random,3,,535,,"error: TypeError(""run_random_agent() got multiple values for argument 'seed'"")"
+260316-000638,033,Random_forward,3,,535,,"error: TypeError(""run_forward_random_agent() got multiple values for argument 'seed'"")"
+260316-000638,033,Greedy_oracle,3,,535,,"error: TypeError(""run_greedy_agent() got multiple values for argument 'seed'"")"
+260316-000638,033,FullFwd,3,16.0,535,0.029906542056074768,ok
+260316-000638,033,NoBkFullFwd,3,16.0,535,0.029906542056074768,ok
+260316-000638,033,FSC_bio,3,16.0,535,0.029906542056074768,ok
+260316-000638,033,Mouse-bias_ego,3,16.0,535,0.029906542056074768,ok
+260316-000638,033,Mouse-bias_allo_real,3,16.0,535,0.029906542056074768,ok
+260316-000638,033,Mouse-bias_allo_latent,3,16.0,535,0.029906542056074768,ok
+260316-000638,033,ConditionalClone_ego,3,16.0,535,0.029906542056074768,ok
+260316-000638,033,Random,4,,535,,"error: TypeError(""run_random_agent() got multiple values for argument 'seed'"")"
+260316-000638,033,Random_forward,4,,535,,"error: TypeError(""run_forward_random_agent() got multiple values for argument 'seed'"")"
+260316-000638,033,Greedy_oracle,4,,535,,"error: TypeError(""run_greedy_agent() got multiple values for argument 'seed'"")"
+260316-000638,033,FullFwd,4,16.0,535,0.029906542056074768,ok
+260316-000638,033,NoBkFullFwd,4,16.0,535,0.029906542056074768,ok
+260316-000638,033,FSC_bio,4,16.0,535,0.029906542056074768,ok
+260316-000638,033,Mouse-bias_ego,4,16.0,535,0.029906542056074768,ok
+260316-000638,033,Mouse-bias_allo_real,4,16.0,535,0.029906542056074768,ok
+260316-000638,033,Mouse-bias_allo_latent,4,16.0,535,0.029906542056074768,ok
+260316-000638,033,ConditionalClone_ego,4,16.0,535,0.029906542056074768,ok
+260316-230259,033,Random,0,,272,,"error: TypeError(""run_random_agent() got multiple values for argument 'seed'"")"
+260316-230259,033,Random_forward,0,,272,,"error: TypeError(""run_forward_random_agent() got multiple values for argument 'seed'"")"
+260316-230259,033,Greedy_oracle,0,,272,,"error: TypeError(""run_greedy_agent() got multiple values for argument 'seed'"")"
+260316-230259,033,FullFwd,0,16.0,272,0.058823529411764705,ok
+260316-230259,033,NoBkFullFwd,0,16.0,272,0.058823529411764705,ok
+260316-230259,033,FSC_bio,0,16.0,272,0.058823529411764705,ok
+260316-230259,033,Mouse-bias_ego,0,16.0,272,0.058823529411764705,ok
+260316-230259,033,Mouse-bias_allo_real,0,16.0,272,0.058823529411764705,ok
+260316-230259,033,Mouse-bias_allo_latent,0,16.0,272,0.058823529411764705,ok
+260316-230259,033,ConditionalClone_ego,0,16.0,272,0.058823529411764705,ok
+260316-230259,033,Random,1,,272,,"error: TypeError(""run_random_agent() got multiple values for argument 'seed'"")"
+260316-230259,033,Random_forward,1,,272,,"error: TypeError(""run_forward_random_agent() got multiple values for argument 'seed'"")"
+260316-230259,033,Greedy_oracle,1,,272,,"error: TypeError(""run_greedy_agent() got multiple values for argument 'seed'"")"
+260316-230259,033,FullFwd,1,16.0,272,0.058823529411764705,ok
+260316-230259,033,NoBkFullFwd,1,16.0,272,0.058823529411764705,ok
+260316-230259,033,FSC_bio,1,16.0,272,0.058823529411764705,ok
+260316-230259,033,Mouse-bias_ego,1,16.0,272,0.058823529411764705,ok
+260316-230259,033,Mouse-bias_allo_real,1,16.0,272,0.058823529411764705,ok
+260316-230259,033,Mouse-bias_allo_latent,1,16.0,272,0.058823529411764705,ok
+260316-230259,033,ConditionalClone_ego,1,16.0,272,0.058823529411764705,ok
+260316-230259,033,Random,2,,272,,"error: TypeError(""run_random_agent() got multiple values for argument 'seed'"")"
+260316-230259,033,Random_forward,2,,272,,"error: TypeError(""run_forward_random_agent() got multiple values for argument 'seed'"")"
+260316-230259,033,Greedy_oracle,2,,272,,"error: TypeError(""run_greedy_agent() got multiple values for argument 'seed'"")"
+260316-230259,033,FullFwd,2,16.0,272,0.058823529411764705,ok
+260316-230259,033,NoBkFullFwd,2,16.0,272,0.058823529411764705,ok
+260316-230259,033,FSC_bio,2,16.0,272,0.058823529411764705,ok
+260316-230259,033,Mouse-bias_ego,2,16.0,272,0.058823529411764705,ok
+260316-230259,033,Mouse-bias_allo_real,2,16.0,272,0.058823529411764705,ok
+260316-230259,033,Mouse-bias_allo_latent,2,16.0,272,0.058823529411764705,ok
+260316-230259,033,ConditionalClone_ego,2,16.0,272,0.058823529411764705,ok
+260316-230259,033,Random,3,,272,,"error: TypeError(""run_random_agent() got multiple values for argument 'seed'"")"
+260316-230259,033,Random_forward,3,,272,,"error: TypeError(""run_forward_random_agent() got multiple values for argument 'seed'"")"
+260316-230259,033,Greedy_oracle,3,,272,,"error: TypeError(""run_greedy_agent() got multiple values for argument 'seed'"")"
+260316-230259,033,FullFwd,3,16.0,272,0.058823529411764705,ok
+260316-230259,033,NoBkFullFwd,3,16.0,272,0.058823529411764705,ok
+260316-230259,033,FSC_bio,3,16.0,272,0.058823529411764705,ok
+260316-230259,033,Mouse-bias_ego,3,16.0,272,0.058823529411764705,ok
+260316-230259,033,Mouse-bias_allo_real,3,16.0,272,0.058823529411764705,ok
+260316-230259,033,Mouse-bias_allo_latent,3,16.0,272,0.058823529411764705,ok
+260316-230259,033,ConditionalClone_ego,3,16.0,272,0.058823529411764705,ok
+260316-230259,033,Random,4,,272,,"error: TypeError(""run_random_agent() got multiple values for argument 'seed'"")"
+260316-230259,033,Random_forward,4,,272,,"error: TypeError(""run_forward_random_agent() got multiple values for argument 'seed'"")"
+260316-230259,033,Greedy_oracle,4,,272,,"error: TypeError(""run_greedy_agent() got multiple values for argument 'seed'"")"
+260316-230259,033,FullFwd,4,16.0,272,0.058823529411764705,ok
+260316-230259,033,NoBkFullFwd,4,16.0,272,0.058823529411764705,ok
+260316-230259,033,FSC_bio,4,16.0,272,0.058823529411764705,ok
+260316-230259,033,Mouse-bias_ego,4,16.0,272,0.058823529411764705,ok
+260316-230259,033,Mouse-bias_allo_real,4,16.0,272,0.058823529411764705,ok
+260316-230259,033,Mouse-bias_allo_latent,4,16.0,272,0.058823529411764705,ok
+260316-230259,033,ConditionalClone_ego,4,16.0,272,0.058823529411764705,ok
+260317-234056,033,Random,0,,191,,"error: TypeError(""run_random_agent() got multiple values for argument 'seed'"")"
+260317-234056,033,Random_forward,0,,191,,"error: TypeError(""run_forward_random_agent() got multiple values for argument 'seed'"")"
+260317-234056,033,Greedy_oracle,0,,191,,"error: TypeError(""run_greedy_agent() got multiple values for argument 'seed'"")"
+260317-234056,033,FullFwd,0,16.0,191,0.08376963350785341,ok
+260317-234056,033,NoBkFullFwd,0,16.0,191,0.08376963350785341,ok
+260317-234056,033,FSC_bio,0,16.0,191,0.08376963350785341,ok
+260317-234056,033,Mouse-bias_ego,0,16.0,191,0.08376963350785341,ok
+260317-234056,033,Mouse-bias_allo_real,0,16.0,191,0.08376963350785341,ok
+260317-234056,033,Mouse-bias_allo_latent,0,16.0,191,0.08376963350785341,ok
+260317-234056,033,ConditionalClone_ego,0,14.0,191,0.07329842931937172,ok
+260317-234056,033,Random,1,,191,,"error: TypeError(""run_random_agent() got multiple values for argument 'seed'"")"
+260317-234056,033,Random_forward,1,,191,,"error: TypeError(""run_forward_random_agent() got multiple values for argument 'seed'"")"
+260317-234056,033,Greedy_oracle,1,,191,,"error: TypeError(""run_greedy_agent() got multiple values for argument 'seed'"")"
+260317-234056,033,FullFwd,1,16.0,191,0.08376963350785341,ok
+260317-234056,033,NoBkFullFwd,1,16.0,191,0.08376963350785341,ok
+260317-234056,033,FSC_bio,1,16.0,191,0.08376963350785341,ok
+260317-234056,033,Mouse-bias_ego,1,16.0,191,0.08376963350785341,ok
+260317-234056,033,Mouse-bias_allo_real,1,16.0,191,0.08376963350785341,ok
+260317-234056,033,Mouse-bias_allo_latent,1,16.0,191,0.08376963350785341,ok
+260317-234056,033,ConditionalClone_ego,1,11.0,191,0.05759162303664921,ok
+260317-234056,033,Random,2,,191,,"error: TypeError(""run_random_agent() got multiple values for argument 'seed'"")"
+260317-234056,033,Random_forward,2,,191,,"error: TypeError(""run_forward_random_agent() got multiple values for argument 'seed'"")"
+260317-234056,033,Greedy_oracle,2,,191,,"error: TypeError(""run_greedy_agent() got multiple values for argument 'seed'"")"
+260317-234056,033,FullFwd,2,16.0,191,0.08376963350785341,ok
+260317-234056,033,NoBkFullFwd,2,16.0,191,0.08376963350785341,ok
+260317-234056,033,FSC_bio,2,16.0,191,0.08376963350785341,ok
+260317-234056,033,Mouse-bias_ego,2,16.0,191,0.08376963350785341,ok
+260317-234056,033,Mouse-bias_allo_real,2,16.0,191,0.08376963350785341,ok
+260317-234056,033,Mouse-bias_allo_latent,2,16.0,191,0.08376963350785341,ok
+260317-234056,033,ConditionalClone_ego,2,14.0,191,0.07329842931937172,ok
+260317-234056,033,Random,3,,191,,"error: TypeError(""run_random_agent() got multiple values for argument 'seed'"")"
+260317-234056,033,Random_forward,3,,191,,"error: TypeError(""run_forward_random_agent() got multiple values for argument 'seed'"")"
+260317-234056,033,Greedy_oracle,3,,191,,"error: TypeError(""run_greedy_agent() got multiple values for argument 'seed'"")"
+260317-234056,033,FullFwd,3,15.0,191,0.07853403141361257,ok
+260317-234056,033,NoBkFullFwd,3,16.0,191,0.08376963350785341,ok
+260317-234056,033,FSC_bio,3,16.0,191,0.08376963350785341,ok
+260317-234056,033,Mouse-bias_ego,3,16.0,191,0.08376963350785341,ok
+260317-234056,033,Mouse-bias_allo_real,3,16.0,191,0.08376963350785341,ok
+260317-234056,033,Mouse-bias_allo_latent,3,16.0,191,0.08376963350785341,ok
+260317-234056,033,ConditionalClone_ego,3,12.0,191,0.06282722513089005,ok
+260317-234056,033,Random,4,,191,,"error: TypeError(""run_random_agent() got multiple values for argument 'seed'"")"
+260317-234056,033,Random_forward,4,,191,,"error: TypeError(""run_forward_random_agent() got multiple values for argument 'seed'"")"
+260317-234056,033,Greedy_oracle,4,,191,,"error: TypeError(""run_greedy_agent() got multiple values for argument 'seed'"")"
+260317-234056,033,FullFwd,4,16.0,191,0.08376963350785341,ok
+260317-234056,033,NoBkFullFwd,4,16.0,191,0.08376963350785341,ok
+260317-234056,033,FSC_bio,4,16.0,191,0.08376963350785341,ok
+260317-234056,033,Mouse-bias_ego,4,16.0,191,0.08376963350785341,ok
+260317-234056,033,Mouse-bias_allo_real,4,16.0,191,0.08376963350785341,ok
+260317-234056,033,Mouse-bias_allo_latent,4,16.0,191,0.08376963350785341,ok
+260317-234056,033,ConditionalClone_ego,4,15.0,191,0.07853403141361257,ok
+260318-204155,033,Random,0,,151,,"error: TypeError(""run_random_agent() got multiple values for argument 'seed'"")"
+260318-204155,033,Random_forward,0,,151,,"error: TypeError(""run_forward_random_agent() got multiple values for argument 'seed'"")"
+260318-204155,033,Greedy_oracle,0,,151,,"error: TypeError(""run_greedy_agent() got multiple values for argument 'seed'"")"
+260318-204155,033,FullFwd,0,16.0,151,0.10596026490066225,ok
+260318-204155,033,NoBkFullFwd,0,16.0,151,0.10596026490066225,ok
+260318-204155,033,FSC_bio,0,16.0,151,0.10596026490066225,ok
+260318-204155,033,Mouse-bias_ego,0,15.0,151,0.09933774834437085,ok
+260318-204155,033,Mouse-bias_allo_real,0,10.0,151,0.06622516556291391,ok
+260318-204155,033,Mouse-bias_allo_latent,0,10.0,151,0.06622516556291391,ok
+260318-204155,033,ConditionalClone_ego,0,14.0,151,0.09271523178807947,ok
+260318-204155,033,Random,1,,151,,"error: TypeError(""run_random_agent() got multiple values for argument 'seed'"")"
+260318-204155,033,Random_forward,1,,151,,"error: TypeError(""run_forward_random_agent() got multiple values for argument 'seed'"")"
+260318-204155,033,Greedy_oracle,1,,151,,"error: TypeError(""run_greedy_agent() got multiple values for argument 'seed'"")"
+260318-204155,033,FullFwd,1,16.0,151,0.10596026490066225,ok
+260318-204155,033,NoBkFullFwd,1,16.0,151,0.10596026490066225,ok
+260318-204155,033,FSC_bio,1,16.0,151,0.10596026490066225,ok
+260318-204155,033,Mouse-bias_ego,1,16.0,151,0.10596026490066225,ok
+260318-204155,033,Mouse-bias_allo_real,1,16.0,151,0.10596026490066225,ok
+260318-204155,033,Mouse-bias_allo_latent,1,16.0,151,0.10596026490066225,ok
+260318-204155,033,ConditionalClone_ego,1,16.0,151,0.10596026490066225,ok
+260318-204155,033,Random,2,,151,,"error: TypeError(""run_random_agent() got multiple values for argument 'seed'"")"
+260318-204155,033,Random_forward,2,,151,,"error: TypeError(""run_forward_random_agent() got multiple values for argument 'seed'"")"
+260318-204155,033,Greedy_oracle,2,,151,,"error: TypeError(""run_greedy_agent() got multiple values for argument 'seed'"")"
+260318-204155,033,FullFwd,2,16.0,151,0.10596026490066225,ok
+260318-204155,033,NoBkFullFwd,2,16.0,151,0.10596026490066225,ok
+260318-204155,033,FSC_bio,2,16.0,151,0.10596026490066225,ok
+260318-204155,033,Mouse-bias_ego,2,16.0,151,0.10596026490066225,ok
+260318-204155,033,Mouse-bias_allo_real,2,16.0,151,0.10596026490066225,ok
+260318-204155,033,Mouse-bias_allo_latent,2,16.0,151,0.10596026490066225,ok
+260318-204155,033,ConditionalClone_ego,2,15.0,151,0.09933774834437085,ok
+260318-204155,033,Random,3,,151,,"error: TypeError(""run_random_agent() got multiple values for argument 'seed'"")"
+260318-204155,033,Random_forward,3,,151,,"error: TypeError(""run_forward_random_agent() got multiple values for argument 'seed'"")"
+260318-204155,033,Greedy_oracle,3,,151,,"error: TypeError(""run_greedy_agent() got multiple values for argument 'seed'"")"
+260318-204155,033,FullFwd,3,15.0,151,0.09933774834437085,ok
+260318-204155,033,NoBkFullFwd,3,16.0,151,0.10596026490066225,ok
+260318-204155,033,FSC_bio,3,16.0,151,0.10596026490066225,ok
+260318-204155,033,Mouse-bias_ego,3,16.0,151,0.10596026490066225,ok
+260318-204155,033,Mouse-bias_allo_real,3,16.0,151,0.10596026490066225,ok
+260318-204155,033,Mouse-bias_allo_latent,3,16.0,151,0.10596026490066225,ok
+260318-204155,033,ConditionalClone_ego,3,16.0,151,0.10596026490066225,ok
+260318-204155,033,Random,4,,151,,"error: TypeError(""run_random_agent() got multiple values for argument 'seed'"")"
+260318-204155,033,Random_forward,4,,151,,"error: TypeError(""run_forward_random_agent() got multiple values for argument 'seed'"")"
+260318-204155,033,Greedy_oracle,4,,151,,"error: TypeError(""run_greedy_agent() got multiple values for argument 'seed'"")"
+260318-204155,033,FullFwd,4,16.0,151,0.10596026490066225,ok
+260318-204155,033,NoBkFullFwd,4,16.0,151,0.10596026490066225,ok
+260318-204155,033,FSC_bio,4,16.0,151,0.10596026490066225,ok
+260318-204155,033,Mouse-bias_ego,4,16.0,151,0.10596026490066225,ok
+260318-204155,033,Mouse-bias_allo_real,4,16.0,151,0.10596026490066225,ok
+260318-204155,033,Mouse-bias_allo_latent,4,16.0,151,0.10596026490066225,ok
+260318-204155,033,ConditionalClone_ego,4,16.0,151,0.10596026490066225,ok
+260408-175657,044,Random,0,,72,,"error: TypeError(""run_random_agent() got multiple values for argument 'seed'"")"
+260408-175657,044,Random_forward,0,,72,,"error: TypeError(""run_forward_random_agent() got multiple values for argument 'seed'"")"
+260408-175657,044,Greedy_oracle,0,,72,,"error: TypeError(""run_greedy_agent() got multiple values for argument 'seed'"")"
+260408-175657,044,FullFwd,0,12.0,72,0.16666666666666666,ok
+260408-175657,044,NoBkFullFwd,0,12.0,72,0.16666666666666666,ok
+260408-175657,044,FSC_bio,0,12.0,72,0.16666666666666666,ok
+260408-175657,044,Mouse-bias_ego,0,11.0,72,0.1527777777777778,ok
+260408-175657,044,Mouse-bias_allo_real,0,11.0,72,0.1527777777777778,ok
+260408-175657,044,Mouse-bias_allo_latent,0,11.0,72,0.1527777777777778,ok
+260408-175657,044,ConditionalClone_ego,0,10.0,72,0.1388888888888889,ok
+260408-175657,044,Random,1,,72,,"error: TypeError(""run_random_agent() got multiple values for argument 'seed'"")"
+260408-175657,044,Random_forward,1,,72,,"error: TypeError(""run_forward_random_agent() got multiple values for argument 'seed'"")"
+260408-175657,044,Greedy_oracle,1,,72,,"error: TypeError(""run_greedy_agent() got multiple values for argument 'seed'"")"
+260408-175657,044,FullFwd,1,12.0,72,0.16666666666666666,ok
+260408-175657,044,NoBkFullFwd,1,12.0,72,0.16666666666666666,ok
+260408-175657,044,FSC_bio,1,12.0,72,0.16666666666666666,ok
+260408-175657,044,Mouse-bias_ego,1,8.0,72,0.1111111111111111,ok
+260408-175657,044,Mouse-bias_allo_real,1,12.0,72,0.16666666666666666,ok
+260408-175657,044,Mouse-bias_allo_latent,1,12.0,72,0.16666666666666666,ok
+260408-175657,044,ConditionalClone_ego,1,11.0,72,0.1527777777777778,ok
+260408-175657,044,Random,2,,72,,"error: TypeError(""run_random_agent() got multiple values for argument 'seed'"")"
+260408-175657,044,Random_forward,2,,72,,"error: TypeError(""run_forward_random_agent() got multiple values for argument 'seed'"")"
+260408-175657,044,Greedy_oracle,2,,72,,"error: TypeError(""run_greedy_agent() got multiple values for argument 'seed'"")"
+260408-175657,044,FullFwd,2,12.0,72,0.16666666666666666,ok
+260408-175657,044,NoBkFullFwd,2,12.0,72,0.16666666666666666,ok
+260408-175657,044,FSC_bio,2,12.0,72,0.16666666666666666,ok
+260408-175657,044,Mouse-bias_ego,2,10.0,72,0.1388888888888889,ok
+260408-175657,044,Mouse-bias_allo_real,2,8.0,72,0.1111111111111111,ok
+260408-175657,044,Mouse-bias_allo_latent,2,8.0,72,0.1111111111111111,ok
+260408-175657,044,ConditionalClone_ego,2,10.0,72,0.1388888888888889,ok
+260408-175657,044,Random,3,,72,,"error: TypeError(""run_random_agent() got multiple values for argument 'seed'"")"
+260408-175657,044,Random_forward,3,,72,,"error: TypeError(""run_forward_random_agent() got multiple values for argument 'seed'"")"
+260408-175657,044,Greedy_oracle,3,,72,,"error: TypeError(""run_greedy_agent() got multiple values for argument 'seed'"")"
+260408-175657,044,FullFwd,3,9.0,72,0.125,ok
+260408-175657,044,NoBkFullFwd,3,12.0,72,0.16666666666666666,ok
+260408-175657,044,FSC_bio,3,12.0,72,0.16666666666666666,ok
+260408-175657,044,Mouse-bias_ego,3,9.0,72,0.125,ok
+260408-175657,044,Mouse-bias_allo_real,3,12.0,72,0.16666666666666666,ok
+260408-175657,044,Mouse-bias_allo_latent,3,12.0,72,0.16666666666666666,ok
+260408-175657,044,ConditionalClone_ego,3,7.0,72,0.09722222222222222,ok
+260408-175657,044,Random,4,,72,,"error: TypeError(""run_random_agent() got multiple values for argument 'seed'"")"
+260408-175657,044,Random_forward,4,,72,,"error: TypeError(""run_forward_random_agent() got multiple values for argument 'seed'"")"
+260408-175657,044,Greedy_oracle,4,,72,,"error: TypeError(""run_greedy_agent() got multiple values for argument 'seed'"")"
+260408-175657,044,FullFwd,4,9.0,72,0.125,ok
+260408-175657,044,NoBkFullFwd,4,12.0,72,0.16666666666666666,ok
+260408-175657,044,FSC_bio,4,12.0,72,0.16666666666666666,ok
+260408-175657,044,Mouse-bias_ego,4,9.0,72,0.125,ok
+260408-175657,044,Mouse-bias_allo_real,4,12.0,72,0.16666666666666666,ok
+260408-175657,044,Mouse-bias_allo_latent,4,12.0,72,0.16666666666666666,ok
+260408-175657,044,ConditionalClone_ego,4,12.0,72,0.16666666666666666,ok
+260408-222044,044,Random,0,,174,,"error: TypeError(""run_random_agent() got multiple values for argument 'seed'"")"
+260408-222044,044,Random_forward,0,,174,,"error: TypeError(""run_forward_random_agent() got multiple values for argument 'seed'"")"
+260408-222044,044,Greedy_oracle,0,,174,,"error: TypeError(""run_greedy_agent() got multiple values for argument 'seed'"")"
+260408-222044,044,FullFwd,0,12.0,174,0.06896551724137931,ok
+260408-222044,044,NoBkFullFwd,0,12.0,174,0.06896551724137931,ok
+260408-222044,044,FSC_bio,0,12.0,174,0.06896551724137931,ok
+260408-222044,044,Mouse-bias_ego,0,12.0,174,0.06896551724137931,ok
+260408-222044,044,Mouse-bias_allo_real,0,12.0,174,0.06896551724137931,ok
+260408-222044,044,Mouse-bias_allo_latent,0,12.0,174,0.06896551724137931,ok
+260408-222044,044,ConditionalClone_ego,0,12.0,174,0.06896551724137931,ok
+260408-222044,044,Random,1,,174,,"error: TypeError(""run_random_agent() got multiple values for argument 'seed'"")"
+260408-222044,044,Random_forward,1,,174,,"error: TypeError(""run_forward_random_agent() got multiple values for argument 'seed'"")"
+260408-222044,044,Greedy_oracle,1,,174,,"error: TypeError(""run_greedy_agent() got multiple values for argument 'seed'"")"
+260408-222044,044,FullFwd,1,12.0,174,0.06896551724137931,ok
+260408-222044,044,NoBkFullFwd,1,12.0,174,0.06896551724137931,ok
+260408-222044,044,FSC_bio,1,12.0,174,0.06896551724137931,ok
+260408-222044,044,Mouse-bias_ego,1,12.0,174,0.06896551724137931,ok
+260408-222044,044,Mouse-bias_allo_real,1,11.0,174,0.06321839080459771,ok
+260408-222044,044,Mouse-bias_allo_latent,1,11.0,174,0.06321839080459771,ok
+260408-222044,044,ConditionalClone_ego,1,12.0,174,0.06896551724137931,ok
+260408-222044,044,Random,2,,174,,"error: TypeError(""run_random_agent() got multiple values for argument 'seed'"")"
+260408-222044,044,Random_forward,2,,174,,"error: TypeError(""run_forward_random_agent() got multiple values for argument 'seed'"")"
+260408-222044,044,Greedy_oracle,2,,174,,"error: TypeError(""run_greedy_agent() got multiple values for argument 'seed'"")"
+260408-222044,044,FullFwd,2,12.0,174,0.06896551724137931,ok
+260408-222044,044,NoBkFullFwd,2,12.0,174,0.06896551724137931,ok
+260408-222044,044,FSC_bio,2,12.0,174,0.06896551724137931,ok
+260408-222044,044,Mouse-bias_ego,2,12.0,174,0.06896551724137931,ok
+260408-222044,044,Mouse-bias_allo_real,2,12.0,174,0.06896551724137931,ok
+260408-222044,044,Mouse-bias_allo_latent,2,12.0,174,0.06896551724137931,ok
+260408-222044,044,ConditionalClone_ego,2,12.0,174,0.06896551724137931,ok
+260408-222044,044,Random,3,,174,,"error: TypeError(""run_random_agent() got multiple values for argument 'seed'"")"
+260408-222044,044,Random_forward,3,,174,,"error: TypeError(""run_forward_random_agent() got multiple values for argument 'seed'"")"
+260408-222044,044,Greedy_oracle,3,,174,,"error: TypeError(""run_greedy_agent() got multiple values for argument 'seed'"")"
+260408-222044,044,FullFwd,3,12.0,174,0.06896551724137931,ok
+260408-222044,044,NoBkFullFwd,3,12.0,174,0.06896551724137931,ok
+260408-222044,044,FSC_bio,3,12.0,174,0.06896551724137931,ok
+260408-222044,044,Mouse-bias_ego,3,12.0,174,0.06896551724137931,ok
+260408-222044,044,Mouse-bias_allo_real,3,12.0,174,0.06896551724137931,ok
+260408-222044,044,Mouse-bias_allo_latent,3,12.0,174,0.06896551724137931,ok
+260408-222044,044,ConditionalClone_ego,3,12.0,174,0.06896551724137931,ok
+260408-222044,044,Random,4,,174,,"error: TypeError(""run_random_agent() got multiple values for argument 'seed'"")"
+260408-222044,044,Random_forward,4,,174,,"error: TypeError(""run_forward_random_agent() got multiple values for argument 'seed'"")"
+260408-222044,044,Greedy_oracle,4,,174,,"error: TypeError(""run_greedy_agent() got multiple values for argument 'seed'"")"
+260408-222044,044,FullFwd,4,12.0,174,0.06896551724137931,ok
+260408-222044,044,NoBkFullFwd,4,12.0,174,0.06896551724137931,ok
+260408-222044,044,FSC_bio,4,12.0,174,0.06896551724137931,ok
+260408-222044,044,Mouse-bias_ego,4,10.0,174,0.05747126436781609,ok
+260408-222044,044,Mouse-bias_allo_real,4,12.0,174,0.06896551724137931,ok
+260408-222044,044,Mouse-bias_allo_latent,4,12.0,174,0.06896551724137931,ok
+260408-222044,044,ConditionalClone_ego,4,12.0,174,0.06896551724137931,ok
+260409-203034,044,Random,0,,158,,"error: TypeError(""run_random_agent() got multiple values for argument 'seed'"")"
+260409-203034,044,Random_forward,0,,158,,"error: TypeError(""run_forward_random_agent() got multiple values for argument 'seed'"")"
+260409-203034,044,Greedy_oracle,0,,158,,"error: TypeError(""run_greedy_agent() got multiple values for argument 'seed'"")"
+260409-203034,044,FullFwd,0,12.0,158,0.0759493670886076,ok
+260409-203034,044,NoBkFullFwd,0,12.0,158,0.0759493670886076,ok
+260409-203034,044,FSC_bio,0,12.0,158,0.0759493670886076,ok
+260409-203034,044,Mouse-bias_ego,0,12.0,158,0.0759493670886076,ok
+260409-203034,044,Mouse-bias_allo_real,0,12.0,158,0.0759493670886076,ok
+260409-203034,044,Mouse-bias_allo_latent,0,12.0,158,0.0759493670886076,ok
+260409-203034,044,ConditionalClone_ego,0,12.0,158,0.0759493670886076,ok
+260409-203034,044,Random,1,,158,,"error: TypeError(""run_random_agent() got multiple values for argument 'seed'"")"
+260409-203034,044,Random_forward,1,,158,,"error: TypeError(""run_forward_random_agent() got multiple values for argument 'seed'"")"
+260409-203034,044,Greedy_oracle,1,,158,,"error: TypeError(""run_greedy_agent() got multiple values for argument 'seed'"")"
+260409-203034,044,FullFwd,1,12.0,158,0.0759493670886076,ok
+260409-203034,044,NoBkFullFwd,1,12.0,158,0.0759493670886076,ok
+260409-203034,044,FSC_bio,1,12.0,158,0.0759493670886076,ok
+260409-203034,044,Mouse-bias_ego,1,12.0,158,0.0759493670886076,ok
+260409-203034,044,Mouse-bias_allo_real,1,11.0,158,0.06962025316455696,ok
+260409-203034,044,Mouse-bias_allo_latent,1,11.0,158,0.06962025316455696,ok
+260409-203034,044,ConditionalClone_ego,1,12.0,158,0.0759493670886076,ok
+260409-203034,044,Random,2,,158,,"error: TypeError(""run_random_agent() got multiple values for argument 'seed'"")"
+260409-203034,044,Random_forward,2,,158,,"error: TypeError(""run_forward_random_agent() got multiple values for argument 'seed'"")"
+260409-203034,044,Greedy_oracle,2,,158,,"error: TypeError(""run_greedy_agent() got multiple values for argument 'seed'"")"
+260409-203034,044,FullFwd,2,12.0,158,0.0759493670886076,ok
+260409-203034,044,NoBkFullFwd,2,12.0,158,0.0759493670886076,ok
+260409-203034,044,FSC_bio,2,12.0,158,0.0759493670886076,ok
+260409-203034,044,Mouse-bias_ego,2,12.0,158,0.0759493670886076,ok
+260409-203034,044,Mouse-bias_allo_real,2,12.0,158,0.0759493670886076,ok
+260409-203034,044,Mouse-bias_allo_latent,2,12.0,158,0.0759493670886076,ok
+260409-203034,044,ConditionalClone_ego,2,12.0,158,0.0759493670886076,ok
+260409-203034,044,Random,3,,158,,"error: TypeError(""run_random_agent() got multiple values for argument 'seed'"")"
+260409-203034,044,Random_forward,3,,158,,"error: TypeError(""run_forward_random_agent() got multiple values for argument 'seed'"")"
+260409-203034,044,Greedy_oracle,3,,158,,"error: TypeError(""run_greedy_agent() got multiple values for argument 'seed'"")"
+260409-203034,044,FullFwd,3,12.0,158,0.0759493670886076,ok
+260409-203034,044,NoBkFullFwd,3,12.0,158,0.0759493670886076,ok
+260409-203034,044,FSC_bio,3,12.0,158,0.0759493670886076,ok
+260409-203034,044,Mouse-bias_ego,3,12.0,158,0.0759493670886076,ok
+260409-203034,044,Mouse-bias_allo_real,3,12.0,158,0.0759493670886076,ok
+260409-203034,044,Mouse-bias_allo_latent,3,12.0,158,0.0759493670886076,ok
+260409-203034,044,ConditionalClone_ego,3,12.0,158,0.0759493670886076,ok
+260409-203034,044,Random,4,,158,,"error: TypeError(""run_random_agent() got multiple values for argument 'seed'"")"
+260409-203034,044,Random_forward,4,,158,,"error: TypeError(""run_forward_random_agent() got multiple values for argument 'seed'"")"
+260409-203034,044,Greedy_oracle,4,,158,,"error: TypeError(""run_greedy_agent() got multiple values for argument 'seed'"")"
+260409-203034,044,FullFwd,4,12.0,158,0.0759493670886076,ok
+260409-203034,044,NoBkFullFwd,4,12.0,158,0.0759493670886076,ok
+260409-203034,044,FSC_bio,4,12.0,158,0.0759493670886076,ok
+260409-203034,044,Mouse-bias_ego,4,12.0,158,0.0759493670886076,ok
+260409-203034,044,Mouse-bias_allo_real,4,12.0,158,0.0759493670886076,ok
+260409-203034,044,Mouse-bias_allo_latent,4,12.0,158,0.0759493670886076,ok
+260409-203034,044,ConditionalClone_ego,4,12.0,158,0.0759493670886076,ok
+260410-174758,044,Random,0,,298,,"error: TypeError(""run_random_agent() got multiple values for argument 'seed'"")"
+260410-174758,044,Random_forward,0,,298,,"error: TypeError(""run_forward_random_agent() got multiple values for argument 'seed'"")"
+260410-174758,044,Greedy_oracle,0,,298,,"error: TypeError(""run_greedy_agent() got multiple values for argument 'seed'"")"
+260410-174758,044,FullFwd,0,12.0,298,0.040268456375838924,ok
+260410-174758,044,NoBkFullFwd,0,12.0,298,0.040268456375838924,ok
+260410-174758,044,FSC_bio,0,12.0,298,0.040268456375838924,ok
+260410-174758,044,Mouse-bias_ego,0,12.0,298,0.040268456375838924,ok
+260410-174758,044,Mouse-bias_allo_real,0,12.0,298,0.040268456375838924,ok
+260410-174758,044,Mouse-bias_allo_latent,0,12.0,298,0.040268456375838924,ok
+260410-174758,044,ConditionalClone_ego,0,12.0,298,0.040268456375838924,ok
+260410-174758,044,Random,1,,298,,"error: TypeError(""run_random_agent() got multiple values for argument 'seed'"")"
+260410-174758,044,Random_forward,1,,298,,"error: TypeError(""run_forward_random_agent() got multiple values for argument 'seed'"")"
+260410-174758,044,Greedy_oracle,1,,298,,"error: TypeError(""run_greedy_agent() got multiple values for argument 'seed'"")"
+260410-174758,044,FullFwd,1,12.0,298,0.040268456375838924,ok
+260410-174758,044,NoBkFullFwd,1,12.0,298,0.040268456375838924,ok
+260410-174758,044,FSC_bio,1,12.0,298,0.040268456375838924,ok
+260410-174758,044,Mouse-bias_ego,1,12.0,298,0.040268456375838924,ok
+260410-174758,044,Mouse-bias_allo_real,1,12.0,298,0.040268456375838924,ok
+260410-174758,044,Mouse-bias_allo_latent,1,12.0,298,0.040268456375838924,ok
+260410-174758,044,ConditionalClone_ego,1,12.0,298,0.040268456375838924,ok
+260410-174758,044,Random,2,,298,,"error: TypeError(""run_random_agent() got multiple values for argument 'seed'"")"
+260410-174758,044,Random_forward,2,,298,,"error: TypeError(""run_forward_random_agent() got multiple values for argument 'seed'"")"
+260410-174758,044,Greedy_oracle,2,,298,,"error: TypeError(""run_greedy_agent() got multiple values for argument 'seed'"")"
+260410-174758,044,FullFwd,2,12.0,298,0.040268456375838924,ok
+260410-174758,044,NoBkFullFwd,2,12.0,298,0.040268456375838924,ok
+260410-174758,044,FSC_bio,2,12.0,298,0.040268456375838924,ok
+260410-174758,044,Mouse-bias_ego,2,12.0,298,0.040268456375838924,ok
+260410-174758,044,Mouse-bias_allo_real,2,12.0,298,0.040268456375838924,ok
+260410-174758,044,Mouse-bias_allo_latent,2,12.0,298,0.040268456375838924,ok
+260410-174758,044,ConditionalClone_ego,2,12.0,298,0.040268456375838924,ok
+260410-174758,044,Random,3,,298,,"error: TypeError(""run_random_agent() got multiple values for argument 'seed'"")"
+260410-174758,044,Random_forward,3,,298,,"error: TypeError(""run_forward_random_agent() got multiple values for argument 'seed'"")"
+260410-174758,044,Greedy_oracle,3,,298,,"error: TypeError(""run_greedy_agent() got multiple values for argument 'seed'"")"
+260410-174758,044,FullFwd,3,12.0,298,0.040268456375838924,ok
+260410-174758,044,NoBkFullFwd,3,12.0,298,0.040268456375838924,ok
+260410-174758,044,FSC_bio,3,12.0,298,0.040268456375838924,ok
+260410-174758,044,Mouse-bias_ego,3,12.0,298,0.040268456375838924,ok
+260410-174758,044,Mouse-bias_allo_real,3,12.0,298,0.040268456375838924,ok
+260410-174758,044,Mouse-bias_allo_latent,3,12.0,298,0.040268456375838924,ok
+260410-174758,044,ConditionalClone_ego,3,12.0,298,0.040268456375838924,ok
+260410-174758,044,Random,4,,298,,"error: TypeError(""run_random_agent() got multiple values for argument 'seed'"")"
+260410-174758,044,Random_forward,4,,298,,"error: TypeError(""run_forward_random_agent() got multiple values for argument 'seed'"")"
+260410-174758,044,Greedy_oracle,4,,298,,"error: TypeError(""run_greedy_agent() got multiple values for argument 'seed'"")"
+260410-174758,044,FullFwd,4,12.0,298,0.040268456375838924,ok
+260410-174758,044,NoBkFullFwd,4,12.0,298,0.040268456375838924,ok
+260410-174758,044,FSC_bio,4,12.0,298,0.040268456375838924,ok
+260410-174758,044,Mouse-bias_ego,4,12.0,298,0.040268456375838924,ok
+260410-174758,044,Mouse-bias_allo_real,4,12.0,298,0.040268456375838924,ok
+260410-174758,044,Mouse-bias_allo_latent,4,12.0,298,0.040268456375838924,ok
+260410-174758,044,ConditionalClone_ego,4,12.0,298,0.040268456375838924,ok
+260411-180701,044,Random,0,,214,,"error: TypeError(""run_random_agent() got multiple values for argument 'seed'"")"
+260411-180701,044,Random_forward,0,,214,,"error: TypeError(""run_forward_random_agent() got multiple values for argument 'seed'"")"
+260411-180701,044,Greedy_oracle,0,,214,,"error: TypeError(""run_greedy_agent() got multiple values for argument 'seed'"")"
+260411-180701,044,FullFwd,0,12.0,214,0.056074766355140186,ok
+260411-180701,044,NoBkFullFwd,0,12.0,214,0.056074766355140186,ok
+260411-180701,044,FSC_bio,0,12.0,214,0.056074766355140186,ok
+260411-180701,044,Mouse-bias_ego,0,12.0,214,0.056074766355140186,ok
+260411-180701,044,Mouse-bias_allo_real,0,12.0,214,0.056074766355140186,ok
+260411-180701,044,Mouse-bias_allo_latent,0,12.0,214,0.056074766355140186,ok
+260411-180701,044,ConditionalClone_ego,0,12.0,214,0.056074766355140186,ok
+260411-180701,044,Random,1,,214,,"error: TypeError(""run_random_agent() got multiple values for argument 'seed'"")"
+260411-180701,044,Random_forward,1,,214,,"error: TypeError(""run_forward_random_agent() got multiple values for argument 'seed'"")"
+260411-180701,044,Greedy_oracle,1,,214,,"error: TypeError(""run_greedy_agent() got multiple values for argument 'seed'"")"
+260411-180701,044,FullFwd,1,12.0,214,0.056074766355140186,ok
+260411-180701,044,NoBkFullFwd,1,12.0,214,0.056074766355140186,ok
+260411-180701,044,FSC_bio,1,12.0,214,0.056074766355140186,ok
+260411-180701,044,Mouse-bias_ego,1,12.0,214,0.056074766355140186,ok
+260411-180701,044,Mouse-bias_allo_real,1,11.0,214,0.0514018691588785,ok
+260411-180701,044,Mouse-bias_allo_latent,1,11.0,214,0.0514018691588785,ok
+260411-180701,044,ConditionalClone_ego,1,12.0,214,0.056074766355140186,ok
+260411-180701,044,Random,2,,214,,"error: TypeError(""run_random_agent() got multiple values for argument 'seed'"")"
+260411-180701,044,Random_forward,2,,214,,"error: TypeError(""run_forward_random_agent() got multiple values for argument 'seed'"")"
+260411-180701,044,Greedy_oracle,2,,214,,"error: TypeError(""run_greedy_agent() got multiple values for argument 'seed'"")"
+260411-180701,044,FullFwd,2,12.0,214,0.056074766355140186,ok
+260411-180701,044,NoBkFullFwd,2,12.0,214,0.056074766355140186,ok
+260411-180701,044,FSC_bio,2,12.0,214,0.056074766355140186,ok
+260411-180701,044,Mouse-bias_ego,2,12.0,214,0.056074766355140186,ok
+260411-180701,044,Mouse-bias_allo_real,2,12.0,214,0.056074766355140186,ok
+260411-180701,044,Mouse-bias_allo_latent,2,12.0,214,0.056074766355140186,ok
+260411-180701,044,ConditionalClone_ego,2,12.0,214,0.056074766355140186,ok
+260411-180701,044,Random,3,,214,,"error: TypeError(""run_random_agent() got multiple values for argument 'seed'"")"
+260411-180701,044,Random_forward,3,,214,,"error: TypeError(""run_forward_random_agent() got multiple values for argument 'seed'"")"
+260411-180701,044,Greedy_oracle,3,,214,,"error: TypeError(""run_greedy_agent() got multiple values for argument 'seed'"")"
+260411-180701,044,FullFwd,3,12.0,214,0.056074766355140186,ok
+260411-180701,044,NoBkFullFwd,3,12.0,214,0.056074766355140186,ok
+260411-180701,044,FSC_bio,3,12.0,214,0.056074766355140186,ok
+260411-180701,044,Mouse-bias_ego,3,12.0,214,0.056074766355140186,ok
+260411-180701,044,Mouse-bias_allo_real,3,12.0,214,0.056074766355140186,ok
+260411-180701,044,Mouse-bias_allo_latent,3,12.0,214,0.056074766355140186,ok
+260411-180701,044,ConditionalClone_ego,3,12.0,214,0.056074766355140186,ok
+260411-180701,044,Random,4,,214,,"error: TypeError(""run_random_agent() got multiple values for argument 'seed'"")"
+260411-180701,044,Random_forward,4,,214,,"error: TypeError(""run_forward_random_agent() got multiple values for argument 'seed'"")"
+260411-180701,044,Greedy_oracle,4,,214,,"error: TypeError(""run_greedy_agent() got multiple values for argument 'seed'"")"
+260411-180701,044,FullFwd,4,12.0,214,0.056074766355140186,ok
+260411-180701,044,NoBkFullFwd,4,12.0,214,0.056074766355140186,ok
+260411-180701,044,FSC_bio,4,12.0,214,0.056074766355140186,ok
+260411-180701,044,Mouse-bias_ego,4,12.0,214,0.056074766355140186,ok
+260411-180701,044,Mouse-bias_allo_real,4,12.0,214,0.056074766355140186,ok
+260411-180701,044,Mouse-bias_allo_latent,4,12.0,214,0.056074766355140186,ok
+260411-180701,044,ConditionalClone_ego,4,12.0,214,0.056074766355140186,ok
+260412-175257,044,Random,0,,305,,"error: TypeError(""run_random_agent() got multiple values for argument 'seed'"")"
+260412-175257,044,Random_forward,0,,305,,"error: TypeError(""run_forward_random_agent() got multiple values for argument 'seed'"")"
+260412-175257,044,Greedy_oracle,0,,305,,"error: TypeError(""run_greedy_agent() got multiple values for argument 'seed'"")"
+260412-175257,044,FullFwd,0,12.0,305,0.03934426229508197,ok
+260412-175257,044,NoBkFullFwd,0,12.0,305,0.03934426229508197,ok
+260412-175257,044,FSC_bio,0,12.0,305,0.03934426229508197,ok
+260412-175257,044,Mouse-bias_ego,0,12.0,305,0.03934426229508197,ok
+260412-175257,044,Mouse-bias_allo_real,0,12.0,305,0.03934426229508197,ok
+260412-175257,044,Mouse-bias_allo_latent,0,12.0,305,0.03934426229508197,ok
+260412-175257,044,ConditionalClone_ego,0,12.0,305,0.03934426229508197,ok
+260412-175257,044,Random,1,,305,,"error: TypeError(""run_random_agent() got multiple values for argument 'seed'"")"
+260412-175257,044,Random_forward,1,,305,,"error: TypeError(""run_forward_random_agent() got multiple values for argument 'seed'"")"
+260412-175257,044,Greedy_oracle,1,,305,,"error: TypeError(""run_greedy_agent() got multiple values for argument 'seed'"")"
+260412-175257,044,FullFwd,1,12.0,305,0.03934426229508197,ok
+260412-175257,044,NoBkFullFwd,1,12.0,305,0.03934426229508197,ok
+260412-175257,044,FSC_bio,1,12.0,305,0.03934426229508197,ok
+260412-175257,044,Mouse-bias_ego,1,12.0,305,0.03934426229508197,ok
+260412-175257,044,Mouse-bias_allo_real,1,12.0,305,0.03934426229508197,ok
+260412-175257,044,Mouse-bias_allo_latent,1,12.0,305,0.03934426229508197,ok
+260412-175257,044,ConditionalClone_ego,1,12.0,305,0.03934426229508197,ok
+260412-175257,044,Random,2,,305,,"error: TypeError(""run_random_agent() got multiple values for argument 'seed'"")"
+260412-175257,044,Random_forward,2,,305,,"error: TypeError(""run_forward_random_agent() got multiple values for argument 'seed'"")"
+260412-175257,044,Greedy_oracle,2,,305,,"error: TypeError(""run_greedy_agent() got multiple values for argument 'seed'"")"
+260412-175257,044,FullFwd,2,12.0,305,0.03934426229508197,ok
+260412-175257,044,NoBkFullFwd,2,12.0,305,0.03934426229508197,ok
+260412-175257,044,FSC_bio,2,12.0,305,0.03934426229508197,ok
+260412-175257,044,Mouse-bias_ego,2,12.0,305,0.03934426229508197,ok
+260412-175257,044,Mouse-bias_allo_real,2,12.0,305,0.03934426229508197,ok
+260412-175257,044,Mouse-bias_allo_latent,2,12.0,305,0.03934426229508197,ok
+260412-175257,044,ConditionalClone_ego,2,12.0,305,0.03934426229508197,ok
+260412-175257,044,Random,3,,305,,"error: TypeError(""run_random_agent() got multiple values for argument 'seed'"")"
+260412-175257,044,Random_forward,3,,305,,"error: TypeError(""run_forward_random_agent() got multiple values for argument 'seed'"")"
+260412-175257,044,Greedy_oracle,3,,305,,"error: TypeError(""run_greedy_agent() got multiple values for argument 'seed'"")"
+260412-175257,044,FullFwd,3,12.0,305,0.03934426229508197,ok
+260412-175257,044,NoBkFullFwd,3,12.0,305,0.03934426229508197,ok
+260412-175257,044,FSC_bio,3,12.0,305,0.03934426229508197,ok
+260412-175257,044,Mouse-bias_ego,3,12.0,305,0.03934426229508197,ok
+260412-175257,044,Mouse-bias_allo_real,3,12.0,305,0.03934426229508197,ok
+260412-175257,044,Mouse-bias_allo_latent,3,12.0,305,0.03934426229508197,ok
+260412-175257,044,ConditionalClone_ego,3,12.0,305,0.03934426229508197,ok
+260412-175257,044,Random,4,,305,,"error: TypeError(""run_random_agent() got multiple values for argument 'seed'"")"
+260412-175257,044,Random_forward,4,,305,,"error: TypeError(""run_forward_random_agent() got multiple values for argument 'seed'"")"
+260412-175257,044,Greedy_oracle,4,,305,,"error: TypeError(""run_greedy_agent() got multiple values for argument 'seed'"")"
+260412-175257,044,FullFwd,4,12.0,305,0.03934426229508197,ok
+260412-175257,044,NoBkFullFwd,4,12.0,305,0.03934426229508197,ok
+260412-175257,044,FSC_bio,4,12.0,305,0.03934426229508197,ok
+260412-175257,044,Mouse-bias_ego,4,12.0,305,0.03934426229508197,ok
+260412-175257,044,Mouse-bias_allo_real,4,12.0,305,0.03934426229508197,ok
+260412-175257,044,Mouse-bias_allo_latent,4,12.0,305,0.03934426229508197,ok
+260412-175257,044,ConditionalClone_ego,4,12.0,305,0.03934426229508197,ok
+260413-174854,044,Random,0,,224,,"error: TypeError(""run_random_agent() got multiple values for argument 'seed'"")"
+260413-174854,044,Random_forward,0,,224,,"error: TypeError(""run_forward_random_agent() got multiple values for argument 'seed'"")"
+260413-174854,044,Greedy_oracle,0,,224,,"error: TypeError(""run_greedy_agent() got multiple values for argument 'seed'"")"
+260413-174854,044,FullFwd,0,12.0,224,0.05357142857142857,ok
+260413-174854,044,NoBkFullFwd,0,12.0,224,0.05357142857142857,ok
+260413-174854,044,FSC_bio,0,12.0,224,0.05357142857142857,ok
+260413-174854,044,Mouse-bias_ego,0,12.0,224,0.05357142857142857,ok
+260413-174854,044,Mouse-bias_allo_real,0,12.0,224,0.05357142857142857,ok
+260413-174854,044,Mouse-bias_allo_latent,0,12.0,224,0.05357142857142857,ok
+260413-174854,044,ConditionalClone_ego,0,12.0,224,0.05357142857142857,ok
+260413-174854,044,Random,1,,224,,"error: TypeError(""run_random_agent() got multiple values for argument 'seed'"")"
+260413-174854,044,Random_forward,1,,224,,"error: TypeError(""run_forward_random_agent() got multiple values for argument 'seed'"")"
+260413-174854,044,Greedy_oracle,1,,224,,"error: TypeError(""run_greedy_agent() got multiple values for argument 'seed'"")"
+260413-174854,044,FullFwd,1,12.0,224,0.05357142857142857,ok
+260413-174854,044,NoBkFullFwd,1,12.0,224,0.05357142857142857,ok
+260413-174854,044,FSC_bio,1,12.0,224,0.05357142857142857,ok
+260413-174854,044,Mouse-bias_ego,1,12.0,224,0.05357142857142857,ok
+260413-174854,044,Mouse-bias_allo_real,1,12.0,224,0.05357142857142857,ok
+260413-174854,044,Mouse-bias_allo_latent,1,12.0,224,0.05357142857142857,ok
+260413-174854,044,ConditionalClone_ego,1,12.0,224,0.05357142857142857,ok
+260413-174854,044,Random,2,,224,,"error: TypeError(""run_random_agent() got multiple values for argument 'seed'"")"
+260413-174854,044,Random_forward,2,,224,,"error: TypeError(""run_forward_random_agent() got multiple values for argument 'seed'"")"
+260413-174854,044,Greedy_oracle,2,,224,,"error: TypeError(""run_greedy_agent() got multiple values for argument 'seed'"")"
+260413-174854,044,FullFwd,2,12.0,224,0.05357142857142857,ok
+260413-174854,044,NoBkFullFwd,2,12.0,224,0.05357142857142857,ok
+260413-174854,044,FSC_bio,2,12.0,224,0.05357142857142857,ok
+260413-174854,044,Mouse-bias_ego,2,12.0,224,0.05357142857142857,ok
+260413-174854,044,Mouse-bias_allo_real,2,12.0,224,0.05357142857142857,ok
+260413-174854,044,Mouse-bias_allo_latent,2,12.0,224,0.05357142857142857,ok
+260413-174854,044,ConditionalClone_ego,2,12.0,224,0.05357142857142857,ok
+260413-174854,044,Random,3,,224,,"error: TypeError(""run_random_agent() got multiple values for argument 'seed'"")"
+260413-174854,044,Random_forward,3,,224,,"error: TypeError(""run_forward_random_agent() got multiple values for argument 'seed'"")"
+260413-174854,044,Greedy_oracle,3,,224,,"error: TypeError(""run_greedy_agent() got multiple values for argument 'seed'"")"
+260413-174854,044,FullFwd,3,12.0,224,0.05357142857142857,ok
+260413-174854,044,NoBkFullFwd,3,12.0,224,0.05357142857142857,ok
+260413-174854,044,FSC_bio,3,12.0,224,0.05357142857142857,ok
+260413-174854,044,Mouse-bias_ego,3,12.0,224,0.05357142857142857,ok
+260413-174854,044,Mouse-bias_allo_real,3,12.0,224,0.05357142857142857,ok
+260413-174854,044,Mouse-bias_allo_latent,3,12.0,224,0.05357142857142857,ok
+260413-174854,044,ConditionalClone_ego,3,12.0,224,0.05357142857142857,ok
+260413-174854,044,Random,4,,224,,"error: TypeError(""run_random_agent() got multiple values for argument 'seed'"")"
+260413-174854,044,Random_forward,4,,224,,"error: TypeError(""run_forward_random_agent() got multiple values for argument 'seed'"")"
+260413-174854,044,Greedy_oracle,4,,224,,"error: TypeError(""run_greedy_agent() got multiple values for argument 'seed'"")"
+260413-174854,044,FullFwd,4,12.0,224,0.05357142857142857,ok
+260413-174854,044,NoBkFullFwd,4,12.0,224,0.05357142857142857,ok
+260413-174854,044,FSC_bio,4,12.0,224,0.05357142857142857,ok
+260413-174854,044,Mouse-bias_ego,4,12.0,224,0.05357142857142857,ok
+260413-174854,044,Mouse-bias_allo_real,4,12.0,224,0.05357142857142857,ok
+260413-174854,044,Mouse-bias_allo_latent,4,12.0,224,0.05357142857142857,ok
+260413-174854,044,ConditionalClone_ego,4,12.0,224,0.05357142857142857,ok
+260414-173529,044,Random,0,,124,,"error: TypeError(""run_random_agent() got multiple values for argument 'seed'"")"
+260414-173529,044,Random_forward,0,,124,,"error: TypeError(""run_forward_random_agent() got multiple values for argument 'seed'"")"
+260414-173529,044,Greedy_oracle,0,,124,,"error: TypeError(""run_greedy_agent() got multiple values for argument 'seed'"")"
+260414-173529,044,FullFwd,0,12.0,124,0.0967741935483871,ok
+260414-173529,044,NoBkFullFwd,0,12.0,124,0.0967741935483871,ok
+260414-173529,044,FSC_bio,0,12.0,124,0.0967741935483871,ok
+260414-173529,044,Mouse-bias_ego,0,11.0,124,0.08870967741935484,ok
+260414-173529,044,Mouse-bias_allo_real,0,12.0,124,0.0967741935483871,ok
+260414-173529,044,Mouse-bias_allo_latent,0,12.0,124,0.0967741935483871,ok
+260414-173529,044,ConditionalClone_ego,0,9.0,124,0.07258064516129033,ok
+260414-173529,044,Random,1,,124,,"error: TypeError(""run_random_agent() got multiple values for argument 'seed'"")"
+260414-173529,044,Random_forward,1,,124,,"error: TypeError(""run_forward_random_agent() got multiple values for argument 'seed'"")"
+260414-173529,044,Greedy_oracle,1,,124,,"error: TypeError(""run_greedy_agent() got multiple values for argument 'seed'"")"
+260414-173529,044,FullFwd,1,12.0,124,0.0967741935483871,ok
+260414-173529,044,NoBkFullFwd,1,12.0,124,0.0967741935483871,ok
+260414-173529,044,FSC_bio,1,12.0,124,0.0967741935483871,ok
+260414-173529,044,Mouse-bias_ego,1,11.0,124,0.08870967741935484,ok
+260414-173529,044,Mouse-bias_allo_real,1,11.0,124,0.08870967741935484,ok
+260414-173529,044,Mouse-bias_allo_latent,1,11.0,124,0.08870967741935484,ok
+260414-173529,044,ConditionalClone_ego,1,12.0,124,0.0967741935483871,ok
+260414-173529,044,Random,2,,124,,"error: TypeError(""run_random_agent() got multiple values for argument 'seed'"")"
+260414-173529,044,Random_forward,2,,124,,"error: TypeError(""run_forward_random_agent() got multiple values for argument 'seed'"")"
+260414-173529,044,Greedy_oracle,2,,124,,"error: TypeError(""run_greedy_agent() got multiple values for argument 'seed'"")"
+260414-173529,044,FullFwd,2,12.0,124,0.0967741935483871,ok
+260414-173529,044,NoBkFullFwd,2,12.0,124,0.0967741935483871,ok
+260414-173529,044,FSC_bio,2,12.0,124,0.0967741935483871,ok
+260414-173529,044,Mouse-bias_ego,2,12.0,124,0.0967741935483871,ok
+260414-173529,044,Mouse-bias_allo_real,2,12.0,124,0.0967741935483871,ok
+260414-173529,044,Mouse-bias_allo_latent,2,12.0,124,0.0967741935483871,ok
+260414-173529,044,ConditionalClone_ego,2,12.0,124,0.0967741935483871,ok
+260414-173529,044,Random,3,,124,,"error: TypeError(""run_random_agent() got multiple values for argument 'seed'"")"
+260414-173529,044,Random_forward,3,,124,,"error: TypeError(""run_forward_random_agent() got multiple values for argument 'seed'"")"
+260414-173529,044,Greedy_oracle,3,,124,,"error: TypeError(""run_greedy_agent() got multiple values for argument 'seed'"")"
+260414-173529,044,FullFwd,3,12.0,124,0.0967741935483871,ok
+260414-173529,044,NoBkFullFwd,3,12.0,124,0.0967741935483871,ok
+260414-173529,044,FSC_bio,3,12.0,124,0.0967741935483871,ok
+260414-173529,044,Mouse-bias_ego,3,11.0,124,0.08870967741935484,ok
+260414-173529,044,Mouse-bias_allo_real,3,12.0,124,0.0967741935483871,ok
+260414-173529,044,Mouse-bias_allo_latent,3,12.0,124,0.0967741935483871,ok
+260414-173529,044,ConditionalClone_ego,3,12.0,124,0.0967741935483871,ok
+260414-173529,044,Random,4,,124,,"error: TypeError(""run_random_agent() got multiple values for argument 'seed'"")"
+260414-173529,044,Random_forward,4,,124,,"error: TypeError(""run_forward_random_agent() got multiple values for argument 'seed'"")"
+260414-173529,044,Greedy_oracle,4,,124,,"error: TypeError(""run_greedy_agent() got multiple values for argument 'seed'"")"
+260414-173529,044,FullFwd,4,12.0,124,0.0967741935483871,ok
+260414-173529,044,NoBkFullFwd,4,12.0,124,0.0967741935483871,ok
+260414-173529,044,FSC_bio,4,12.0,124,0.0967741935483871,ok
+260414-173529,044,Mouse-bias_ego,4,10.0,124,0.08064516129032258,ok
+260414-173529,044,Mouse-bias_allo_real,4,12.0,124,0.0967741935483871,ok
+260414-173529,044,Mouse-bias_allo_latent,4,12.0,124,0.0967741935483871,ok
+260414-173529,044,ConditionalClone_ego,4,12.0,124,0.0967741935483871,ok
+260416-191722,044,Random,0,,92,,"error: TypeError(""run_random_agent() got multiple values for argument 'seed'"")"
+260416-191722,044,Random_forward,0,,92,,"error: TypeError(""run_forward_random_agent() got multiple values for argument 'seed'"")"
+260416-191722,044,Greedy_oracle,0,,92,,"error: TypeError(""run_greedy_agent() got multiple values for argument 'seed'"")"
+260416-191722,044,FullFwd,0,12.0,92,0.13043478260869565,ok
+260416-191722,044,NoBkFullFwd,0,12.0,92,0.13043478260869565,ok
+260416-191722,044,FSC_bio,0,12.0,92,0.13043478260869565,ok
+260416-191722,044,Mouse-bias_ego,0,9.0,92,0.09782608695652174,ok
+260416-191722,044,Mouse-bias_allo_real,0,12.0,92,0.13043478260869565,ok
+260416-191722,044,Mouse-bias_allo_latent,0,12.0,92,0.13043478260869565,ok
+260416-191722,044,ConditionalClone_ego,0,12.0,92,0.13043478260869565,ok
+260416-191722,044,Random,1,,92,,"error: TypeError(""run_random_agent() got multiple values for argument 'seed'"")"
+260416-191722,044,Random_forward,1,,92,,"error: TypeError(""run_forward_random_agent() got multiple values for argument 'seed'"")"
+260416-191722,044,Greedy_oracle,1,,92,,"error: TypeError(""run_greedy_agent() got multiple values for argument 'seed'"")"
+260416-191722,044,FullFwd,1,12.0,92,0.13043478260869565,ok
+260416-191722,044,NoBkFullFwd,1,12.0,92,0.13043478260869565,ok
+260416-191722,044,FSC_bio,1,12.0,92,0.13043478260869565,ok
+260416-191722,044,Mouse-bias_ego,1,11.0,92,0.11956521739130435,ok
+260416-191722,044,Mouse-bias_allo_real,1,11.0,92,0.11956521739130435,ok
+260416-191722,044,Mouse-bias_allo_latent,1,11.0,92,0.11956521739130435,ok
+260416-191722,044,ConditionalClone_ego,1,12.0,92,0.13043478260869565,ok
+260416-191722,044,Random,2,,92,,"error: TypeError(""run_random_agent() got multiple values for argument 'seed'"")"
+260416-191722,044,Random_forward,2,,92,,"error: TypeError(""run_forward_random_agent() got multiple values for argument 'seed'"")"
+260416-191722,044,Greedy_oracle,2,,92,,"error: TypeError(""run_greedy_agent() got multiple values for argument 'seed'"")"
+260416-191722,044,FullFwd,2,12.0,92,0.13043478260869565,ok
+260416-191722,044,NoBkFullFwd,2,12.0,92,0.13043478260869565,ok
+260416-191722,044,FSC_bio,2,12.0,92,0.13043478260869565,ok
+260416-191722,044,Mouse-bias_ego,2,12.0,92,0.13043478260869565,ok
+260416-191722,044,Mouse-bias_allo_real,2,12.0,92,0.13043478260869565,ok
+260416-191722,044,Mouse-bias_allo_latent,2,12.0,92,0.13043478260869565,ok
+260416-191722,044,ConditionalClone_ego,2,12.0,92,0.13043478260869565,ok
+260416-191722,044,Random,3,,92,,"error: TypeError(""run_random_agent() got multiple values for argument 'seed'"")"
+260416-191722,044,Random_forward,3,,92,,"error: TypeError(""run_forward_random_agent() got multiple values for argument 'seed'"")"
+260416-191722,044,Greedy_oracle,3,,92,,"error: TypeError(""run_greedy_agent() got multiple values for argument 'seed'"")"
+260416-191722,044,FullFwd,3,12.0,92,0.13043478260869565,ok
+260416-191722,044,NoBkFullFwd,3,12.0,92,0.13043478260869565,ok
+260416-191722,044,FSC_bio,3,12.0,92,0.13043478260869565,ok
+260416-191722,044,Mouse-bias_ego,3,11.0,92,0.11956521739130435,ok
+260416-191722,044,Mouse-bias_allo_real,3,12.0,92,0.13043478260869565,ok
+260416-191722,044,Mouse-bias_allo_latent,3,12.0,92,0.13043478260869565,ok
+260416-191722,044,ConditionalClone_ego,3,10.0,92,0.10869565217391304,ok
+260416-191722,044,Random,4,,92,,"error: TypeError(""run_random_agent() got multiple values for argument 'seed'"")"
+260416-191722,044,Random_forward,4,,92,,"error: TypeError(""run_forward_random_agent() got multiple values for argument 'seed'"")"
+260416-191722,044,Greedy_oracle,4,,92,,"error: TypeError(""run_greedy_agent() got multiple values for argument 'seed'"")"
+260416-191722,044,FullFwd,4,10.0,92,0.10869565217391304,ok
+260416-191722,044,NoBkFullFwd,4,12.0,92,0.13043478260869565,ok
+260416-191722,044,FSC_bio,4,12.0,92,0.13043478260869565,ok
+260416-191722,044,Mouse-bias_ego,4,11.0,92,0.11956521739130435,ok
+260416-191722,044,Mouse-bias_allo_real,4,12.0,92,0.13043478260869565,ok
+260416-191722,044,Mouse-bias_allo_latent,4,12.0,92,0.13043478260869565,ok
+260416-191722,044,ConditionalClone_ego,4,12.0,92,0.13043478260869565,ok
+260417-212943,044,Random,0,,142,,"error: TypeError(""run_random_agent() got multiple values for argument 'seed'"")"
+260417-212943,044,Random_forward,0,,142,,"error: TypeError(""run_forward_random_agent() got multiple values for argument 'seed'"")"
+260417-212943,044,Greedy_oracle,0,,142,,"error: TypeError(""run_greedy_agent() got multiple values for argument 'seed'"")"
+260417-212943,044,FullFwd,0,12.0,142,0.08450704225352113,ok
+260417-212943,044,NoBkFullFwd,0,12.0,142,0.08450704225352113,ok
+260417-212943,044,FSC_bio,0,12.0,142,0.08450704225352113,ok
+260417-212943,044,Mouse-bias_ego,0,12.0,142,0.08450704225352113,ok
+260417-212943,044,Mouse-bias_allo_real,0,12.0,142,0.08450704225352113,ok
+260417-212943,044,Mouse-bias_allo_latent,0,12.0,142,0.08450704225352113,ok
+260417-212943,044,ConditionalClone_ego,0,12.0,142,0.08450704225352113,ok
+260417-212943,044,Random,1,,142,,"error: TypeError(""run_random_agent() got multiple values for argument 'seed'"")"
+260417-212943,044,Random_forward,1,,142,,"error: TypeError(""run_forward_random_agent() got multiple values for argument 'seed'"")"
+260417-212943,044,Greedy_oracle,1,,142,,"error: TypeError(""run_greedy_agent() got multiple values for argument 'seed'"")"
+260417-212943,044,FullFwd,1,12.0,142,0.08450704225352113,ok
+260417-212943,044,NoBkFullFwd,1,12.0,142,0.08450704225352113,ok
+260417-212943,044,FSC_bio,1,12.0,142,0.08450704225352113,ok
+260417-212943,044,Mouse-bias_ego,1,12.0,142,0.08450704225352113,ok
+260417-212943,044,Mouse-bias_allo_real,1,12.0,142,0.08450704225352113,ok
+260417-212943,044,Mouse-bias_allo_latent,1,12.0,142,0.08450704225352113,ok
+260417-212943,044,ConditionalClone_ego,1,12.0,142,0.08450704225352113,ok
+260417-212943,044,Random,2,,142,,"error: TypeError(""run_random_agent() got multiple values for argument 'seed'"")"
+260417-212943,044,Random_forward,2,,142,,"error: TypeError(""run_forward_random_agent() got multiple values for argument 'seed'"")"
+260417-212943,044,Greedy_oracle,2,,142,,"error: TypeError(""run_greedy_agent() got multiple values for argument 'seed'"")"
+260417-212943,044,FullFwd,2,12.0,142,0.08450704225352113,ok
+260417-212943,044,NoBkFullFwd,2,12.0,142,0.08450704225352113,ok
+260417-212943,044,FSC_bio,2,12.0,142,0.08450704225352113,ok
+260417-212943,044,Mouse-bias_ego,2,12.0,142,0.08450704225352113,ok
+260417-212943,044,Mouse-bias_allo_real,2,12.0,142,0.08450704225352113,ok
+260417-212943,044,Mouse-bias_allo_latent,2,12.0,142,0.08450704225352113,ok
+260417-212943,044,ConditionalClone_ego,2,11.0,142,0.07746478873239436,ok
+260417-212943,044,Random,3,,142,,"error: TypeError(""run_random_agent() got multiple values for argument 'seed'"")"
+260417-212943,044,Random_forward,3,,142,,"error: TypeError(""run_forward_random_agent() got multiple values for argument 'seed'"")"
+260417-212943,044,Greedy_oracle,3,,142,,"error: TypeError(""run_greedy_agent() got multiple values for argument 'seed'"")"
+260417-212943,044,FullFwd,3,12.0,142,0.08450704225352113,ok
+260417-212943,044,NoBkFullFwd,3,12.0,142,0.08450704225352113,ok
+260417-212943,044,FSC_bio,3,12.0,142,0.08450704225352113,ok
+260417-212943,044,Mouse-bias_ego,3,12.0,142,0.08450704225352113,ok
+260417-212943,044,Mouse-bias_allo_real,3,12.0,142,0.08450704225352113,ok
+260417-212943,044,Mouse-bias_allo_latent,3,12.0,142,0.08450704225352113,ok
+260417-212943,044,ConditionalClone_ego,3,12.0,142,0.08450704225352113,ok
+260417-212943,044,Random,4,,142,,"error: TypeError(""run_random_agent() got multiple values for argument 'seed'"")"
+260417-212943,044,Random_forward,4,,142,,"error: TypeError(""run_forward_random_agent() got multiple values for argument 'seed'"")"
+260417-212943,044,Greedy_oracle,4,,142,,"error: TypeError(""run_greedy_agent() got multiple values for argument 'seed'"")"
+260417-212943,044,FullFwd,4,12.0,142,0.08450704225352113,ok
+260417-212943,044,NoBkFullFwd,4,12.0,142,0.08450704225352113,ok
+260417-212943,044,FSC_bio,4,12.0,142,0.08450704225352113,ok
+260417-212943,044,Mouse-bias_ego,4,11.0,142,0.07746478873239436,ok
+260417-212943,044,Mouse-bias_allo_real,4,12.0,142,0.08450704225352113,ok
+260417-212943,044,Mouse-bias_allo_latent,4,12.0,142,0.08450704225352113,ok
+260417-212943,044,ConditionalClone_ego,4,10.0,142,0.07042253521126761,ok
+260418-220634,044,Random,0,,98,,"error: TypeError(""run_random_agent() got multiple values for argument 'seed'"")"
+260418-220634,044,Random_forward,0,,98,,"error: TypeError(""run_forward_random_agent() got multiple values for argument 'seed'"")"
+260418-220634,044,Greedy_oracle,0,,98,,"error: TypeError(""run_greedy_agent() got multiple values for argument 'seed'"")"
+260418-220634,044,FullFwd,0,12.0,98,0.12244897959183673,ok
+260418-220634,044,NoBkFullFwd,0,12.0,98,0.12244897959183673,ok
+260418-220634,044,FSC_bio,0,12.0,98,0.12244897959183673,ok
+260418-220634,044,Mouse-bias_ego,0,12.0,98,0.12244897959183673,ok
+260418-220634,044,Mouse-bias_allo_real,0,12.0,98,0.12244897959183673,ok
+260418-220634,044,Mouse-bias_allo_latent,0,12.0,98,0.12244897959183673,ok
+260418-220634,044,ConditionalClone_ego,0,12.0,98,0.12244897959183673,ok
+260418-220634,044,Random,1,,98,,"error: TypeError(""run_random_agent() got multiple values for argument 'seed'"")"
+260418-220634,044,Random_forward,1,,98,,"error: TypeError(""run_forward_random_agent() got multiple values for argument 'seed'"")"
+260418-220634,044,Greedy_oracle,1,,98,,"error: TypeError(""run_greedy_agent() got multiple values for argument 'seed'"")"
+260418-220634,044,FullFwd,1,12.0,98,0.12244897959183673,ok
+260418-220634,044,NoBkFullFwd,1,12.0,98,0.12244897959183673,ok
+260418-220634,044,FSC_bio,1,12.0,98,0.12244897959183673,ok
+260418-220634,044,Mouse-bias_ego,1,12.0,98,0.12244897959183673,ok
+260418-220634,044,Mouse-bias_allo_real,1,11.0,98,0.11224489795918367,ok
+260418-220634,044,Mouse-bias_allo_latent,1,11.0,98,0.11224489795918367,ok
+260418-220634,044,ConditionalClone_ego,1,12.0,98,0.12244897959183673,ok
+260418-220634,044,Random,2,,98,,"error: TypeError(""run_random_agent() got multiple values for argument 'seed'"")"
+260418-220634,044,Random_forward,2,,98,,"error: TypeError(""run_forward_random_agent() got multiple values for argument 'seed'"")"
+260418-220634,044,Greedy_oracle,2,,98,,"error: TypeError(""run_greedy_agent() got multiple values for argument 'seed'"")"
+260418-220634,044,FullFwd,2,12.0,98,0.12244897959183673,ok
+260418-220634,044,NoBkFullFwd,2,12.0,98,0.12244897959183673,ok
+260418-220634,044,FSC_bio,2,12.0,98,0.12244897959183673,ok
+260418-220634,044,Mouse-bias_ego,2,12.0,98,0.12244897959183673,ok
+260418-220634,044,Mouse-bias_allo_real,2,11.0,98,0.11224489795918367,ok
+260418-220634,044,Mouse-bias_allo_latent,2,11.0,98,0.11224489795918367,ok
+260418-220634,044,ConditionalClone_ego,2,10.0,98,0.10204081632653061,ok
+260418-220634,044,Random,3,,98,,"error: TypeError(""run_random_agent() got multiple values for argument 'seed'"")"
+260418-220634,044,Random_forward,3,,98,,"error: TypeError(""run_forward_random_agent() got multiple values for argument 'seed'"")"
+260418-220634,044,Greedy_oracle,3,,98,,"error: TypeError(""run_greedy_agent() got multiple values for argument 'seed'"")"
+260418-220634,044,FullFwd,3,12.0,98,0.12244897959183673,ok
+260418-220634,044,NoBkFullFwd,3,12.0,98,0.12244897959183673,ok
+260418-220634,044,FSC_bio,3,12.0,98,0.12244897959183673,ok
+260418-220634,044,Mouse-bias_ego,3,12.0,98,0.12244897959183673,ok
+260418-220634,044,Mouse-bias_allo_real,3,12.0,98,0.12244897959183673,ok
+260418-220634,044,Mouse-bias_allo_latent,3,12.0,98,0.12244897959183673,ok
+260418-220634,044,ConditionalClone_ego,3,12.0,98,0.12244897959183673,ok
+260418-220634,044,Random,4,,98,,"error: TypeError(""run_random_agent() got multiple values for argument 'seed'"")"
+260418-220634,044,Random_forward,4,,98,,"error: TypeError(""run_forward_random_agent() got multiple values for argument 'seed'"")"
+260418-220634,044,Greedy_oracle,4,,98,,"error: TypeError(""run_greedy_agent() got multiple values for argument 'seed'"")"
+260418-220634,044,FullFwd,4,10.0,98,0.10204081632653061,ok
+260418-220634,044,NoBkFullFwd,4,12.0,98,0.12244897959183673,ok
+260418-220634,044,FSC_bio,4,12.0,98,0.12244897959183673,ok
+260418-220634,044,Mouse-bias_ego,4,12.0,98,0.12244897959183673,ok
+260418-220634,044,Mouse-bias_allo_real,4,12.0,98,0.12244897959183673,ok
+260418-220634,044,Mouse-bias_allo_latent,4,12.0,98,0.12244897959183673,ok
+260418-220634,044,ConditionalClone_ego,4,10.0,98,0.10204081632653061,ok
+260419-221955,044,Random,0,,91,,"error: TypeError(""run_random_agent() got multiple values for argument 'seed'"")"
+260419-221955,044,Random_forward,0,,91,,"error: TypeError(""run_forward_random_agent() got multiple values for argument 'seed'"")"
+260419-221955,044,Greedy_oracle,0,,91,,"error: TypeError(""run_greedy_agent() got multiple values for argument 'seed'"")"
+260419-221955,044,FullFwd,0,12.0,91,0.13186813186813187,ok
+260419-221955,044,NoBkFullFwd,0,12.0,91,0.13186813186813187,ok
+260419-221955,044,FSC_bio,0,12.0,91,0.13186813186813187,ok
+260419-221955,044,Mouse-bias_ego,0,12.0,91,0.13186813186813187,ok
+260419-221955,044,Mouse-bias_allo_real,0,12.0,91,0.13186813186813187,ok
+260419-221955,044,Mouse-bias_allo_latent,0,12.0,91,0.13186813186813187,ok
+260419-221955,044,ConditionalClone_ego,0,12.0,91,0.13186813186813187,ok
+260419-221955,044,Random,1,,91,,"error: TypeError(""run_random_agent() got multiple values for argument 'seed'"")"
+260419-221955,044,Random_forward,1,,91,,"error: TypeError(""run_forward_random_agent() got multiple values for argument 'seed'"")"
+260419-221955,044,Greedy_oracle,1,,91,,"error: TypeError(""run_greedy_agent() got multiple values for argument 'seed'"")"
+260419-221955,044,FullFwd,1,12.0,91,0.13186813186813187,ok
+260419-221955,044,NoBkFullFwd,1,12.0,91,0.13186813186813187,ok
+260419-221955,044,FSC_bio,1,12.0,91,0.13186813186813187,ok
+260419-221955,044,Mouse-bias_ego,1,10.0,91,0.10989010989010989,ok
+260419-221955,044,Mouse-bias_allo_real,1,12.0,91,0.13186813186813187,ok
+260419-221955,044,Mouse-bias_allo_latent,1,12.0,91,0.13186813186813187,ok
+260419-221955,044,ConditionalClone_ego,1,12.0,91,0.13186813186813187,ok
+260419-221955,044,Random,2,,91,,"error: TypeError(""run_random_agent() got multiple values for argument 'seed'"")"
+260419-221955,044,Random_forward,2,,91,,"error: TypeError(""run_forward_random_agent() got multiple values for argument 'seed'"")"
+260419-221955,044,Greedy_oracle,2,,91,,"error: TypeError(""run_greedy_agent() got multiple values for argument 'seed'"")"
+260419-221955,044,FullFwd,2,12.0,91,0.13186813186813187,ok
+260419-221955,044,NoBkFullFwd,2,12.0,91,0.13186813186813187,ok
+260419-221955,044,FSC_bio,2,12.0,91,0.13186813186813187,ok
+260419-221955,044,Mouse-bias_ego,2,10.0,91,0.10989010989010989,ok
+260419-221955,044,Mouse-bias_allo_real,2,9.0,91,0.0989010989010989,ok
+260419-221955,044,Mouse-bias_allo_latent,2,9.0,91,0.0989010989010989,ok
+260419-221955,044,ConditionalClone_ego,2,11.0,91,0.12087912087912088,ok
+260419-221955,044,Random,3,,91,,"error: TypeError(""run_random_agent() got multiple values for argument 'seed'"")"
+260419-221955,044,Random_forward,3,,91,,"error: TypeError(""run_forward_random_agent() got multiple values for argument 'seed'"")"
+260419-221955,044,Greedy_oracle,3,,91,,"error: TypeError(""run_greedy_agent() got multiple values for argument 'seed'"")"
+260419-221955,044,FullFwd,3,12.0,91,0.13186813186813187,ok
+260419-221955,044,NoBkFullFwd,3,12.0,91,0.13186813186813187,ok
+260419-221955,044,FSC_bio,3,12.0,91,0.13186813186813187,ok
+260419-221955,044,Mouse-bias_ego,3,10.0,91,0.10989010989010989,ok
+260419-221955,044,Mouse-bias_allo_real,3,12.0,91,0.13186813186813187,ok
+260419-221955,044,Mouse-bias_allo_latent,3,12.0,91,0.13186813186813187,ok
+260419-221955,044,ConditionalClone_ego,3,11.0,91,0.12087912087912088,ok
+260419-221955,044,Random,4,,91,,"error: TypeError(""run_random_agent() got multiple values for argument 'seed'"")"
+260419-221955,044,Random_forward,4,,91,,"error: TypeError(""run_forward_random_agent() got multiple values for argument 'seed'"")"
+260419-221955,044,Greedy_oracle,4,,91,,"error: TypeError(""run_greedy_agent() got multiple values for argument 'seed'"")"
+260419-221955,044,FullFwd,4,10.0,91,0.10989010989010989,ok
+260419-221955,044,NoBkFullFwd,4,12.0,91,0.13186813186813187,ok
+260419-221955,044,FSC_bio,4,12.0,91,0.13186813186813187,ok
+260419-221955,044,Mouse-bias_ego,4,12.0,91,0.13186813186813187,ok
+260419-221955,044,Mouse-bias_allo_real,4,12.0,91,0.13186813186813187,ok
+260419-221955,044,Mouse-bias_allo_latent,4,12.0,91,0.13186813186813187,ok
+260419-221955,044,ConditionalClone_ego,4,12.0,91,0.13186813186813187,ok
+260421-233854,044,Random,0,,71,,"error: TypeError(""run_random_agent() got multiple values for argument 'seed'"")"
+260421-233854,044,Random_forward,0,,71,,"error: TypeError(""run_forward_random_agent() got multiple values for argument 'seed'"")"
+260421-233854,044,Greedy_oracle,0,,71,,"error: TypeError(""run_greedy_agent() got multiple values for argument 'seed'"")"
+260421-233854,044,FullFwd,0,12.0,71,0.16901408450704225,ok
+260421-233854,044,NoBkFullFwd,0,12.0,71,0.16901408450704225,ok
+260421-233854,044,FSC_bio,0,12.0,71,0.16901408450704225,ok
+260421-233854,044,Mouse-bias_ego,0,12.0,71,0.16901408450704225,ok
+260421-233854,044,Mouse-bias_allo_real,0,11.0,71,0.15492957746478872,ok
+260421-233854,044,Mouse-bias_allo_latent,0,11.0,71,0.15492957746478872,ok
+260421-233854,044,ConditionalClone_ego,0,12.0,71,0.16901408450704225,ok
+260421-233854,044,Random,1,,71,,"error: TypeError(""run_random_agent() got multiple values for argument 'seed'"")"
+260421-233854,044,Random_forward,1,,71,,"error: TypeError(""run_forward_random_agent() got multiple values for argument 'seed'"")"
+260421-233854,044,Greedy_oracle,1,,71,,"error: TypeError(""run_greedy_agent() got multiple values for argument 'seed'"")"
+260421-233854,044,FullFwd,1,12.0,71,0.16901408450704225,ok
+260421-233854,044,NoBkFullFwd,1,12.0,71,0.16901408450704225,ok
+260421-233854,044,FSC_bio,1,12.0,71,0.16901408450704225,ok
+260421-233854,044,Mouse-bias_ego,1,10.0,71,0.14084507042253522,ok
+260421-233854,044,Mouse-bias_allo_real,1,11.0,71,0.15492957746478872,ok
+260421-233854,044,Mouse-bias_allo_latent,1,11.0,71,0.15492957746478872,ok
+260421-233854,044,ConditionalClone_ego,1,11.0,71,0.15492957746478872,ok
+260421-233854,044,Random,2,,71,,"error: TypeError(""run_random_agent() got multiple values for argument 'seed'"")"
+260421-233854,044,Random_forward,2,,71,,"error: TypeError(""run_forward_random_agent() got multiple values for argument 'seed'"")"
+260421-233854,044,Greedy_oracle,2,,71,,"error: TypeError(""run_greedy_agent() got multiple values for argument 'seed'"")"
+260421-233854,044,FullFwd,2,12.0,71,0.16901408450704225,ok
+260421-233854,044,NoBkFullFwd,2,12.0,71,0.16901408450704225,ok
+260421-233854,044,FSC_bio,2,12.0,71,0.16901408450704225,ok
+260421-233854,044,Mouse-bias_ego,2,12.0,71,0.16901408450704225,ok
+260421-233854,044,Mouse-bias_allo_real,2,11.0,71,0.15492957746478872,ok
+260421-233854,044,Mouse-bias_allo_latent,2,11.0,71,0.15492957746478872,ok
+260421-233854,044,ConditionalClone_ego,2,12.0,71,0.16901408450704225,ok
+260421-233854,044,Random,3,,71,,"error: TypeError(""run_random_agent() got multiple values for argument 'seed'"")"
+260421-233854,044,Random_forward,3,,71,,"error: TypeError(""run_forward_random_agent() got multiple values for argument 'seed'"")"
+260421-233854,044,Greedy_oracle,3,,71,,"error: TypeError(""run_greedy_agent() got multiple values for argument 'seed'"")"
+260421-233854,044,FullFwd,3,9.0,71,0.1267605633802817,ok
+260421-233854,044,NoBkFullFwd,3,12.0,71,0.16901408450704225,ok
+260421-233854,044,FSC_bio,3,12.0,71,0.16901408450704225,ok
+260421-233854,044,Mouse-bias_ego,3,12.0,71,0.16901408450704225,ok
+260421-233854,044,Mouse-bias_allo_real,3,12.0,71,0.16901408450704225,ok
+260421-233854,044,Mouse-bias_allo_latent,3,12.0,71,0.16901408450704225,ok
+260421-233854,044,ConditionalClone_ego,3,10.0,71,0.14084507042253522,ok
+260421-233854,044,Random,4,,71,,"error: TypeError(""run_random_agent() got multiple values for argument 'seed'"")"
+260421-233854,044,Random_forward,4,,71,,"error: TypeError(""run_forward_random_agent() got multiple values for argument 'seed'"")"
+260421-233854,044,Greedy_oracle,4,,71,,"error: TypeError(""run_greedy_agent() got multiple values for argument 'seed'"")"
+260421-233854,044,FullFwd,4,9.0,71,0.1267605633802817,ok
+260421-233854,044,NoBkFullFwd,4,12.0,71,0.16901408450704225,ok
+260421-233854,044,FSC_bio,4,12.0,71,0.16901408450704225,ok
+260421-233854,044,Mouse-bias_ego,4,12.0,71,0.16901408450704225,ok
+260421-233854,044,Mouse-bias_allo_real,4,12.0,71,0.16901408450704225,ok
+260421-233854,044,Mouse-bias_allo_latent,4,12.0,71,0.16901408450704225,ok
+260421-233854,044,ConditionalClone_ego,4,11.0,71,0.15492957746478872,ok
+260422-180900,044,Random,0,,94,,"error: TypeError(""run_random_agent() got multiple values for argument 'seed'"")"
+260422-180900,044,Random_forward,0,,94,,"error: TypeError(""run_forward_random_agent() got multiple values for argument 'seed'"")"
+260422-180900,044,Greedy_oracle,0,,94,,"error: TypeError(""run_greedy_agent() got multiple values for argument 'seed'"")"
+260422-180900,044,FullFwd,0,12.0,94,0.1276595744680851,ok
+260422-180900,044,NoBkFullFwd,0,12.0,94,0.1276595744680851,ok
+260422-180900,044,FSC_bio,0,12.0,94,0.1276595744680851,ok
+260422-180900,044,Mouse-bias_ego,0,10.0,94,0.10638297872340426,ok
+260422-180900,044,Mouse-bias_allo_real,0,12.0,94,0.1276595744680851,ok
+260422-180900,044,Mouse-bias_allo_latent,0,12.0,94,0.1276595744680851,ok
+260422-180900,044,ConditionalClone_ego,0,12.0,94,0.1276595744680851,ok
+260422-180900,044,Random,1,,94,,"error: TypeError(""run_random_agent() got multiple values for argument 'seed'"")"
+260422-180900,044,Random_forward,1,,94,,"error: TypeError(""run_forward_random_agent() got multiple values for argument 'seed'"")"
+260422-180900,044,Greedy_oracle,1,,94,,"error: TypeError(""run_greedy_agent() got multiple values for argument 'seed'"")"
+260422-180900,044,FullFwd,1,12.0,94,0.1276595744680851,ok
+260422-180900,044,NoBkFullFwd,1,12.0,94,0.1276595744680851,ok
+260422-180900,044,FSC_bio,1,12.0,94,0.1276595744680851,ok
+260422-180900,044,Mouse-bias_ego,1,12.0,94,0.1276595744680851,ok
+260422-180900,044,Mouse-bias_allo_real,1,11.0,94,0.11702127659574468,ok
+260422-180900,044,Mouse-bias_allo_latent,1,11.0,94,0.11702127659574468,ok
+260422-180900,044,ConditionalClone_ego,1,12.0,94,0.1276595744680851,ok
+260422-180900,044,Random,2,,94,,"error: TypeError(""run_random_agent() got multiple values for argument 'seed'"")"
+260422-180900,044,Random_forward,2,,94,,"error: TypeError(""run_forward_random_agent() got multiple values for argument 'seed'"")"
+260422-180900,044,Greedy_oracle,2,,94,,"error: TypeError(""run_greedy_agent() got multiple values for argument 'seed'"")"
+260422-180900,044,FullFwd,2,12.0,94,0.1276595744680851,ok
+260422-180900,044,NoBkFullFwd,2,12.0,94,0.1276595744680851,ok
+260422-180900,044,FSC_bio,2,12.0,94,0.1276595744680851,ok
+260422-180900,044,Mouse-bias_ego,2,12.0,94,0.1276595744680851,ok
+260422-180900,044,Mouse-bias_allo_real,2,11.0,94,0.11702127659574468,ok
+260422-180900,044,Mouse-bias_allo_latent,2,11.0,94,0.11702127659574468,ok
+260422-180900,044,ConditionalClone_ego,2,12.0,94,0.1276595744680851,ok
+260422-180900,044,Random,3,,94,,"error: TypeError(""run_random_agent() got multiple values for argument 'seed'"")"
+260422-180900,044,Random_forward,3,,94,,"error: TypeError(""run_forward_random_agent() got multiple values for argument 'seed'"")"
+260422-180900,044,Greedy_oracle,3,,94,,"error: TypeError(""run_greedy_agent() got multiple values for argument 'seed'"")"
+260422-180900,044,FullFwd,3,12.0,94,0.1276595744680851,ok
+260422-180900,044,NoBkFullFwd,3,12.0,94,0.1276595744680851,ok
+260422-180900,044,FSC_bio,3,12.0,94,0.1276595744680851,ok
+260422-180900,044,Mouse-bias_ego,3,11.0,94,0.11702127659574468,ok
+260422-180900,044,Mouse-bias_allo_real,3,12.0,94,0.1276595744680851,ok
+260422-180900,044,Mouse-bias_allo_latent,3,12.0,94,0.1276595744680851,ok
+260422-180900,044,ConditionalClone_ego,3,12.0,94,0.1276595744680851,ok
+260422-180900,044,Random,4,,94,,"error: TypeError(""run_random_agent() got multiple values for argument 'seed'"")"
+260422-180900,044,Random_forward,4,,94,,"error: TypeError(""run_forward_random_agent() got multiple values for argument 'seed'"")"
+260422-180900,044,Greedy_oracle,4,,94,,"error: TypeError(""run_greedy_agent() got multiple values for argument 'seed'"")"
+260422-180900,044,FullFwd,4,10.0,94,0.10638297872340426,ok
+260422-180900,044,NoBkFullFwd,4,12.0,94,0.1276595744680851,ok
+260422-180900,044,FSC_bio,4,12.0,94,0.1276595744680851,ok
+260422-180900,044,Mouse-bias_ego,4,12.0,94,0.1276595744680851,ok
+260422-180900,044,Mouse-bias_allo_real,4,12.0,94,0.1276595744680851,ok
+260422-180900,044,Mouse-bias_allo_latent,4,12.0,94,0.1276595744680851,ok
+260422-180900,044,ConditionalClone_ego,4,12.0,94,0.1276595744680851,ok
+260423-183127,044,Random,0,,149,,"error: TypeError(""run_random_agent() got multiple values for argument 'seed'"")"
+260423-183127,044,Random_forward,0,,149,,"error: TypeError(""run_forward_random_agent() got multiple values for argument 'seed'"")"
+260423-183127,044,Greedy_oracle,0,,149,,"error: TypeError(""run_greedy_agent() got multiple values for argument 'seed'"")"
+260423-183127,044,FullFwd,0,12.0,149,0.08053691275167785,ok
+260423-183127,044,NoBkFullFwd,0,12.0,149,0.08053691275167785,ok
+260423-183127,044,FSC_bio,0,12.0,149,0.08053691275167785,ok
+260423-183127,044,Mouse-bias_ego,0,12.0,149,0.08053691275167785,ok
+260423-183127,044,Mouse-bias_allo_real,0,12.0,149,0.08053691275167785,ok
+260423-183127,044,Mouse-bias_allo_latent,0,12.0,149,0.08053691275167785,ok
+260423-183127,044,ConditionalClone_ego,0,12.0,149,0.08053691275167785,ok
+260423-183127,044,Random,1,,149,,"error: TypeError(""run_random_agent() got multiple values for argument 'seed'"")"
+260423-183127,044,Random_forward,1,,149,,"error: TypeError(""run_forward_random_agent() got multiple values for argument 'seed'"")"
+260423-183127,044,Greedy_oracle,1,,149,,"error: TypeError(""run_greedy_agent() got multiple values for argument 'seed'"")"
+260423-183127,044,FullFwd,1,12.0,149,0.08053691275167785,ok
+260423-183127,044,NoBkFullFwd,1,12.0,149,0.08053691275167785,ok
+260423-183127,044,FSC_bio,1,12.0,149,0.08053691275167785,ok
+260423-183127,044,Mouse-bias_ego,1,12.0,149,0.08053691275167785,ok
+260423-183127,044,Mouse-bias_allo_real,1,11.0,149,0.0738255033557047,ok
+260423-183127,044,Mouse-bias_allo_latent,1,11.0,149,0.0738255033557047,ok
+260423-183127,044,ConditionalClone_ego,1,12.0,149,0.08053691275167785,ok
+260423-183127,044,Random,2,,149,,"error: TypeError(""run_random_agent() got multiple values for argument 'seed'"")"
+260423-183127,044,Random_forward,2,,149,,"error: TypeError(""run_forward_random_agent() got multiple values for argument 'seed'"")"
+260423-183127,044,Greedy_oracle,2,,149,,"error: TypeError(""run_greedy_agent() got multiple values for argument 'seed'"")"
+260423-183127,044,FullFwd,2,12.0,149,0.08053691275167785,ok
+260423-183127,044,NoBkFullFwd,2,12.0,149,0.08053691275167785,ok
+260423-183127,044,FSC_bio,2,12.0,149,0.08053691275167785,ok
+260423-183127,044,Mouse-bias_ego,2,12.0,149,0.08053691275167785,ok
+260423-183127,044,Mouse-bias_allo_real,2,12.0,149,0.08053691275167785,ok
+260423-183127,044,Mouse-bias_allo_latent,2,12.0,149,0.08053691275167785,ok
+260423-183127,044,ConditionalClone_ego,2,12.0,149,0.08053691275167785,ok
+260423-183127,044,Random,3,,149,,"error: TypeError(""run_random_agent() got multiple values for argument 'seed'"")"
+260423-183127,044,Random_forward,3,,149,,"error: TypeError(""run_forward_random_agent() got multiple values for argument 'seed'"")"
+260423-183127,044,Greedy_oracle,3,,149,,"error: TypeError(""run_greedy_agent() got multiple values for argument 'seed'"")"
+260423-183127,044,FullFwd,3,12.0,149,0.08053691275167785,ok
+260423-183127,044,NoBkFullFwd,3,12.0,149,0.08053691275167785,ok
+260423-183127,044,FSC_bio,3,12.0,149,0.08053691275167785,ok
+260423-183127,044,Mouse-bias_ego,3,12.0,149,0.08053691275167785,ok
+260423-183127,044,Mouse-bias_allo_real,3,12.0,149,0.08053691275167785,ok
+260423-183127,044,Mouse-bias_allo_latent,3,12.0,149,0.08053691275167785,ok
+260423-183127,044,ConditionalClone_ego,3,12.0,149,0.08053691275167785,ok
+260423-183127,044,Random,4,,149,,"error: TypeError(""run_random_agent() got multiple values for argument 'seed'"")"
+260423-183127,044,Random_forward,4,,149,,"error: TypeError(""run_forward_random_agent() got multiple values for argument 'seed'"")"
+260423-183127,044,Greedy_oracle,4,,149,,"error: TypeError(""run_greedy_agent() got multiple values for argument 'seed'"")"
+260423-183127,044,FullFwd,4,12.0,149,0.08053691275167785,ok
+260423-183127,044,NoBkFullFwd,4,12.0,149,0.08053691275167785,ok
+260423-183127,044,FSC_bio,4,12.0,149,0.08053691275167785,ok
+260423-183127,044,Mouse-bias_ego,4,12.0,149,0.08053691275167785,ok
+260423-183127,044,Mouse-bias_allo_real,4,12.0,149,0.08053691275167785,ok
+260423-183127,044,Mouse-bias_allo_latent,4,12.0,149,0.08053691275167785,ok
+260423-183127,044,ConditionalClone_ego,4,12.0,149,0.08053691275167785,ok
+260424-170308,044,Random,0,,162,,"error: TypeError(""run_random_agent() got multiple values for argument 'seed'"")"
+260424-170308,044,Random_forward,0,,162,,"error: TypeError(""run_forward_random_agent() got multiple values for argument 'seed'"")"
+260424-170308,044,Greedy_oracle,0,,162,,"error: TypeError(""run_greedy_agent() got multiple values for argument 'seed'"")"
+260424-170308,044,FullFwd,0,12.0,162,0.07407407407407407,ok
+260424-170308,044,NoBkFullFwd,0,12.0,162,0.07407407407407407,ok
+260424-170308,044,FSC_bio,0,12.0,162,0.07407407407407407,ok
+260424-170308,044,Mouse-bias_ego,0,12.0,162,0.07407407407407407,ok
+260424-170308,044,Mouse-bias_allo_real,0,12.0,162,0.07407407407407407,ok
+260424-170308,044,Mouse-bias_allo_latent,0,12.0,162,0.07407407407407407,ok
+260424-170308,044,ConditionalClone_ego,0,12.0,162,0.07407407407407407,ok
+260424-170308,044,Random,1,,162,,"error: TypeError(""run_random_agent() got multiple values for argument 'seed'"")"
+260424-170308,044,Random_forward,1,,162,,"error: TypeError(""run_forward_random_agent() got multiple values for argument 'seed'"")"
+260424-170308,044,Greedy_oracle,1,,162,,"error: TypeError(""run_greedy_agent() got multiple values for argument 'seed'"")"
+260424-170308,044,FullFwd,1,12.0,162,0.07407407407407407,ok
+260424-170308,044,NoBkFullFwd,1,12.0,162,0.07407407407407407,ok
+260424-170308,044,FSC_bio,1,12.0,162,0.07407407407407407,ok
+260424-170308,044,Mouse-bias_ego,1,12.0,162,0.07407407407407407,ok
+260424-170308,044,Mouse-bias_allo_real,1,11.0,162,0.06790123456790123,ok
+260424-170308,044,Mouse-bias_allo_latent,1,11.0,162,0.06790123456790123,ok
+260424-170308,044,ConditionalClone_ego,1,12.0,162,0.07407407407407407,ok
+260424-170308,044,Random,2,,162,,"error: TypeError(""run_random_agent() got multiple values for argument 'seed'"")"
+260424-170308,044,Random_forward,2,,162,,"error: TypeError(""run_forward_random_agent() got multiple values for argument 'seed'"")"
+260424-170308,044,Greedy_oracle,2,,162,,"error: TypeError(""run_greedy_agent() got multiple values for argument 'seed'"")"
+260424-170308,044,FullFwd,2,12.0,162,0.07407407407407407,ok
+260424-170308,044,NoBkFullFwd,2,12.0,162,0.07407407407407407,ok
+260424-170308,044,FSC_bio,2,12.0,162,0.07407407407407407,ok
+260424-170308,044,Mouse-bias_ego,2,12.0,162,0.07407407407407407,ok
+260424-170308,044,Mouse-bias_allo_real,2,12.0,162,0.07407407407407407,ok
+260424-170308,044,Mouse-bias_allo_latent,2,12.0,162,0.07407407407407407,ok
+260424-170308,044,ConditionalClone_ego,2,12.0,162,0.07407407407407407,ok
+260424-170308,044,Random,3,,162,,"error: TypeError(""run_random_agent() got multiple values for argument 'seed'"")"
+260424-170308,044,Random_forward,3,,162,,"error: TypeError(""run_forward_random_agent() got multiple values for argument 'seed'"")"
+260424-170308,044,Greedy_oracle,3,,162,,"error: TypeError(""run_greedy_agent() got multiple values for argument 'seed'"")"
+260424-170308,044,FullFwd,3,12.0,162,0.07407407407407407,ok
+260424-170308,044,NoBkFullFwd,3,12.0,162,0.07407407407407407,ok
+260424-170308,044,FSC_bio,3,12.0,162,0.07407407407407407,ok
+260424-170308,044,Mouse-bias_ego,3,12.0,162,0.07407407407407407,ok
+260424-170308,044,Mouse-bias_allo_real,3,12.0,162,0.07407407407407407,ok
+260424-170308,044,Mouse-bias_allo_latent,3,12.0,162,0.07407407407407407,ok
+260424-170308,044,ConditionalClone_ego,3,12.0,162,0.07407407407407407,ok
+260424-170308,044,Random,4,,162,,"error: TypeError(""run_random_agent() got multiple values for argument 'seed'"")"
+260424-170308,044,Random_forward,4,,162,,"error: TypeError(""run_forward_random_agent() got multiple values for argument 'seed'"")"
+260424-170308,044,Greedy_oracle,4,,162,,"error: TypeError(""run_greedy_agent() got multiple values for argument 'seed'"")"
+260424-170308,044,FullFwd,4,12.0,162,0.07407407407407407,ok
+260424-170308,044,NoBkFullFwd,4,12.0,162,0.07407407407407407,ok
+260424-170308,044,FSC_bio,4,12.0,162,0.07407407407407407,ok
+260424-170308,044,Mouse-bias_ego,4,12.0,162,0.07407407407407407,ok
+260424-170308,044,Mouse-bias_allo_real,4,12.0,162,0.07407407407407407,ok
+260424-170308,044,Mouse-bias_allo_latent,4,12.0,162,0.07407407407407407,ok
+260424-170308,044,ConditionalClone_ego,4,12.0,162,0.07407407407407407,ok
+260425-171142,044,Random,0,,284,,"error: TypeError(""run_random_agent() got multiple values for argument 'seed'"")"
+260425-171142,044,Random_forward,0,,284,,"error: TypeError(""run_forward_random_agent() got multiple values for argument 'seed'"")"
+260425-171142,044,Greedy_oracle,0,,284,,"error: TypeError(""run_greedy_agent() got multiple values for argument 'seed'"")"
+260425-171142,044,FullFwd,0,12.0,284,0.04225352112676056,ok
+260425-171142,044,NoBkFullFwd,0,12.0,284,0.04225352112676056,ok
+260425-171142,044,FSC_bio,0,12.0,284,0.04225352112676056,ok
+260425-171142,044,Mouse-bias_ego,0,12.0,284,0.04225352112676056,ok
+260425-171142,044,Mouse-bias_allo_real,0,12.0,284,0.04225352112676056,ok
+260425-171142,044,Mouse-bias_allo_latent,0,12.0,284,0.04225352112676056,ok
+260425-171142,044,ConditionalClone_ego,0,12.0,284,0.04225352112676056,ok
+260425-171142,044,Random,1,,284,,"error: TypeError(""run_random_agent() got multiple values for argument 'seed'"")"
+260425-171142,044,Random_forward,1,,284,,"error: TypeError(""run_forward_random_agent() got multiple values for argument 'seed'"")"
+260425-171142,044,Greedy_oracle,1,,284,,"error: TypeError(""run_greedy_agent() got multiple values for argument 'seed'"")"
+260425-171142,044,FullFwd,1,12.0,284,0.04225352112676056,ok
+260425-171142,044,NoBkFullFwd,1,12.0,284,0.04225352112676056,ok
+260425-171142,044,FSC_bio,1,12.0,284,0.04225352112676056,ok
+260425-171142,044,Mouse-bias_ego,1,12.0,284,0.04225352112676056,ok
+260425-171142,044,Mouse-bias_allo_real,1,12.0,284,0.04225352112676056,ok
+260425-171142,044,Mouse-bias_allo_latent,1,12.0,284,0.04225352112676056,ok
+260425-171142,044,ConditionalClone_ego,1,12.0,284,0.04225352112676056,ok
+260425-171142,044,Random,2,,284,,"error: TypeError(""run_random_agent() got multiple values for argument 'seed'"")"
+260425-171142,044,Random_forward,2,,284,,"error: TypeError(""run_forward_random_agent() got multiple values for argument 'seed'"")"
+260425-171142,044,Greedy_oracle,2,,284,,"error: TypeError(""run_greedy_agent() got multiple values for argument 'seed'"")"
+260425-171142,044,FullFwd,2,12.0,284,0.04225352112676056,ok
+260425-171142,044,NoBkFullFwd,2,12.0,284,0.04225352112676056,ok
+260425-171142,044,FSC_bio,2,12.0,284,0.04225352112676056,ok
+260425-171142,044,Mouse-bias_ego,2,12.0,284,0.04225352112676056,ok
+260425-171142,044,Mouse-bias_allo_real,2,12.0,284,0.04225352112676056,ok
+260425-171142,044,Mouse-bias_allo_latent,2,12.0,284,0.04225352112676056,ok
+260425-171142,044,ConditionalClone_ego,2,12.0,284,0.04225352112676056,ok
+260425-171142,044,Random,3,,284,,"error: TypeError(""run_random_agent() got multiple values for argument 'seed'"")"
+260425-171142,044,Random_forward,3,,284,,"error: TypeError(""run_forward_random_agent() got multiple values for argument 'seed'"")"
+260425-171142,044,Greedy_oracle,3,,284,,"error: TypeError(""run_greedy_agent() got multiple values for argument 'seed'"")"
+260425-171142,044,FullFwd,3,12.0,284,0.04225352112676056,ok
+260425-171142,044,NoBkFullFwd,3,12.0,284,0.04225352112676056,ok
+260425-171142,044,FSC_bio,3,12.0,284,0.04225352112676056,ok
+260425-171142,044,Mouse-bias_ego,3,12.0,284,0.04225352112676056,ok
+260425-171142,044,Mouse-bias_allo_real,3,12.0,284,0.04225352112676056,ok
+260425-171142,044,Mouse-bias_allo_latent,3,12.0,284,0.04225352112676056,ok
+260425-171142,044,ConditionalClone_ego,3,12.0,284,0.04225352112676056,ok
+260425-171142,044,Random,4,,284,,"error: TypeError(""run_random_agent() got multiple values for argument 'seed'"")"
+260425-171142,044,Random_forward,4,,284,,"error: TypeError(""run_forward_random_agent() got multiple values for argument 'seed'"")"
+260425-171142,044,Greedy_oracle,4,,284,,"error: TypeError(""run_greedy_agent() got multiple values for argument 'seed'"")"
+260425-171142,044,FullFwd,4,12.0,284,0.04225352112676056,ok
+260425-171142,044,NoBkFullFwd,4,12.0,284,0.04225352112676056,ok
+260425-171142,044,FSC_bio,4,12.0,284,0.04225352112676056,ok
+260425-171142,044,Mouse-bias_ego,4,12.0,284,0.04225352112676056,ok
+260425-171142,044,Mouse-bias_allo_real,4,12.0,284,0.04225352112676056,ok
+260425-171142,044,Mouse-bias_allo_latent,4,12.0,284,0.04225352112676056,ok
+260425-171142,044,ConditionalClone_ego,4,12.0,284,0.04225352112676056,ok
+260426-232859,044,Random,0,,264,,"error: TypeError(""run_random_agent() got multiple values for argument 'seed'"")"
+260426-232859,044,Random_forward,0,,264,,"error: TypeError(""run_forward_random_agent() got multiple values for argument 'seed'"")"
+260426-232859,044,Greedy_oracle,0,,264,,"error: TypeError(""run_greedy_agent() got multiple values for argument 'seed'"")"
+260426-232859,044,FullFwd,0,12.0,264,0.045454545454545456,ok
+260426-232859,044,NoBkFullFwd,0,12.0,264,0.045454545454545456,ok
+260426-232859,044,FSC_bio,0,12.0,264,0.045454545454545456,ok
+260426-232859,044,Mouse-bias_ego,0,12.0,264,0.045454545454545456,ok
+260426-232859,044,Mouse-bias_allo_real,0,12.0,264,0.045454545454545456,ok
+260426-232859,044,Mouse-bias_allo_latent,0,12.0,264,0.045454545454545456,ok
+260426-232859,044,ConditionalClone_ego,0,12.0,264,0.045454545454545456,ok
+260426-232859,044,Random,1,,264,,"error: TypeError(""run_random_agent() got multiple values for argument 'seed'"")"
+260426-232859,044,Random_forward,1,,264,,"error: TypeError(""run_forward_random_agent() got multiple values for argument 'seed'"")"
+260426-232859,044,Greedy_oracle,1,,264,,"error: TypeError(""run_greedy_agent() got multiple values for argument 'seed'"")"
+260426-232859,044,FullFwd,1,12.0,264,0.045454545454545456,ok
+260426-232859,044,NoBkFullFwd,1,12.0,264,0.045454545454545456,ok
+260426-232859,044,FSC_bio,1,12.0,264,0.045454545454545456,ok
+260426-232859,044,Mouse-bias_ego,1,12.0,264,0.045454545454545456,ok
+260426-232859,044,Mouse-bias_allo_real,1,12.0,264,0.045454545454545456,ok
+260426-232859,044,Mouse-bias_allo_latent,1,12.0,264,0.045454545454545456,ok
+260426-232859,044,ConditionalClone_ego,1,12.0,264,0.045454545454545456,ok
+260426-232859,044,Random,2,,264,,"error: TypeError(""run_random_agent() got multiple values for argument 'seed'"")"
+260426-232859,044,Random_forward,2,,264,,"error: TypeError(""run_forward_random_agent() got multiple values for argument 'seed'"")"
+260426-232859,044,Greedy_oracle,2,,264,,"error: TypeError(""run_greedy_agent() got multiple values for argument 'seed'"")"
+260426-232859,044,FullFwd,2,12.0,264,0.045454545454545456,ok
+260426-232859,044,NoBkFullFwd,2,12.0,264,0.045454545454545456,ok
+260426-232859,044,FSC_bio,2,12.0,264,0.045454545454545456,ok
+260426-232859,044,Mouse-bias_ego,2,12.0,264,0.045454545454545456,ok
+260426-232859,044,Mouse-bias_allo_real,2,12.0,264,0.045454545454545456,ok
+260426-232859,044,Mouse-bias_allo_latent,2,12.0,264,0.045454545454545456,ok
+260426-232859,044,ConditionalClone_ego,2,12.0,264,0.045454545454545456,ok
+260426-232859,044,Random,3,,264,,"error: TypeError(""run_random_agent() got multiple values for argument 'seed'"")"
+260426-232859,044,Random_forward,3,,264,,"error: TypeError(""run_forward_random_agent() got multiple values for argument 'seed'"")"
+260426-232859,044,Greedy_oracle,3,,264,,"error: TypeError(""run_greedy_agent() got multiple values for argument 'seed'"")"
+260426-232859,044,FullFwd,3,12.0,264,0.045454545454545456,ok
+260426-232859,044,NoBkFullFwd,3,12.0,264,0.045454545454545456,ok
+260426-232859,044,FSC_bio,3,12.0,264,0.045454545454545456,ok
+260426-232859,044,Mouse-bias_ego,3,12.0,264,0.045454545454545456,ok
+260426-232859,044,Mouse-bias_allo_real,3,12.0,264,0.045454545454545456,ok
+260426-232859,044,Mouse-bias_allo_latent,3,12.0,264,0.045454545454545456,ok
+260426-232859,044,ConditionalClone_ego,3,12.0,264,0.045454545454545456,ok
+260426-232859,044,Random,4,,264,,"error: TypeError(""run_random_agent() got multiple values for argument 'seed'"")"
+260426-232859,044,Random_forward,4,,264,,"error: TypeError(""run_forward_random_agent() got multiple values for argument 'seed'"")"
+260426-232859,044,Greedy_oracle,4,,264,,"error: TypeError(""run_greedy_agent() got multiple values for argument 'seed'"")"
+260426-232859,044,FullFwd,4,12.0,264,0.045454545454545456,ok
+260426-232859,044,NoBkFullFwd,4,12.0,264,0.045454545454545456,ok
+260426-232859,044,FSC_bio,4,12.0,264,0.045454545454545456,ok
+260426-232859,044,Mouse-bias_ego,4,12.0,264,0.045454545454545456,ok
+260426-232859,044,Mouse-bias_allo_real,4,12.0,264,0.045454545454545456,ok
+260426-232859,044,Mouse-bias_allo_latent,4,12.0,264,0.045454545454545456,ok
+260426-232859,044,ConditionalClone_ego,4,12.0,264,0.045454545454545456,ok
+260427-233640,044,Random,0,,136,,"error: TypeError(""run_random_agent() got multiple values for argument 'seed'"")"
+260427-233640,044,Random_forward,0,,136,,"error: TypeError(""run_forward_random_agent() got multiple values for argument 'seed'"")"
+260427-233640,044,Greedy_oracle,0,,136,,"error: TypeError(""run_greedy_agent() got multiple values for argument 'seed'"")"
+260427-233640,044,FullFwd,0,12.0,136,0.08823529411764706,ok
+260427-233640,044,NoBkFullFwd,0,12.0,136,0.08823529411764706,ok
+260427-233640,044,FSC_bio,0,12.0,136,0.08823529411764706,ok
+260427-233640,044,Mouse-bias_ego,0,12.0,136,0.08823529411764706,ok
+260427-233640,044,Mouse-bias_allo_real,0,12.0,136,0.08823529411764706,ok
+260427-233640,044,Mouse-bias_allo_latent,0,12.0,136,0.08823529411764706,ok
+260427-233640,044,ConditionalClone_ego,0,12.0,136,0.08823529411764706,ok
+260427-233640,044,Random,1,,136,,"error: TypeError(""run_random_agent() got multiple values for argument 'seed'"")"
+260427-233640,044,Random_forward,1,,136,,"error: TypeError(""run_forward_random_agent() got multiple values for argument 'seed'"")"
+260427-233640,044,Greedy_oracle,1,,136,,"error: TypeError(""run_greedy_agent() got multiple values for argument 'seed'"")"
+260427-233640,044,FullFwd,1,12.0,136,0.08823529411764706,ok
+260427-233640,044,NoBkFullFwd,1,12.0,136,0.08823529411764706,ok
+260427-233640,044,FSC_bio,1,12.0,136,0.08823529411764706,ok
+260427-233640,044,Mouse-bias_ego,1,12.0,136,0.08823529411764706,ok
+260427-233640,044,Mouse-bias_allo_real,1,11.0,136,0.08088235294117647,ok
+260427-233640,044,Mouse-bias_allo_latent,1,11.0,136,0.08088235294117647,ok
+260427-233640,044,ConditionalClone_ego,1,12.0,136,0.08823529411764706,ok
+260427-233640,044,Random,2,,136,,"error: TypeError(""run_random_agent() got multiple values for argument 'seed'"")"
+260427-233640,044,Random_forward,2,,136,,"error: TypeError(""run_forward_random_agent() got multiple values for argument 'seed'"")"
+260427-233640,044,Greedy_oracle,2,,136,,"error: TypeError(""run_greedy_agent() got multiple values for argument 'seed'"")"
+260427-233640,044,FullFwd,2,12.0,136,0.08823529411764706,ok
+260427-233640,044,NoBkFullFwd,2,12.0,136,0.08823529411764706,ok
+260427-233640,044,FSC_bio,2,12.0,136,0.08823529411764706,ok
+260427-233640,044,Mouse-bias_ego,2,12.0,136,0.08823529411764706,ok
+260427-233640,044,Mouse-bias_allo_real,2,12.0,136,0.08823529411764706,ok
+260427-233640,044,Mouse-bias_allo_latent,2,12.0,136,0.08823529411764706,ok
+260427-233640,044,ConditionalClone_ego,2,12.0,136,0.08823529411764706,ok
+260427-233640,044,Random,3,,136,,"error: TypeError(""run_random_agent() got multiple values for argument 'seed'"")"
+260427-233640,044,Random_forward,3,,136,,"error: TypeError(""run_forward_random_agent() got multiple values for argument 'seed'"")"
+260427-233640,044,Greedy_oracle,3,,136,,"error: TypeError(""run_greedy_agent() got multiple values for argument 'seed'"")"
+260427-233640,044,FullFwd,3,12.0,136,0.08823529411764706,ok
+260427-233640,044,NoBkFullFwd,3,12.0,136,0.08823529411764706,ok
+260427-233640,044,FSC_bio,3,12.0,136,0.08823529411764706,ok
+260427-233640,044,Mouse-bias_ego,3,12.0,136,0.08823529411764706,ok
+260427-233640,044,Mouse-bias_allo_real,3,12.0,136,0.08823529411764706,ok
+260427-233640,044,Mouse-bias_allo_latent,3,12.0,136,0.08823529411764706,ok
+260427-233640,044,ConditionalClone_ego,3,12.0,136,0.08823529411764706,ok
+260427-233640,044,Random,4,,136,,"error: TypeError(""run_random_agent() got multiple values for argument 'seed'"")"
+260427-233640,044,Random_forward,4,,136,,"error: TypeError(""run_forward_random_agent() got multiple values for argument 'seed'"")"
+260427-233640,044,Greedy_oracle,4,,136,,"error: TypeError(""run_greedy_agent() got multiple values for argument 'seed'"")"
+260427-233640,044,FullFwd,4,12.0,136,0.08823529411764706,ok
+260427-233640,044,NoBkFullFwd,4,12.0,136,0.08823529411764706,ok
+260427-233640,044,FSC_bio,4,12.0,136,0.08823529411764706,ok
+260427-233640,044,Mouse-bias_ego,4,12.0,136,0.08823529411764706,ok
+260427-233640,044,Mouse-bias_allo_real,4,12.0,136,0.08823529411764706,ok
+260427-233640,044,Mouse-bias_allo_latent,4,12.0,136,0.08823529411764706,ok
+260427-233640,044,ConditionalClone_ego,4,12.0,136,0.08823529411764706,ok
+260428-171404,044,Random,0,,258,,"error: TypeError(""run_random_agent() got multiple values for argument 'seed'"")"
+260428-171404,044,Random_forward,0,,258,,"error: TypeError(""run_forward_random_agent() got multiple values for argument 'seed'"")"
+260428-171404,044,Greedy_oracle,0,,258,,"error: TypeError(""run_greedy_agent() got multiple values for argument 'seed'"")"
+260428-171404,044,FullFwd,0,12.0,258,0.046511627906976744,ok
+260428-171404,044,NoBkFullFwd,0,12.0,258,0.046511627906976744,ok
+260428-171404,044,FSC_bio,0,12.0,258,0.046511627906976744,ok
+260428-171404,044,Mouse-bias_ego,0,12.0,258,0.046511627906976744,ok
+260428-171404,044,Mouse-bias_allo_real,0,12.0,258,0.046511627906976744,ok
+260428-171404,044,Mouse-bias_allo_latent,0,12.0,258,0.046511627906976744,ok
+260428-171404,044,ConditionalClone_ego,0,12.0,258,0.046511627906976744,ok
+260428-171404,044,Random,1,,258,,"error: TypeError(""run_random_agent() got multiple values for argument 'seed'"")"
+260428-171404,044,Random_forward,1,,258,,"error: TypeError(""run_forward_random_agent() got multiple values for argument 'seed'"")"
+260428-171404,044,Greedy_oracle,1,,258,,"error: TypeError(""run_greedy_agent() got multiple values for argument 'seed'"")"
+260428-171404,044,FullFwd,1,12.0,258,0.046511627906976744,ok
+260428-171404,044,NoBkFullFwd,1,12.0,258,0.046511627906976744,ok
+260428-171404,044,FSC_bio,1,12.0,258,0.046511627906976744,ok
+260428-171404,044,Mouse-bias_ego,1,12.0,258,0.046511627906976744,ok
+260428-171404,044,Mouse-bias_allo_real,1,12.0,258,0.046511627906976744,ok
+260428-171404,044,Mouse-bias_allo_latent,1,12.0,258,0.046511627906976744,ok
+260428-171404,044,ConditionalClone_ego,1,12.0,258,0.046511627906976744,ok
+260428-171404,044,Random,2,,258,,"error: TypeError(""run_random_agent() got multiple values for argument 'seed'"")"
+260428-171404,044,Random_forward,2,,258,,"error: TypeError(""run_forward_random_agent() got multiple values for argument 'seed'"")"
+260428-171404,044,Greedy_oracle,2,,258,,"error: TypeError(""run_greedy_agent() got multiple values for argument 'seed'"")"
+260428-171404,044,FullFwd,2,12.0,258,0.046511627906976744,ok
+260428-171404,044,NoBkFullFwd,2,12.0,258,0.046511627906976744,ok
+260428-171404,044,FSC_bio,2,12.0,258,0.046511627906976744,ok
+260428-171404,044,Mouse-bias_ego,2,12.0,258,0.046511627906976744,ok
+260428-171404,044,Mouse-bias_allo_real,2,12.0,258,0.046511627906976744,ok
+260428-171404,044,Mouse-bias_allo_latent,2,12.0,258,0.046511627906976744,ok
+260428-171404,044,ConditionalClone_ego,2,12.0,258,0.046511627906976744,ok
+260428-171404,044,Random,3,,258,,"error: TypeError(""run_random_agent() got multiple values for argument 'seed'"")"
+260428-171404,044,Random_forward,3,,258,,"error: TypeError(""run_forward_random_agent() got multiple values for argument 'seed'"")"
+260428-171404,044,Greedy_oracle,3,,258,,"error: TypeError(""run_greedy_agent() got multiple values for argument 'seed'"")"
+260428-171404,044,FullFwd,3,12.0,258,0.046511627906976744,ok
+260428-171404,044,NoBkFullFwd,3,12.0,258,0.046511627906976744,ok
+260428-171404,044,FSC_bio,3,12.0,258,0.046511627906976744,ok
+260428-171404,044,Mouse-bias_ego,3,12.0,258,0.046511627906976744,ok
+260428-171404,044,Mouse-bias_allo_real,3,12.0,258,0.046511627906976744,ok
+260428-171404,044,Mouse-bias_allo_latent,3,12.0,258,0.046511627906976744,ok
+260428-171404,044,ConditionalClone_ego,3,12.0,258,0.046511627906976744,ok
+260428-171404,044,Random,4,,258,,"error: TypeError(""run_random_agent() got multiple values for argument 'seed'"")"
+260428-171404,044,Random_forward,4,,258,,"error: TypeError(""run_forward_random_agent() got multiple values for argument 'seed'"")"
+260428-171404,044,Greedy_oracle,4,,258,,"error: TypeError(""run_greedy_agent() got multiple values for argument 'seed'"")"
+260428-171404,044,FullFwd,4,12.0,258,0.046511627906976744,ok
+260428-171404,044,NoBkFullFwd,4,12.0,258,0.046511627906976744,ok
+260428-171404,044,FSC_bio,4,12.0,258,0.046511627906976744,ok
+260428-171404,044,Mouse-bias_ego,4,12.0,258,0.046511627906976744,ok
+260428-171404,044,Mouse-bias_allo_real,4,12.0,258,0.046511627906976744,ok
+260428-171404,044,Mouse-bias_allo_latent,4,12.0,258,0.046511627906976744,ok
+260428-171404,044,ConditionalClone_ego,4,12.0,258,0.046511627906976744,ok
+260429-212652,044,Random,0,,142,,"error: TypeError(""run_random_agent() got multiple values for argument 'seed'"")"
+260429-212652,044,Random_forward,0,,142,,"error: TypeError(""run_forward_random_agent() got multiple values for argument 'seed'"")"
+260429-212652,044,Greedy_oracle,0,,142,,"error: TypeError(""run_greedy_agent() got multiple values for argument 'seed'"")"
+260429-212652,044,FullFwd,0,12.0,142,0.08450704225352113,ok
+260429-212652,044,NoBkFullFwd,0,12.0,142,0.08450704225352113,ok
+260429-212652,044,FSC_bio,0,12.0,142,0.08450704225352113,ok
+260429-212652,044,Mouse-bias_ego,0,12.0,142,0.08450704225352113,ok
+260429-212652,044,Mouse-bias_allo_real,0,12.0,142,0.08450704225352113,ok
+260429-212652,044,Mouse-bias_allo_latent,0,12.0,142,0.08450704225352113,ok
+260429-212652,044,ConditionalClone_ego,0,12.0,142,0.08450704225352113,ok
+260429-212652,044,Random,1,,142,,"error: TypeError(""run_random_agent() got multiple values for argument 'seed'"")"
+260429-212652,044,Random_forward,1,,142,,"error: TypeError(""run_forward_random_agent() got multiple values for argument 'seed'"")"
+260429-212652,044,Greedy_oracle,1,,142,,"error: TypeError(""run_greedy_agent() got multiple values for argument 'seed'"")"
+260429-212652,044,FullFwd,1,12.0,142,0.08450704225352113,ok
+260429-212652,044,NoBkFullFwd,1,12.0,142,0.08450704225352113,ok
+260429-212652,044,FSC_bio,1,12.0,142,0.08450704225352113,ok
+260429-212652,044,Mouse-bias_ego,1,12.0,142,0.08450704225352113,ok
+260429-212652,044,Mouse-bias_allo_real,1,11.0,142,0.07746478873239436,ok
+260429-212652,044,Mouse-bias_allo_latent,1,11.0,142,0.07746478873239436,ok
+260429-212652,044,ConditionalClone_ego,1,12.0,142,0.08450704225352113,ok
+260429-212652,044,Random,2,,142,,"error: TypeError(""run_random_agent() got multiple values for argument 'seed'"")"
+260429-212652,044,Random_forward,2,,142,,"error: TypeError(""run_forward_random_agent() got multiple values for argument 'seed'"")"
+260429-212652,044,Greedy_oracle,2,,142,,"error: TypeError(""run_greedy_agent() got multiple values for argument 'seed'"")"
+260429-212652,044,FullFwd,2,12.0,142,0.08450704225352113,ok
+260429-212652,044,NoBkFullFwd,2,12.0,142,0.08450704225352113,ok
+260429-212652,044,FSC_bio,2,12.0,142,0.08450704225352113,ok
+260429-212652,044,Mouse-bias_ego,2,12.0,142,0.08450704225352113,ok
+260429-212652,044,Mouse-bias_allo_real,2,12.0,142,0.08450704225352113,ok
+260429-212652,044,Mouse-bias_allo_latent,2,12.0,142,0.08450704225352113,ok
+260429-212652,044,ConditionalClone_ego,2,12.0,142,0.08450704225352113,ok
+260429-212652,044,Random,3,,142,,"error: TypeError(""run_random_agent() got multiple values for argument 'seed'"")"
+260429-212652,044,Random_forward,3,,142,,"error: TypeError(""run_forward_random_agent() got multiple values for argument 'seed'"")"
+260429-212652,044,Greedy_oracle,3,,142,,"error: TypeError(""run_greedy_agent() got multiple values for argument 'seed'"")"
+260429-212652,044,FullFwd,3,12.0,142,0.08450704225352113,ok
+260429-212652,044,NoBkFullFwd,3,12.0,142,0.08450704225352113,ok
+260429-212652,044,FSC_bio,3,12.0,142,0.08450704225352113,ok
+260429-212652,044,Mouse-bias_ego,3,12.0,142,0.08450704225352113,ok
+260429-212652,044,Mouse-bias_allo_real,3,12.0,142,0.08450704225352113,ok
+260429-212652,044,Mouse-bias_allo_latent,3,12.0,142,0.08450704225352113,ok
+260429-212652,044,ConditionalClone_ego,3,10.0,142,0.07042253521126761,ok
+260429-212652,044,Random,4,,142,,"error: TypeError(""run_random_agent() got multiple values for argument 'seed'"")"
+260429-212652,044,Random_forward,4,,142,,"error: TypeError(""run_forward_random_agent() got multiple values for argument 'seed'"")"
+260429-212652,044,Greedy_oracle,4,,142,,"error: TypeError(""run_greedy_agent() got multiple values for argument 'seed'"")"
+260429-212652,044,FullFwd,4,12.0,142,0.08450704225352113,ok
+260429-212652,044,NoBkFullFwd,4,12.0,142,0.08450704225352113,ok
+260429-212652,044,FSC_bio,4,12.0,142,0.08450704225352113,ok
+260429-212652,044,Mouse-bias_ego,4,12.0,142,0.08450704225352113,ok
+260429-212652,044,Mouse-bias_allo_real,4,12.0,142,0.08450704225352113,ok
+260429-212652,044,Mouse-bias_allo_latent,4,12.0,142,0.08450704225352113,ok
+260429-212652,044,ConditionalClone_ego,4,12.0,142,0.08450704225352113,ok
+260430-221618,044,Random,0,,76,,"error: TypeError(""run_random_agent() got multiple values for argument 'seed'"")"
+260430-221618,044,Random_forward,0,,76,,"error: TypeError(""run_forward_random_agent() got multiple values for argument 'seed'"")"
+260430-221618,044,Greedy_oracle,0,,76,,"error: TypeError(""run_greedy_agent() got multiple values for argument 'seed'"")"
+260430-221618,044,FullFwd,0,12.0,76,0.15789473684210525,ok
+260430-221618,044,NoBkFullFwd,0,12.0,76,0.15789473684210525,ok
+260430-221618,044,FSC_bio,0,12.0,76,0.15789473684210525,ok
+260430-221618,044,Mouse-bias_ego,0,12.0,76,0.15789473684210525,ok
+260430-221618,044,Mouse-bias_allo_real,0,12.0,76,0.15789473684210525,ok
+260430-221618,044,Mouse-bias_allo_latent,0,12.0,76,0.15789473684210525,ok
+260430-221618,044,ConditionalClone_ego,0,12.0,76,0.15789473684210525,ok
+260430-221618,044,Random,1,,76,,"error: TypeError(""run_random_agent() got multiple values for argument 'seed'"")"
+260430-221618,044,Random_forward,1,,76,,"error: TypeError(""run_forward_random_agent() got multiple values for argument 'seed'"")"
+260430-221618,044,Greedy_oracle,1,,76,,"error: TypeError(""run_greedy_agent() got multiple values for argument 'seed'"")"
+260430-221618,044,FullFwd,1,12.0,76,0.15789473684210525,ok
+260430-221618,044,NoBkFullFwd,1,12.0,76,0.15789473684210525,ok
+260430-221618,044,FSC_bio,1,12.0,76,0.15789473684210525,ok
+260430-221618,044,Mouse-bias_ego,1,10.0,76,0.13157894736842105,ok
+260430-221618,044,Mouse-bias_allo_real,1,11.0,76,0.14473684210526316,ok
+260430-221618,044,Mouse-bias_allo_latent,1,11.0,76,0.14473684210526316,ok
+260430-221618,044,ConditionalClone_ego,1,10.0,76,0.13157894736842105,ok
+260430-221618,044,Random,2,,76,,"error: TypeError(""run_random_agent() got multiple values for argument 'seed'"")"
+260430-221618,044,Random_forward,2,,76,,"error: TypeError(""run_forward_random_agent() got multiple values for argument 'seed'"")"
+260430-221618,044,Greedy_oracle,2,,76,,"error: TypeError(""run_greedy_agent() got multiple values for argument 'seed'"")"
+260430-221618,044,FullFwd,2,12.0,76,0.15789473684210525,ok
+260430-221618,044,NoBkFullFwd,2,12.0,76,0.15789473684210525,ok
+260430-221618,044,FSC_bio,2,12.0,76,0.15789473684210525,ok
+260430-221618,044,Mouse-bias_ego,2,12.0,76,0.15789473684210525,ok
+260430-221618,044,Mouse-bias_allo_real,2,11.0,76,0.14473684210526316,ok
+260430-221618,044,Mouse-bias_allo_latent,2,11.0,76,0.14473684210526316,ok
+260430-221618,044,ConditionalClone_ego,2,10.0,76,0.13157894736842105,ok
+260430-221618,044,Random,3,,76,,"error: TypeError(""run_random_agent() got multiple values for argument 'seed'"")"
+260430-221618,044,Random_forward,3,,76,,"error: TypeError(""run_forward_random_agent() got multiple values for argument 'seed'"")"
+260430-221618,044,Greedy_oracle,3,,76,,"error: TypeError(""run_greedy_agent() got multiple values for argument 'seed'"")"
+260430-221618,044,FullFwd,3,9.0,76,0.11842105263157894,ok
+260430-221618,044,NoBkFullFwd,3,12.0,76,0.15789473684210525,ok
+260430-221618,044,FSC_bio,3,12.0,76,0.15789473684210525,ok
+260430-221618,044,Mouse-bias_ego,3,12.0,76,0.15789473684210525,ok
+260430-221618,044,Mouse-bias_allo_real,3,12.0,76,0.15789473684210525,ok
+260430-221618,044,Mouse-bias_allo_latent,3,12.0,76,0.15789473684210525,ok
+260430-221618,044,ConditionalClone_ego,3,12.0,76,0.15789473684210525,ok
+260430-221618,044,Random,4,,76,,"error: TypeError(""run_random_agent() got multiple values for argument 'seed'"")"
+260430-221618,044,Random_forward,4,,76,,"error: TypeError(""run_forward_random_agent() got multiple values for argument 'seed'"")"
+260430-221618,044,Greedy_oracle,4,,76,,"error: TypeError(""run_greedy_agent() got multiple values for argument 'seed'"")"
+260430-221618,044,FullFwd,4,9.0,76,0.11842105263157894,ok
+260430-221618,044,NoBkFullFwd,4,12.0,76,0.15789473684210525,ok
+260430-221618,044,FSC_bio,4,12.0,76,0.15789473684210525,ok
+260430-221618,044,Mouse-bias_ego,4,12.0,76,0.15789473684210525,ok
+260430-221618,044,Mouse-bias_allo_real,4,12.0,76,0.15789473684210525,ok
+260430-221618,044,Mouse-bias_allo_latent,4,12.0,76,0.15789473684210525,ok
+260430-221618,044,ConditionalClone_ego,4,8.0,76,0.10526315789473684,ok
+260501-184911,044,Random,0,,122,,"error: TypeError(""run_random_agent() got multiple values for argument 'seed'"")"
+260501-184911,044,Random_forward,0,,122,,"error: TypeError(""run_forward_random_agent() got multiple values for argument 'seed'"")"
+260501-184911,044,Greedy_oracle,0,,122,,"error: TypeError(""run_greedy_agent() got multiple values for argument 'seed'"")"
+260501-184911,044,FullFwd,0,12.0,122,0.09836065573770492,ok
+260501-184911,044,NoBkFullFwd,0,12.0,122,0.09836065573770492,ok
+260501-184911,044,FSC_bio,0,12.0,122,0.09836065573770492,ok
+260501-184911,044,Mouse-bias_ego,0,12.0,122,0.09836065573770492,ok
+260501-184911,044,Mouse-bias_allo_real,0,12.0,122,0.09836065573770492,ok
+260501-184911,044,Mouse-bias_allo_latent,0,12.0,122,0.09836065573770492,ok
+260501-184911,044,ConditionalClone_ego,0,12.0,122,0.09836065573770492,ok
+260501-184911,044,Random,1,,122,,"error: TypeError(""run_random_agent() got multiple values for argument 'seed'"")"
+260501-184911,044,Random_forward,1,,122,,"error: TypeError(""run_forward_random_agent() got multiple values for argument 'seed'"")"
+260501-184911,044,Greedy_oracle,1,,122,,"error: TypeError(""run_greedy_agent() got multiple values for argument 'seed'"")"
+260501-184911,044,FullFwd,1,12.0,122,0.09836065573770492,ok
+260501-184911,044,NoBkFullFwd,1,12.0,122,0.09836065573770492,ok
+260501-184911,044,FSC_bio,1,12.0,122,0.09836065573770492,ok
+260501-184911,044,Mouse-bias_ego,1,12.0,122,0.09836065573770492,ok
+260501-184911,044,Mouse-bias_allo_real,1,11.0,122,0.09016393442622951,ok
+260501-184911,044,Mouse-bias_allo_latent,1,11.0,122,0.09016393442622951,ok
+260501-184911,044,ConditionalClone_ego,1,12.0,122,0.09836065573770492,ok
+260501-184911,044,Random,2,,122,,"error: TypeError(""run_random_agent() got multiple values for argument 'seed'"")"
+260501-184911,044,Random_forward,2,,122,,"error: TypeError(""run_forward_random_agent() got multiple values for argument 'seed'"")"
+260501-184911,044,Greedy_oracle,2,,122,,"error: TypeError(""run_greedy_agent() got multiple values for argument 'seed'"")"
+260501-184911,044,FullFwd,2,12.0,122,0.09836065573770492,ok
+260501-184911,044,NoBkFullFwd,2,12.0,122,0.09836065573770492,ok
+260501-184911,044,FSC_bio,2,12.0,122,0.09836065573770492,ok
+260501-184911,044,Mouse-bias_ego,2,12.0,122,0.09836065573770492,ok
+260501-184911,044,Mouse-bias_allo_real,2,12.0,122,0.09836065573770492,ok
+260501-184911,044,Mouse-bias_allo_latent,2,12.0,122,0.09836065573770492,ok
+260501-184911,044,ConditionalClone_ego,2,12.0,122,0.09836065573770492,ok
+260501-184911,044,Random,3,,122,,"error: TypeError(""run_random_agent() got multiple values for argument 'seed'"")"
+260501-184911,044,Random_forward,3,,122,,"error: TypeError(""run_forward_random_agent() got multiple values for argument 'seed'"")"
+260501-184911,044,Greedy_oracle,3,,122,,"error: TypeError(""run_greedy_agent() got multiple values for argument 'seed'"")"
+260501-184911,044,FullFwd,3,12.0,122,0.09836065573770492,ok
+260501-184911,044,NoBkFullFwd,3,12.0,122,0.09836065573770492,ok
+260501-184911,044,FSC_bio,3,12.0,122,0.09836065573770492,ok
+260501-184911,044,Mouse-bias_ego,3,12.0,122,0.09836065573770492,ok
+260501-184911,044,Mouse-bias_allo_real,3,12.0,122,0.09836065573770492,ok
+260501-184911,044,Mouse-bias_allo_latent,3,12.0,122,0.09836065573770492,ok
+260501-184911,044,ConditionalClone_ego,3,12.0,122,0.09836065573770492,ok
+260501-184911,044,Random,4,,122,,"error: TypeError(""run_random_agent() got multiple values for argument 'seed'"")"
+260501-184911,044,Random_forward,4,,122,,"error: TypeError(""run_forward_random_agent() got multiple values for argument 'seed'"")"
+260501-184911,044,Greedy_oracle,4,,122,,"error: TypeError(""run_greedy_agent() got multiple values for argument 'seed'"")"
+260501-184911,044,FullFwd,4,12.0,122,0.09836065573770492,ok
+260501-184911,044,NoBkFullFwd,4,12.0,122,0.09836065573770492,ok
+260501-184911,044,FSC_bio,4,12.0,122,0.09836065573770492,ok
+260501-184911,044,Mouse-bias_ego,4,12.0,122,0.09836065573770492,ok
+260501-184911,044,Mouse-bias_allo_real,4,12.0,122,0.09836065573770492,ok
+260501-184911,044,Mouse-bias_allo_latent,4,12.0,122,0.09836065573770492,ok
+260501-184911,044,ConditionalClone_ego,4,12.0,122,0.09836065573770492,ok
+260502-214459,044,Random,0,,74,,"error: TypeError(""run_random_agent() got multiple values for argument 'seed'"")"
+260502-214459,044,Random_forward,0,,74,,"error: TypeError(""run_forward_random_agent() got multiple values for argument 'seed'"")"
+260502-214459,044,Greedy_oracle,0,,74,,"error: TypeError(""run_greedy_agent() got multiple values for argument 'seed'"")"
+260502-214459,044,FullFwd,0,12.0,74,0.16216216216216217,ok
+260502-214459,044,NoBkFullFwd,0,12.0,74,0.16216216216216217,ok
+260502-214459,044,FSC_bio,0,12.0,74,0.16216216216216217,ok
+260502-214459,044,Mouse-bias_ego,0,12.0,74,0.16216216216216217,ok
+260502-214459,044,Mouse-bias_allo_real,0,12.0,74,0.16216216216216217,ok
+260502-214459,044,Mouse-bias_allo_latent,0,12.0,74,0.16216216216216217,ok
+260502-214459,044,ConditionalClone_ego,0,12.0,74,0.16216216216216217,ok
+260502-214459,044,Random,1,,74,,"error: TypeError(""run_random_agent() got multiple values for argument 'seed'"")"
+260502-214459,044,Random_forward,1,,74,,"error: TypeError(""run_forward_random_agent() got multiple values for argument 'seed'"")"
+260502-214459,044,Greedy_oracle,1,,74,,"error: TypeError(""run_greedy_agent() got multiple values for argument 'seed'"")"
+260502-214459,044,FullFwd,1,12.0,74,0.16216216216216217,ok
+260502-214459,044,NoBkFullFwd,1,12.0,74,0.16216216216216217,ok
+260502-214459,044,FSC_bio,1,12.0,74,0.16216216216216217,ok
+260502-214459,044,Mouse-bias_ego,1,11.0,74,0.14864864864864866,ok
+260502-214459,044,Mouse-bias_allo_real,1,11.0,74,0.14864864864864866,ok
+260502-214459,044,Mouse-bias_allo_latent,1,11.0,74,0.14864864864864866,ok
+260502-214459,044,ConditionalClone_ego,1,11.0,74,0.14864864864864866,ok
+260502-214459,044,Random,2,,74,,"error: TypeError(""run_random_agent() got multiple values for argument 'seed'"")"
+260502-214459,044,Random_forward,2,,74,,"error: TypeError(""run_forward_random_agent() got multiple values for argument 'seed'"")"
+260502-214459,044,Greedy_oracle,2,,74,,"error: TypeError(""run_greedy_agent() got multiple values for argument 'seed'"")"
+260502-214459,044,FullFwd,2,12.0,74,0.16216216216216217,ok
+260502-214459,044,NoBkFullFwd,2,12.0,74,0.16216216216216217,ok
+260502-214459,044,FSC_bio,2,12.0,74,0.16216216216216217,ok
+260502-214459,044,Mouse-bias_ego,2,12.0,74,0.16216216216216217,ok
+260502-214459,044,Mouse-bias_allo_real,2,11.0,74,0.14864864864864866,ok
+260502-214459,044,Mouse-bias_allo_latent,2,11.0,74,0.14864864864864866,ok
+260502-214459,044,ConditionalClone_ego,2,12.0,74,0.16216216216216217,ok
+260502-214459,044,Random,3,,74,,"error: TypeError(""run_random_agent() got multiple values for argument 'seed'"")"
+260502-214459,044,Random_forward,3,,74,,"error: TypeError(""run_forward_random_agent() got multiple values for argument 'seed'"")"
+260502-214459,044,Greedy_oracle,3,,74,,"error: TypeError(""run_greedy_agent() got multiple values for argument 'seed'"")"
+260502-214459,044,FullFwd,3,9.0,74,0.12162162162162163,ok
+260502-214459,044,NoBkFullFwd,3,12.0,74,0.16216216216216217,ok
+260502-214459,044,FSC_bio,3,12.0,74,0.16216216216216217,ok
+260502-214459,044,Mouse-bias_ego,3,10.0,74,0.13513513513513514,ok
+260502-214459,044,Mouse-bias_allo_real,3,12.0,74,0.16216216216216217,ok
+260502-214459,044,Mouse-bias_allo_latent,3,12.0,74,0.16216216216216217,ok
+260502-214459,044,ConditionalClone_ego,3,12.0,74,0.16216216216216217,ok
+260502-214459,044,Random,4,,74,,"error: TypeError(""run_random_agent() got multiple values for argument 'seed'"")"
+260502-214459,044,Random_forward,4,,74,,"error: TypeError(""run_forward_random_agent() got multiple values for argument 'seed'"")"
+260502-214459,044,Greedy_oracle,4,,74,,"error: TypeError(""run_greedy_agent() got multiple values for argument 'seed'"")"
+260502-214459,044,FullFwd,4,9.0,74,0.12162162162162163,ok
+260502-214459,044,NoBkFullFwd,4,12.0,74,0.16216216216216217,ok
+260502-214459,044,FSC_bio,4,12.0,74,0.16216216216216217,ok
+260502-214459,044,Mouse-bias_ego,4,12.0,74,0.16216216216216217,ok
+260502-214459,044,Mouse-bias_allo_real,4,12.0,74,0.16216216216216217,ok
+260502-214459,044,Mouse-bias_allo_latent,4,12.0,74,0.16216216216216217,ok
+260502-214459,044,ConditionalClone_ego,4,12.0,74,0.16216216216216217,ok

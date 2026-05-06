@@ -1,0 +1,86 @@
+GOTCHA: GraphMazeEnv Rebait Order-of-Operations Issue
+====================================================
+Fixed: 2026-03-05, commit a2e9c93
+Affects: ALL simulation CSVs in data_out/rl_sims/ generated before this date
+
+WHAT WAS WRONG
+--------------
+GraphMazeEnv.step() had the wrong order of operations for reward rebait:
+
+  OLD (buggy):
+    1. rwd_per_node[current] = 0               # REMOVE consumed state
+    2. if sum(rwd_per_node) < min_allowed:      # CHECK rebait threshold
+    3.     rwd_per_node = deepcopy(initial)      # REBAIT (restores consumed!)
+
+  CORRECT (RPi experiment, line 559 of 240829_latMaz_exp-mop0half-STABLE.py):
+    1. if len(rewarded_states) == thresh + 1:   # CHECK rebait threshold
+    2.     rewarded_states = deepcopy(INITIAL)   # REBAIT
+    3. rewarded_states.remove(state_t)           # THEN REMOVE
+
+  FIXED GraphMazeEnv:
+    1. if sum(rwd_per_node) == min_allowed + 1:  # CHECK before removal
+    2.     rwd_per_node = deepcopy(initial)       # REBAIT
+    3. rwd_per_node[current] = 0                  # THEN REMOVE
+
+Two issues in the old code:
+  a) Removing before checking shifts the threshold comparison by one
+  b) Rebaiting after removal means deepcopy(initial) restores the consumed state
+
+WHY WE KNOW THE FIX IS CORRECT
+-------------------------------
+The RPi code IS ground truth -- it ran during the actual mouse experiments.
+The yoking DF records the actual n_rewards each mouse earned.
+
+Simulating both logics on 185 validated mouse trajectories:
+  - RPi (fixed) logic matches actual n_rewards: 181/185 (97.8%)
+  - Old GraphMazeEnv logic matches:              122/185 (65.9%)
+  - 63 sessions (34.1%) produce different reward counts
+
+The fix generally INCREASES reward counts (mean delta +6), because the old
+logic under-counted by removing the consumed state before checking rebait.
+
+WHICH FILES ARE AFFECTED
+-------------------------
+Core baselines have been RERUN with the fix (_FIXED suffix):
+  - 260305-162549_baseline_heuristics_extended_FIXED.csv  (59,600 rows)
+  - 260305-162549_baseline_random_greedy_FIXED.csv        (900 rows)
+  - 260305-162549_belief_oracle_FIXED.csv                 (300 rows)
+
+These OLD files have BUGGY reward counts:
+  - 260301-*_baseline_heuristics_extended.csv
+  - 260217_baseline_heuristics_full226.csv
+  - 260217_baseline_heuristics.csv
+  - 260217_baseline_random_greedy.csv
+  - 260219_belief_oracle_results.csv
+  - 260210_hpo_tuning_results.csv
+  - 260210_baseline_all_agents.csv
+  - 260211_pretrain_results.csv
+  - 260211_pomcp_full41.csv
+  - 260213_pomcp_bio_results.csv
+  - 260217_target_session_pretrain.csv
+  - 260222_exp1*  (diagnostics series)
+  - 260223-*_maze_scaling_results.csv
+  - 260225-*_focused_scaling_results.csv
+  - 260226-*_greedy_scaling_results.csv
+  - 260226_pomcp_bio_cscg_results.csv
+  - 260228_cscg_*_results.csv
+  - 260301_cscg_pomcp_exploit_results.csv
+
+WHAT TO DO IN YOUR WORKTREE
+----------------------------
+1. Use *_FIXED.csv files for heuristic/greedy/belief baselines
+2. If you need other agent results (POMCP, CSCG, scaling, pretrain):
+   rerun them using the current (fixed) GraphMazeEnv
+3. The fix is in yoked_rl_runner.py -- any script importing GraphMazeEnv
+   from the current codebase automatically gets the fix
+4. Impact report: reports/260305-*_rebait_bug_impact_report.pdf
+5. Full evidence report: reports/260305-*_rebait_fix_evidence.pdf
+
+QUICK SANITY CHECK
+------------------
+After running sims, verify reward counts match mouse data:
+
+  from experiment_config import load_data, build_runner
+  yoking_df, rwd_df, sessions = load_data()
+  runner = build_runner(yoking_df, rwd_df)
+  # Pick any validated session and check sim matches yoking n_rewards
