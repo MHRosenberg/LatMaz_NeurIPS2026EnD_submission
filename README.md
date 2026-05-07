@@ -79,17 +79,26 @@ python 260505_plot_per_animal_categories.py
 ## Project structure
 
 ```
-
-├── paper/                              # LaTeX manuscript + generated PDF + paper_values
-├── code/                               # active RL code: runner, agents, experiments, figure scripts
+├── code/                               # active RL + analysis Python code (71 top-level scripts)
+│   ├── apparatus_control/              # Raspberry-Pi-side experiment-control scripts (30 files)
+│   │   ├── 1_setup_and_calibration/    #   motor calibration, fluid management, miniscreen config (4)
+│   │   ├── 2_canonical_runtime/        #   canonical egocentric runtime (3) + allocentric/ (2)
+│   │   ├── 3_maze_variants/            #   per-maze runtime variants (10)
+│   │   ├── 4_historical/               #   training-curriculum history (9)
+│   │   ├── utils_latMaz.py             #   apparatus-side utilities
+│   │   └── utils_latMaz_apparatus.py   #   Raspberry-Pi-side runtime module
+│   └── shelved_agents/                 # parked POMCP oracle agent (2 files)
 ├── data_released/                      # canonical release artifacts
 │   ├── croissant_metadata.json         #   Croissant 1.0 metadata
-│   ├── yoked_dfs/                      #   canonical yoked-sessions dataframe
-│   ├── raw_session_csvs/, mazes/, *.zip
-│   └── results/                        #   precomputed simulation CSVs (14 files)
-├── reports/figures/                    # generated figures
-├── data_in/, data_out/                 # working dirs (gitignored)
-└── docs/                               # workflow / approach notes
+│   ├── paper_values.tex                #   auto-generated paper-value macros
+│   ├── yoked_dfs/                      #   canonical yoked-sessions dataframe (1 file)
+│   ├── mazes/                          #   per-maze adjacency + state-position CSVs (23 files)
+│   ├── raw_session_csvs/               #   per-session event-log CSVs (361 files)
+│   └── results/                        #   precomputed simulation CSVs + paper-values JSON snapshots (21 files)
+├── requirements.txt                    # simulation/analysis-side Python deps
+├── requirementsRPi.txt                 # Raspberry-Pi-side Python deps
+├── data_in/, data_out/                 # working dirs (gitignored; created at runtime)
+└── reports/figures/                    # generated at runtime by figure scripts (gitignored)
 ```
 
 ## Replication validation across machines
