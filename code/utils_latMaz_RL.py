@@ -36,7 +36,12 @@ from stable_baselines3 import TD3
 from stable_baselines3.common.monitor import Monitor
 from stable_baselines3.common.results_plotter import ts2xy
 from stable_baselines3.common.noise import NormalActionNoise
-from sb3_contrib import TRPO, CrossQ, RecurrentPPO, TQC
+# Note: CrossQ and TQC were added in sb3-contrib 2.4.0; the paper-pinned
+# sb3-contrib==2.3.0 (requirements.txt) doesn't have them. None of these
+# four symbols is referenced anywhere in this module — yoked_rl_runner.py
+# imports its own TRPO / RecurrentPPO / QRDQN from sb3_contrib at line 61
+# and is the only consumer downstream. Removed to align the code's actual
+# sb3-contrib-API requirement with paper §5 and requirements.txt.
 from stable_baselines3 import A2C, DDPG, DQN, PPO, HER, HerReplayBuffer
 
 sys.path.append('../')
