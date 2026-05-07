@@ -20,6 +20,8 @@ scipy>=1.10
 matplotlib>=3.7
 networkx>=3.0
 seaborn>=0.12
+imageio>=2.0       # used by visualize_trajectories.py, generate_pomcp_bio_gifs.py, utils_latMaz*.py
+plotly>=5.0        # used by utils_latMaz.py, utils_latMaz_stats_n_plotting.py
 
 # ---- POMCP / planners ----
 pomdp-py==1.3.5
