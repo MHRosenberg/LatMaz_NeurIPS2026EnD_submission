@@ -705,7 +705,7 @@ if _TORCH_AVAILABLE:
             Bug history: prior to 260505 this method ignored `mode` entirely
             and always used the random branch, producing bit-identical outputs
             for DRQN_seq and DRQN_rand under matched seeds (see
-            (internal note)).
+            (internal note).
             """
             max_start = len(self) - seq_len
             if mode == 'sequential':
@@ -938,10 +938,31 @@ class YokedRLRunner:
         self,
         yoking_df: pd.DataFrame,
         rewarded_states_df: Optional[pd.DataFrame] = None,
-        maze_dir: str = '../data_in/mazes',
+        maze_dir: Optional[str] = None,
         output_dir: str = '../data_out/rl_sims',
         algo_config: Optional[AlgoConfig] = None,
     ):
+        # Layout-agnostic maze_dir default: prefer data_released/mazes/ (the
+        # released layout), fall back to data_in/mazes/ (dev layout). Caller
+        # can override explicitly.
+        if maze_dir is None:
+            here = os.path.dirname(os.path.abspath(__file__))
+            cur = here
+            for _ in range(5):
+                released = os.path.join(cur, 'data_released', 'mazes')
+                legacy = os.path.join(cur, 'data_in', 'mazes')
+                if os.path.isdir(released):
+                    maze_dir = released
+                    break
+                if os.path.isdir(legacy):
+                    maze_dir = legacy
+                    break
+                parent = os.path.dirname(cur)
+                if parent == cur:
+                    break
+                cur = parent
+            if maze_dir is None:
+                maze_dir = '../data_in/mazes'  # legacy fallback
         self.yoking_df = yoking_df.copy()
         self.maze_dir = maze_dir
         self.output_dir = output_dir
@@ -959,8 +980,17 @@ class YokedRLRunner:
                         states = ast.literal_eval(row['rewarded_states']) if isinstance(row['rewarded_states'], str) else row['rewarded_states']
                         reset_val = int(row.get('reset_when_n_rwds_remaining', 1)) + 1
                         self.rwd_lookup[exp_mom] = (states, reset_val)
-                    except:
-                        pass
+                    except Exception as e:
+                        # 260507 v12: was bare `except: pass`. Silent swallow
+                        # of cache-population errors meant broken rwd-state
+                        # rows were skipped and the agent ran without
+                        # those sessions, with zero indication. Now: log
+                        # loudly and re-raise so the caller can decide.
+                        import sys
+                        print(f'ERROR: failed to parse rewarded_states for '
+                              f'exp_moment={exp_mom}: {type(e).__name__}: {e}',
+                              file=sys.stderr)
+                        raise
 
         # Cache for mazes
         self._maze_cache = {}

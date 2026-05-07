@@ -1,7 +1,7 @@
 """Explicit POMCPbioAlloAgent verification run — all 60 sessions × 5 seeds.
 
-This script is a verification run, not a issue fix. Investigation (see
-docs/outbox/260408_pomcp_bio_obs_type_investigation.md and GitHub issue #13)
+This script is a verification run, not a bug fix. Investigation (see
+internal investigation notes (not in public release))
 confirmed that:
 
   1. POMCP_OBS_CONFIG = {'obs_type': 'ego'} has ZERO effect on POMCP_bio.

@@ -8,7 +8,7 @@ Produces:
       canonical-60 HPO-best (from c260316-171035_hpo_tuning_FIXED.csv).
   (c) generalisation-gap summary: NNS drop from canonical-60 to cohort-137
       under each agent's canonical-60 HPO-best config (the HPO-leakage diagnostic
-      proposed in docs/outbox/260504_HPO_leakage_non_triviality_argument.md).
+      proposed in internal HPO-leakage analysis notes (not in public release).
 
 Inputs:
   - data_transfer_cld/cluster_bundle_260503/outputs/c{ts}_cohort137_8agents_HPO_mac_overnight.csv
@@ -34,7 +34,17 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 
-PROJECT_ROOT = Path('<REPO_ROOT>')
+def _find_project_root(start: Path) -> Path:
+    """Walk up from start looking for data_released/ or paper/ marker dirs."""
+    cur = start
+    for _ in range(5):
+        if (cur / 'data_released').is_dir() or (cur / 'paper').is_dir():
+            return cur
+        if cur.parent == cur:
+            break
+        cur = cur.parent
+    return start.parent.parent  # legacy fallback (depth-2 dev layout)
+PROJECT_ROOT = _find_project_root(Path(__file__).resolve().parent)
 COHORT_DIR = PROJECT_ROOT / 'data_transfer_cld' / 'cluster_bundle_260503' / 'outputs'
 HPO_CSV = PROJECT_ROOT / 'data_out' / 'rl_sims' / 'c260316-171035_hpo_tuning_FIXED.csv'
 OUT_DIR = PROJECT_ROOT / 'data_out' / 'sanity_checks'
@@ -183,7 +193,7 @@ def main():
         f.write(gap.to_markdown(index=False))
         f.write('\n\n')
         f.write('### Interpretation\n\n')
-        f.write('See `docs/outbox/260504_HPO_leakage_non_triviality_argument.md` for context.\n')
+        f.write('See internal HPO-leakage analysis notes (not in public release).\n')
         f.write('Large NNS drops (>10 pp) indicate the canonical-60 HPO-best config does\n')
         f.write('not generalize to the wider 137-session cohort. This is consistent with\n')
         f.write('two interpretations: (a) HPO leakage (overfitting to canonical-60 quirks),\n')

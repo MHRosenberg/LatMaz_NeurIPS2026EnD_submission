@@ -42,7 +42,7 @@ import matplotlib.patches as mpatches
 # ---------------------------------------------------------------------------
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 PROJECT_ROOT = os.path.normpath(os.path.join(SCRIPT_DIR, '..', '..'))
-sys.path.insert(0, os.path.join(PROJECT_ROOT, 'code'))
+sys.path.insert(0, os.path.join(PROJECT_ROOT, 'code', 'code/'))
 sys.path.insert(0, SCRIPT_DIR)
 
 DATA_DIR = os.path.join(PROJECT_ROOT, 'data_out', 'rl_sims')
@@ -640,7 +640,7 @@ md_lines = [
     f"# Comprehensive Agent Benchmark Report",
     f"",
     f"**Date:** {DATE_STR}",
-    f"**Dataset:** {N_SESSIONS} filtered sessions, fully corrected rebait (commit 6596423)",
+    f"**Dataset:** {N_SESSIONS} filtered sessions, fully corrected rebait (corrected-rebait release)",
     f"**Reference:** Random={random_rpa:.3f}, Forward={fwd_random_rpa:.3f}, "
     f"Greedy={greedy_rpa:.3f}, Mouse={MOUSE_RPA:.3f}",
     f"",
@@ -720,7 +720,7 @@ html_lines = [
     f'<h1>Comprehensive Agent Benchmark Report</h1>',
     f'<p><strong>Date:</strong> {DATE_STR} &nbsp;|&nbsp; '
     f'<strong>Sessions:</strong> {N_SESSIONS} &nbsp;|&nbsp; '
-    f'<strong>Code:</strong> fully corrected rebait (commit 6596423)</p>',
+    f'<strong>Code:</strong> fully corrected rebait (corrected-rebait release)</p>',
     '',
     '<div class="summary-box">',
     f'<strong>Key result:</strong> RecurrentSAC D=32 (RPA={compute_rpa(rsac_df):.3f}, '
@@ -834,8 +834,8 @@ html_lines += [
     '',
     '<div class="warning-box">',
     '<strong>Data provenance:</strong> All results use fully corrected rebait logic '
-    '(commit 6596423, 2026-03-15). The 260316-171035 master rerun replaced all prior '
-    '260308 FIXED CSVs which had a double-+1 off-by-one issue. '
+    '(corrected-rebait release on 2026-03-15). The 260316-171035 master rerun replaced all prior '
+    '260308 FIXED CSVs which had a double-+1 off-by-one bug. '
     'RecurrentSAC and POMCP c=1.0 use 260315 CSVs. '
     'Baselines rerun 2026-03-18.',
     '</div>',

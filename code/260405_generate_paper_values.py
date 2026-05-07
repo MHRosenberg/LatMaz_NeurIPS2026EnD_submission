@@ -132,16 +132,30 @@ def load_all():
     mouse['rpa'] = mouse['n_rewards'] / mouse['n_actions']
 
     dfs = {'mouse': mouse, 'sessions_60': sessions_60}
+    missing_files = []
     for name, path in FILES.items():
-        if path.exists():
-            df = pd.read_csv(path)
-            if 'exp_moment' in df.columns:
-                df = df[df['exp_moment'].isin(sessions_60)]
-            dfs[name] = df
-            print(f'  Loaded {name}: {len(df)} rows from {path.name}')
-        else:
-            print(f'  WARNING: {path.name} not found')
-            dfs[name] = pd.DataFrame()
+        if not path.exists():
+            missing_files.append((name, path))
+            continue
+        df = pd.read_csv(path)
+        if 'exp_moment' in df.columns:
+            df = df[df['exp_moment'].isin(sessions_60)]
+        dfs[name] = df
+        print(f'  Loaded {name}: {len(df)} rows from {path.name}')
+    if missing_files:
+        # 260507 v12: was `print('WARNING'); dfs[name] = pd.DataFrame()` per
+        # file (silent empty-df fallback). Downstream stat code processed
+        # the empty frame and produced nonsense values without crashing
+        # loudly. Now: collect missing files, then fail-fast with a clear
+        # multi-file error before any stat is computed.
+        msg = ['ERROR: required CSV(s) not found in DATA_DIR:']
+        for name, path in missing_files:
+            msg.append(f'  - {name}: {path}')
+        msg.append('')
+        msg.append('All FILES entries above feed into headline numbers in')
+        msg.append('paper_values.tex. Set DATA_DIR (env var) to the dir')
+        msg.append('containing them, or ship the missing files.')
+        raise FileNotFoundError('\n'.join(msg))
     return dfs
 
 
@@ -732,7 +746,7 @@ def compute_all(dfs):
 
     # ---- Cloning / heuristic stat tests vs mouse (Bonferroni n=5, separate pool) ----
     # NOTE: uses n=5 (5 cloning/heuristic comparisons), separate from the 7 primary tests.
-    # See GitHub issue #19 for decision on whether to merge into a single n=12 pool.
+    # See internal tracking notes for decision on whether to merge into a single n=12 pool.
     N_BONF_CLONING = 5
     for _key, _prefix in [
         ('FullFwd',         'FullFwdVsMouse'),
@@ -789,7 +803,7 @@ def compute_all(dfs):
     for key, sess in table1_sess.items():
         V[f'{key}RpaCI'] = ci95(sess)
 
-    # NNS denominator: switched POMCP -> Greedy_oracle on 2026-05-04 per Author.
+    # NNS denominator: switched POMCP -> Greedy_oracle on 2026-05-04 per review.
     # Greedy_oracle (BFS+replan with full graph access) is empirically the
     # strictest oracle on the canonical 60-session set (RPA 0.878 vs POMCP 0.820);
     # using it as the NNS denominator pins all bars in [0, 100%] and aligns the
@@ -1061,8 +1075,8 @@ def to_latex_commands(V):
         lines.append(cmd(f'{_key}WinRate',  str(V[f'{_key}WinRate']) + '\\%'))
         lines.append('')
 
-    # --- Cloning stat tests vs mouse (Bonferroni n=5; see issue #19) ---
-    lines.append('% === Cloning/heuristic stat tests vs mouse (Bonferroni n=5; see issue #19) ===')
+    # --- Cloning stat tests vs mouse (Bonferroni n=5; see internal notes) ---
+    lines.append('% === Cloning/heuristic stat tests vs mouse (Bonferroni n=5; see internal notes) ===')
     lines.append('% NOTE: separate n=5 Bonferroni pool — pending decision on merging with n=7 primary tests')
     for _prefix, _label in [
         ('FullFwdVsMouse',         'FullFwd vs Mouse'),

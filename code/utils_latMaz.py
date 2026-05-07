@@ -33,7 +33,7 @@ def deserialize_df_MR(df):
         try:
             df[col] = df[col].apply(safe_eval)
         except Exception as e:
-            print(f"Author: unable to deserialize col {col} of your df due to: {e}")
+            print(f"unable to deserialize col {col} of your df due to: {e}")
     return df
 
 from scipy.sparse import csr_matrix
@@ -73,7 +73,7 @@ def dijkstra(adj_matrix, start_node, end_node):
     return float('inf')  # Return infinity if the end node is not reachable
 
 def move_df_col_to_leftmost(df, col_name): 
-    print('Author: move_df_col_to_leftmost() is not an in-place operation currently; assign the result back to the input df')
+    print('move_df_col_to_leftmost() is not an in-place operation currently; assign the result back to the input df')
     return df[[col_name] + [col for col in df.columns if col != col_name]]
 
 def remove_consecutive_duplicates(original_list, return_inds_kept=False):
@@ -86,7 +86,7 @@ def remove_consecutive_duplicates(original_list, return_inds_kept=False):
     if return_inds_kept: return new_list, inds_kept
     else: return new_list
 
-def zero_pad_numbers(start, end=None, padded_str_length=3): # 250123 Author: minor mod to return the contents of the list instead of the list itself, if len is 1
+def zero_pad_numbers(start, end=None, padded_str_length=3): # 250123: minor mod to return the contents of the list instead of the list itself, if len is 1
     if end is None: end = start
     if isinstance(start, np.ndarray): start = list(start) # convert numpy to list
     if isinstance(start, list): result = [str(s).zfill(padded_str_length) for s in start]
@@ -102,18 +102,18 @@ def zero_pad_numbers(start, end=None, padded_str_length=3): # 250123 Author: min
 #     data = pd.read_csv('data_in/1_experiment_csvs/' + os.path.basename(csv_data_path))
 #     adj_file = data.iloc[0]['adjacency_file']
 #     st_pos_file = data.iloc[0]['st_positions_file']
-#     assert data.adjacency_file.nunique() == 1, 'Author: there should be only one adjacency file per experiment'
-#     assert data.st_positions_file.nunique() == 1, 'Author: there should be only one state positions file per experiment'
+#     assert data.adjacency_file.nunique() == 1, 'there should be only one adjacency file per experiment'
+#     assert data.st_positions_file.nunique() == 1, 'there should be only one state positions file per experiment'
     
 #     adj_mat, st_pos = load_maze('data_in/mazes/' + adj_file, 'data_in/mazes/' + st_pos_file)
     
 #     ## 1. if the action is rewarded
-#     # data['action_rewarded'] = (data['n_rewards'] - data['n_rewards'].shift()) > 0   # Author: Author3 approach neglects the first row; might have other issues
+#     # data['action_rewarded'] = (data['n_rewards'] - data['n_rewards'].shift()) > 0   # Author3 approach neglects the first row; might have other issues
 #     data['action_rewarded'] = False  # Initialize full column
 #     data.loc[data.reward_time.notna(), 'action_rewarded'] = data.reward_time.notna().astype(bool)
 
 #     ## add start state
-#     assert data.start_state.nunique() == 1, 'Author: there should be only one start state per experiment'
+#     assert data.start_state.nunique() == 1, 'there should be only one start state per experiment'
 #     st = data.iloc[0]['start_state']
 #     adj_states = get_adj_states(st, adj_mat)
     
@@ -131,7 +131,7 @@ def zero_pad_numbers(start, end=None, padded_str_length=3): # 250123 Author: min
 
 #     try: reward_duration = data.iloc[0]['reward_duration']
 #     except KeyError: 
-#         print(f"Author: no reward_duration column found, setting to np.nan\n{csv_data_path}")
+#         print(f"no reward_duration column found, setting to np.nan\n{csv_data_path}")
 #         reward_duration = np.nan
 
 #     start_row_df = pd.DataFrame([{'time': np.nan, 'action_idx': np.nan, 'lights_on': np.nan, 'state': st, 'rewarded_states': data.iloc[0].rewarded_states, 
@@ -194,7 +194,7 @@ ego_radian_map_dict.update({v: k for k, v in ego_radian_map_dict.items()}) # not
 allo_radian_map_dict = {'N': np.pi/2, 'S': 3*np.pi/2, 'W': np.pi, 'E': 0.0} # allocentric conventions for chars to radians and back
 allo_radian_map_dict.update({v: k for k,v in allo_radian_map_dict.items()})
 
-## Author: one hot versions (added 250128)
+## one hot versions (added 250128)
 ego_actions_one_hot_dict = {0: 'F', 1: 'B', 2: 'L', 3: 'R'}
 ego_actions_one_hot_dict.update({v: k for k,v in ego_actions_one_hot_dict.items()})
 allo_actions_one_hot_dict = {0: 'N', 1: 'S', 2: 'W', 3: 'E'}
@@ -215,7 +215,7 @@ def get_ego_direction(current_point, candidate_point, current_heading):
     '''Args:
         current_point: a (x,y) location in latent position of the current state.
         candidate_point: a (x,y) location in latent position of the new state.
-        current heading: 250618 Author: is this allo or ego???? the current heading of the agent in radians, as defined by the ego_radian_map_dict (Forwards = 0, Backwards = π, Left = π/2, Right = 3π/2).
+        current heading: 250618: is this allo or ego???? the current heading of the agent in radians, as defined by the ego_radian_map_dict (Forwards = 0, Backwards = π, Left = π/2, Right = 3π/2).
     Returns: forward, backward, left, or right as defined by the ego_radian_map_dict.
     '''
     # print(f'current_point: {current_point}, candidate_point: {candidate_point}, angle_to_candidate: {angle_to_candidate} radians')
@@ -229,9 +229,9 @@ def get_ego_direction(current_point, candidate_point, current_heading):
 def get_adj_states(state, adj_mat):
     state = int(state)
     # return np.argwhere(adj_mat[state] == 1).flatten()
-    return [int(state) for state in np.argwhere(adj_mat[state] == 1).flatten()] # 250622 Author: attempting to solve string to dict conversion error
+    return [int(state) for state in np.argwhere(adj_mat[state] == 1).flatten()] # 250622: attempting to solve string to dict conversion error
 
-## Author: modified to support 1 hot encodings for RL agents
+## modified to support 1 hot encodings for RL agents
 def env_transition_func(current_state, action, representation, adj_mat=None, st_positions=None, heading_real=None, heading_latent=None): # the transition function
     
     current_state = int(current_state)
@@ -277,8 +277,36 @@ def env_transition_func(current_state, action, representation, adj_mat=None, st_
         return 'action_unavailable'
 
 def load_maze(adj_path, st_pos_path):
-    st_positions = pd.read_csv(f'{st_pos_path}').to_numpy()[:,1:] # row index matches the state indices; each row is [x_position, y_position]
-    adj_df = pd.read_csv(f'{adj_path}', header=None)
+    """Load the adjacency matrix + state positions for a maze.
+
+    Layout-aware path resolution (added 260507 v12): if the given path
+    doesn't resolve as-is, try the canonical released location
+    ``data_released/mazes/<basename>`` and the legacy dev location
+    ``data_in/mazes/<basename>``. Lets the same yoking dataframe drive
+    both the dev pipeline and the released artifact without hand-edits
+    to call sites (utils_latMaz_analysis.py, utils_latMaz_RL.py, the
+    yoked_rl_runner default, and the figure scripts that hardcoded
+    'data_in/mazes/').
+    """
+    def _resolve(p):
+        if os.path.exists(p):
+            return p
+        base = os.path.basename(p)
+        here = os.path.dirname(os.path.abspath(__file__))
+        cur = here
+        for _ in range(5):
+            for cand_dir in ('data_released/mazes', 'data_in/mazes'):
+                cand = os.path.join(cur, cand_dir, base)
+                if os.path.exists(cand):
+                    return cand
+            parent = os.path.dirname(cur)
+            if parent == cur:
+                break
+            cur = parent
+        return p  # let pandas raise the original error
+
+    st_positions = pd.read_csv(_resolve(st_pos_path)).to_numpy()[:,1:] # row index matches the state indices; each row is [x_position, y_position]
+    adj_df = pd.read_csv(_resolve(adj_path), header=None)
 
     adj_df = adj_df.fillna(0) # map nans to zeros
     adj_df = adj_df.astype(int) # convert floats (NaNs are imported as float) to int
@@ -288,7 +316,7 @@ def load_maze(adj_path, st_pos_path):
     # return adj_df, st_positions
     return adj_mat, st_positions
 
-""" 240802 Author: new standard (ToDo: port back to exp script)
+""" 240802: new standard (ToDo: port back to exp script)
 src: 240802_latent_maze_exp-consistentRwdLoc-mop0full.py"""
 def plot_maze(adj_mat, st_positions, title='', rwd_states=None, current_position=None, filename = "unspecified",
               output_dir= './data_out', close=True, show=False, save=True):
@@ -314,12 +342,12 @@ def plot_maze(adj_mat, st_positions, title='', rwd_states=None, current_position
                 plt.plot(st_positions[rwd_state][0], st_positions[rwd_state][1], 'o', markersize=12, color='deepskyblue')
         else: plt.plot(st_positions[rwd_states][0], st_positions[rwd_states][1], 'o', markersize=12, color='deepskyblue') # this is a misnomer cuz there is only one rwd state in this condition
     except IndexError as e:
-        print(e); print('Author: no rwds found -> attempting to skip this')
+        print(e); print('no rwds found -> attempting to skip this')
         # import pdb; pdb.set_trace()
 
     ## plot current position of agent/mouse
 
-    if current_position is not None: # 250605 Author: why would there be more than one current position?
+    if current_position is not None: # 250605: why would there be more than one current position?
     #     for sp in current_position: plt.plot(st_positions[sp][0], st_positions[sp][1], 'o', markersize=13, color='red')
         plt.plot(st_positions[current_position][0], st_positions[current_position][1], 'o', markersize=13, color='red')
 
@@ -359,14 +387,14 @@ def copy_checksum_del_dir(original_dir_path, destination_parent_folder, checksum
 # Example usage:
 # copy_checksum_del_dir("path/to/original/dir", "path/to/destination/folder")
         
-def copy_checksum_del_file(original_file_path, destination_folder, checksum_algor='md5'): # 240903 Author: custom safer move involving checksum verification
+def copy_checksum_del_file(original_file_path, destination_folder, checksum_algor='md5'): # 240903: custom safer move involving checksum verification
     os.makedirs(destination_folder, exist_ok=True) # Ensure destination folder exists
-    assert destination_folder[-1] == '/', "Author: Destination folder path must end with a '/'"
+    assert destination_folder[-1] == '/', "Destination folder path must end with a '/'"
     destination_file_path = os.path.join(destination_folder, os.path.basename(original_file_path)) # Define path for the copied file
     print(f'copying: {original_file_path}\nto: {destination_file_path}') 
     shutil.copy2(original_file_path, destination_file_path) # Copy the file
     
-    def calculate_checksum(file_path, algorithm="md5"): # 241004 Author: md5 seems to be ok and faster
+    def calculate_checksum(file_path, algorithm="md5"): # 241004: md5 seems to be ok and faster
         if algorithm == "sha256": checksum = hashlib.sha256()
         elif algorithm == "md5": checksum = hashlib.md5()
         elif algorithm == "xxhash": checksum = xxhash.xxh64() # Much faster for non-cryptographic integrity checks
@@ -390,7 +418,7 @@ def copy_checksum_del_file(original_file_path, destination_folder, checksum_algo
 # Example usage:
 # copy_and_verify_file("path/to/original/file.txt", "path/to/destination/folder")
 
-def extract_animal_IDs(text): ## 241014 Author: from utils_ephys.py
+def extract_animal_IDs(text): ## 241014: from utils_ephys.py
     pattern = r'a(\d{3})'
     print(f'searching pattern: {pattern}')
     matches = re.findall(pattern, text)
@@ -398,8 +426,8 @@ def extract_animal_IDs(text): ## 241014 Author: from utils_ephys.py
     if len(matches) == 1: return matches[0]
     else: return matches
 
-# def get_moment_strings(string_input, force_output_as_list=False): # 250901 copied from utils_ephys_n_decoding.py (250606 Author: updated to version from utils_ephys.py)
-#     assert type(string_input) is str, '241013 Author: input must be a string'
+# def get_moment_strings(string_input, force_output_as_list=False): # 250901 copied from utils_ephys_n_decoding.py (250606: updated to version from utils_ephys.py)
+#     assert type(string_input) is str, '241013: input must be a string'
 #     pattern = r'\b\d{6}(?:-\d{6}|[a-z])?\b'
 #     # Find all matches in the input string
 #     matches = re.split(r'[_]', os.path.basename(string_input))  # Split by underscore first
@@ -410,8 +438,8 @@ def extract_animal_IDs(text): ## 241014 Author: from utils_ephys.py
 #     if len(results) == 1 and not force_output_as_list: return results[0]
 #     else: return results
 
-def get_moment_strings(string_input, str_separator='-', use_filename_only=True, return_as_single_str=True): # 241015 Author: from utils_ephys.py
-    assert type(string_input) is str, '241013 Author: input must be a string'
+def get_moment_strings(string_input, str_separator='-', use_filename_only=True, return_as_single_str=True): # 241015: from utils_ephys.py
+    assert type(string_input) is str, '241013: input must be a string'
     if use_filename_only: string_input = os.path.basename(string_input)
     if str_separator == '-': pattern = r'\b\d{6}(?:-\d{6}|[a-z])?\b'
     elif str_separator == '_': pattern = r'\b\d{6}(?:_\d{6}|[a-z])?\b'
@@ -430,7 +458,7 @@ def get_moment_strings(string_input, str_separator='-', use_filename_only=True, 
 # print(get_datetime_strings('240530-171942_LED_crossings.feather'))         # Expected: ['240530-171942']
 # print(get_datetime_strings('240530_LED_crossings.feather'))                # Expected: ['240530']
 
-## 240827 Author: plot counts for a given experiment csv path
+## 240827: plot counts for a given experiment csv path
 def plot_session_counts(csv_path, min_actions_per_exp=10, data_included=['choice', 'state', 'action', 'n_rewards'], 
                         x_label='date&time', y_label='cumulative count', show_mpl=False, save_mpl=True, show_plty=False, save_plty=True):
     print(csv_path)
@@ -443,11 +471,11 @@ def plot_session_counts(csv_path, min_actions_per_exp=10, data_included=['choice
     # # adj_mat, st_positions = load_maze(adj_path, st_pos_path)
     # try: adj_mat, st_positions = load_maze(adj_path, st_pos_path)
     # except FileNotFoundError as e: 
-    #     print(e); print('Author: retrying w reasonable expected ./data_in/ path')
+    #     print(e); print('retrying w reasonable expected ./data_in/ path')
     #     adj_mat, st_positions = load_maze(f"./data_in/{adj_path}", f"./data_in/{st_pos_path}")
     
     print('states visited:', df.state.to_list())
-    assert len(df.rewarded_states) == len(df.state), 'Author: downstream analysis assumes these should match!'
+    assert len(df.rewarded_states) == len(df.state), 'downstream analysis assumes these should match!'
     animal_ID = extract_animal_IDs(csv_path)
     print(f'animal_ID: {animal_ID}')
     if type(animal_ID) == list: animal_ID = animal_ID[0]
@@ -456,7 +484,7 @@ def plot_session_counts(csv_path, min_actions_per_exp=10, data_included=['choice
 
     try: xs_all = [datetime.strptime(ds, '%y%m%d_%H%M%S') for ds in df.time.to_list()] # convert to datetime objects 
     except ValueError as e:
-        print(e); print('Author: retrying w alternate datetime format')
+        print(e); print('retrying w alternate datetime format')
         xs_all = [datetime.strptime(ds, '%y%m%d-%H%M%S') for ds in df.time.to_list()]
 
 
@@ -544,7 +572,7 @@ def plot_session_counts(csv_path, min_actions_per_exp=10, data_included=['choice
     if show_plty: fig.show()
     
 
-def get_element_hit_inds(input_list): # 240827 Author: specifies the indices at which an list element occurs as a dictionary over the set of unique elements
+def get_element_hit_inds(input_list): # 240827: specifies the indices at which an list element occurs as a dictionary over the set of unique elements
     element_set = list(set(input_list)) # count these
     element_hit_inds_dict = {e: [] for e in element_set}
     for e_i in element_set:
@@ -565,8 +593,7 @@ def setup_gpio_pins(nose_poke_pins, led_pins, motor_info_dict, door_type='5 pin 
         GPIO.setmode(GPIO.BCM)
         for pin in nose_poke_pins:
             print(f'initializing NOSE_POKE_PINS: pin {pin}')
-            GPIO.setup(pin, GPIO.IN, pull_up_down=GPIO.PUD_DOWN) # original Author2
-            #GPIO.setup(pin, GPIO.IN, pull_up_down=GPIO.PUD_UP) # Author: attempting opposite polarity
+            GPIO.setup(pin, GPIO.IN, pull_up_down=GPIO.PUD_DOWN) # original #GPIO.setup(pin, GPIO.IN, pull_up_down=GPIO.PUD_UP) # attempting opposite polarity
         print('\nMR: NOTE: the physical pull up resister warning has been investigated in some detail and deemed NO cause for concern. :) \n')
 
         for pin in led_pins:
@@ -601,7 +628,7 @@ def export_data_to_csv(data, data_columns, file_path):
     print(f"data saved to: {file_path}")
 
 '''Assorted less common functionality associated with setup/calibration'''
-#### Author: this GPT code seems to verify that all of the pins are of the same type and doing the same thing on the software side...
+#### this GPT code seems to verify that all of the pins are of the same type and doing the same thing on the software side...
 # def func_to_str(func_code):
     # func_dict = {GPIO.IN: 'GPIO.IN', GPIO.OUT: 'GPIO.OUT', GPIO.SPI: 'GPIO.SPI', GPIO.I2C: 'GPIO.I2C', GPIO.HARD_PWM: 'GPIO.HARD_PWM', GPIO.SERIAL: 'GPIO.SERIAL', GPIO.UNKNOWN: 'GPIO.UNKNOWN',}
     # return func_dict.get(func_code, 'not in dict...')
@@ -623,7 +650,7 @@ def export_data_to_csv(data, data_columns, file_path):
 # for i in range(100):
     # GPIO.output(ID, GPIO.HIGH)
     # print('on')
-    # sleep(CLICK_DURATION) #Author2: change the time to whatever gives the correct amount of water
+    # sleep(CLICK_DURATION) #change the time to whatever gives the correct amount of water
     # print(f'clicking: pin {ID} for {CLICK_DURATION} seconds')
     # GPIO.output(ID, GPIO.LOW)
     # print('off')
@@ -647,14 +674,14 @@ def lightControl(showLights):
 def await_input():
     print('waiting for the next poke')
     while True:
-        for pin in NOSE_POKE_PINS: # Author: this is defined on the calling code side; pass in explicitly if an error occurs
+        for pin in NOSE_POKE_PINS: # this is defined on the calling code side; pass in explicitly if an error occurs
             #sleep(1)
             if GPIO.input(pin) == GPIO.HIGH:
                 print(f'poke registered: {pin}: {GPIO.input(pin)}, {NOSE_POKE_PIN_DICT[pin]}')
                 return [NOSE_POKE_PIN_DICT[pin], pin]
 
-## Author2 approach (240820 Author: neither of us can understand each other's approach... but I verified that Author2's works)
-def options_to_true_ego(options, current_State, mouse_rotation, maze_rotation, st_positions): # Author: st_positions defined on the calling code side; pass in explicitly if an error occurs
+## approach (240820: neither of us can understand each other's approach... but I verified that Author2's works)
+def options_to_true_ego(options, current_State, mouse_rotation, maze_rotation, st_positions): # st_positions defined on the calling code side; pass in explicitly if an error occurs
     true_ego = [] #length same as options, has arrays with [pos1, pos2, state]
     rot_dict = {0: ["left", "right", "forwards", "backwards"], 90: ["backwards", "forwards", "left", "right"], 
                 180: [ "right", "left", "backwards", "forwards"], 270: ["forwards", "backwards", "right", "left"]}
@@ -664,7 +691,7 @@ def options_to_true_ego(options, current_State, mouse_rotation, maze_rotation, s
     elif (mouse_rotation+180)%360 == maze_rotation: pos1options = ["E", "W", "S", "N"] #(0, 180), (90, 270), (180,0), (270, 90)
     else: pos1options = ["N", "S", "E", "W"]                                          #(0, 270), (90, 180), (180, 270), (270, 0)
         
-    for state in options: # Max 3 states in options 240131 Author: why max 3? Is this outdated from the binary code?
+    for state in options: # Max 3 states in options 240131: why max 3? Is this outdated from the binary code?
         if (st_positions[state][0] - st_positions[current_State][0] < 0): true_ego.append([pos1options[0], pos2options[0], state]) #If West
         elif (st_positions[state][0] - st_positions[current_State][0] > 0): true_ego.append([pos1options[1], pos2options[1], state]) # If East
         elif (st_positions[state][1] - st_positions[current_State][1] > 0): true_ego.append([pos1options[2], pos2options[2], state]) #If North
@@ -703,19 +730,19 @@ def count_occurences_in_list(input):
     return counts
 
 def get_n_action_prob_dict(input_list, n_actions_per_window, n_actions_shifted):
-    """ 240811 Author: whether the args should match reflects subtle hypotheses about how the animal might learn;
+    """ 240811: whether the args should match reflects subtle hypotheses about how the animal might learn;
             Note: throws away the final states if the list isn't evenly divisible"""
     action_window_list = chunk_list_into_windows(input_list=input_list, chunk_size=n_actions_per_window, n_per_shift=n_actions_shifted)
     action_chunk_counts_dict = count_occurences_in_list(action_window_list)
     action_prob_dict = {k: v/sum(action_chunk_counts_dict.values()) for k, v in action_chunk_counts_dict.items()}
-    assert abs(sum(action_prob_dict.values()) - 1) < 0.000001, 'Author: action_prob_dict does not sum to 1'
+    assert abs(sum(action_prob_dict.values()) - 1) < 0.000001, 'action_prob_dict does not sum to 1'
     return action_prob_dict
 
 def convert_action_words_to_chars(list_of_actions):
-    ego_action_str2char = {'right': 'R', 'left': 'L', 'forwards': 'F', 'backwards': 'B'} # convert out of legacy Author2 format from keys to values
+    ego_action_str2char = {'right': 'R', 'left': 'L', 'forwards': 'F', 'backwards': 'B'} # convert out of legacy format from keys to values
     try: return [ego_action_str2char[a] for a in list_of_actions]
     except Exception as e:
-        print(e); print('240614 Author: unable to convert legacy format data, hopefully cuz the format is already correct...')
+        print(e); print('240614: unable to convert legacy format data, hopefully cuz the format is already correct...')
         return list_of_actions
 
 import re
@@ -758,7 +785,7 @@ def deserialize_str(obj: Any) -> Any:
     except (ValueError, SyntaxError):
         # Not a pure literal / collection of literals; keep the original string
         return obj
-chk_type = deserialize_str # Author: to maintain legacy compatibility
+chk_type = deserialize_str # to maintain legacy compatibility
 
 # Define the colormap to use (e.g., 'turbo')
 from matplotlib.cm import get_cmap
@@ -777,7 +804,7 @@ def extract_animal_IDs(text):
     else: return matches
 
 def get_verified_st_traj(exp_df, verbose=False):
-    assert len(exp_df.start_state.unique()) == 1, 'Author: start_state not unique: definitly a problem!'
+    assert len(exp_df.start_state.unique()) == 1, 'start_state not unique: definitly a problem!'
     if exp_df.start_state.unique()[0] != exp_df.state.to_list()[0]:
         if verbose: print('Warning: start_state not found in state list --> added it')
         return [int(exp_df.start_state.unique()[0])] + exp_df.state.to_list()
@@ -788,7 +815,7 @@ def get_verified_st_traj(exp_df, verbose=False):
 """ Pandas operations
 """
 def reposition_df_column(orig_df=None, col_name=None, new_col_idx=None):
-    assert orig_df is not None and col_name is not None and new_col_idx is not None, '240619 Author: you need to provide the df, the column, and the new column index!'
+    assert orig_df is not None and col_name is not None and new_col_idx is not None, '240619: you need to provide the df, the column, and the new column index!'
     df = deepcopy(orig_df)
     col = df.pop(col_name)
     df.insert(new_col_idx, col.name, col)
@@ -887,7 +914,7 @@ def save_params(namespace, extra_info_in_name=''): # USE THIS
     up_df = save_user_params_to_df(namespace)
     print(up_df)
     try: param_path = f'{PROJECT_DIR}/param_records'
-    except NameError as e: print(e); print('Author: using ./ for PROJECT_DIR'); param_path = './param_records'
+    except NameError as e: print(e); print('using ./ for PROJECT_DIR'); param_path = './param_records'
     if not os.path.exists(param_path):
         os.mkdir(param_path)
     fn = f'{get_now_str(hms=True)}_usr_params-{extra_info_in_name}.csv'
@@ -969,7 +996,7 @@ def count_files(directory, extension):
   """
   return len(glob(os.path.join(directory, f"*.{extension.replace('.','')}")))
 # # Example usage:
-# num_csv_files = count_files("/content/drive/MyDrive/a_science_AnonymousInstitution/behavior/a_latent_maze/experiment_out/decoding_notebook/20230614-151817_latent_maze_decoding_notebook-mouse_15_session_1", "csv")
+# (legacy Google Drive count_files call removed for double-blind review)
 # print(f"Number of CSV files: {num_csv_files}")
 # get_now_str(include_hms = False)
 

@@ -7,11 +7,11 @@ LatMaz is a yoked (per-session matched) lab-mouse vs. synthetic RL-agent benchma
 The release contains:
 
 - **Mouse data**: 12 mice across 422 egocentric main-benchmark sessions; 60 canonical sessions (a031, a033) used for HPO and headline claims; 29-session in-progress allocentric subset reported separately.
-- **Apparatus / training / microcontroller materials**: experiment-control scripts at `code/apparatus_control/` (egocentric and allocentric variants, training-curriculum history, motor calibration, fluid management). The Raspberry-Pi-side runtime is `utils_latMaz_apparatus.py`.
+- **Apparatus / training / microcontroller materials**: experiment-control scripts at `code/apparatus_control/` (`1_setup_and_calibration/`, `2_canonical_runtime/` incl. `allocentric/`, `3_maze_variants/`, `4_historical/`). Raspberry-Pi-side runtime: `code/apparatus_control/utils_latMaz_apparatus.py`. RPi-side dependencies in `requirementsRPi.txt`.
 - **Animal-data analysis code**: `code/` (mouse-trajectory parsing, yoking, statistics).
 - **Gymnasium-compatible graph-maze simulator + agent zoo**: `code/yoked_rl_runner.py` (GraphMazeEnv + YokedRLRunner), `intermediate_agents.py`, `advanced_agents.py`. Compatible with Stable-Baselines3.
 - **Precomputed per-agent, per-session simulation CSVs**: `data_released/results/` (HPO sweep, baselines, RecurrentSAC, pretraining, cloning, rerun-452, scaling sweep, allocentric subset).
-- **Generated paper-value macros**: `paper/paper_values.tex` (regenerable via `code/260405_generate_paper_values.py`).
+- **Generated paper-value macros**: `data_released/paper_values.tex` (regenerable via `code/260405_generate_paper_values.py`).
 - **Figure-generation scripts**: alongside `code/`.
 - **Croissant 1.0 metadata**: `data_released/croissant_metadata.json`.
 
@@ -25,7 +25,7 @@ The pipeline is tested with Python 3.11 and the `latMaz_RL` conda environment.
 # create and activate environment
 conda create -n latMaz_RL python=3.11 -y
 conda activate latMaz_RL
-pip install -r requirements.txt   # if shipped, otherwise pip install: stable-baselines3, gymnasium, sb3-contrib, torch, numpy, pandas, matplotlib, scipy, networkx, mlcroissant
+pip install -r requirements.txt
 ```
 
 ### 2. Reproduce paper values from released CSVs
@@ -33,7 +33,7 @@ pip install -r requirements.txt   # if shipped, otherwise pip install: stable-ba
 ```bash
 cd code/
 python 260405_generate_paper_values.py
-# writes paper/paper_values.tex (matches the canonical version bit-for-bit)
+# writes data_released/paper_values.tex (matches the canonical version bit-for-bit)
 ```
 
 The script reads from `data_released/results/` by default and falls back to `data_out/rl_sims/` for in-development runs.
@@ -81,14 +81,7 @@ python 260505_plot_per_animal_categories.py
 ```
 
 ├── paper/                              # LaTeX manuscript + generated PDF + paper_values
-├── code/
-│   ├── apparatus_control/              # Raspberry-Pi experiment-control scripts (data collection)
-│   │   ├── allocentric/                #   allocentric subset apparatus scripts
-│   │   ├── utils_latMaz_apparatus.py   #   apparatus-side hardware utilities
-│   │   ├── 260218_*-noRev.py           #   canonical-60 collection script
-│   │   └── ...                         #   training-curriculum history
-│   └── code/                     # mouse-data analysis utilities
-├── code/          # active RL code: runner, agents, experiments, figure scripts
+├── code/                               # active RL code: runner, agents, experiments, figure scripts
 ├── data_released/                      # canonical release artifacts
 │   ├── croissant_metadata.json         #   Croissant 1.0 metadata
 │   ├── yoked_dfs/                      #   canonical yoked-sessions dataframe
@@ -125,9 +118,9 @@ in `data_released/` and the `latMaz_RL` env from §1 are in place.
 ```bash
 cd code/
 python 260405_generate_paper_values.py
-diff -u ../../paper/paper_values.tex /dev/null   # snapshot pre-run for comparison
-# script writes ../../paper/paper_values.tex; should be bit-identical to the
-# committed canonical version. If it differs, the released CSVs in
+diff -u ../data_released/paper_values.tex /dev/null   # snapshot pre-run for comparison
+# script writes ../data_released/paper_values.tex; should be bit-identical to
+# the committed canonical version. If it differs, the released CSVs in
 # data_released/results/ have drifted from the paper claims — flag immediately.
 ```
 
@@ -198,7 +191,7 @@ python 260505_rerun452_corrected_BESTCONFIGS.py --workers 4
   while the rerun wrapper uses plain `seed=0..4`. So canonical-60 macros from
   rerun-452 and from `c260316-171035_hpo_tuning_FIXED.csv` are **close
   (within ±0.07 RPA) but not identical** — this is expected seed-stochasticity
-  divergence, not a issue.
+  divergence, not a bug.
 - **Rebait notation drift**: paper §2 uses `N` ("rebait when fewer than $N$
   unvisited remain"); §4.7 uses `R` ("rebait at $R$ unrewarded remaining");
   the data field in `c260302_rewarded_states_df.csv` is `reset_when_n_rwds_remaining`
@@ -206,8 +199,9 @@ python 260505_rerun452_corrected_BESTCONFIGS.py --workers 4
 - **Adjacency loading**: ALWAYS use `utils_latMaz.load_maze` or
   `YokedRLRunner._load_maze`. Naive `pd.read_csv(..., header=None).values`
   without symmetrization gives wrong navigable-node counts because the CSV
-  stores only the upper triangle. See `docs/outbox/260330_gotchas_adj_loading_bug.txt`
-  and the table in `understanding.md` (lines ~516-525).
+  stores only the upper triangle. The canonical helper `utils_latMaz.load_maze`
+  symmetrises before use; ad-hoc `pd.read_csv(adj_path, header=None).values`
+  in analysis scripts is incorrect.
 - **noRev asymmetry**: `GraphMazeEnv` defaults to `prevent_reverse=False`;
   RL agents can issue immediate-reverse actions that the mouse is physically
   prevented from issuing within the apparatus's 45-90s sensor timeout. Per-action
@@ -231,4 +225,4 @@ Anonymous Authors (2026). *LatMaz: A Dataset and Evaluation Benchmark for Biolog
 - Code: MIT
 - Dataset: CC-BY-4.0
 
-See the dataset card in `paper/main_DandB.pdf` Appendix T (`\label{app:datasetcard}`) for full collection, preprocessing, intended uses, and limitations.
+See the dataset card appendix in the submitted PDF for full collection, preprocessing, intended uses, and limitations.

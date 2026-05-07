@@ -2,7 +2,7 @@
 
 Produces canonical benchmark values for the five Table 1 rows that oTmac
 imported from the 2025 NeurIPS workshop paper without backing code or data.
-See GitHub issue #18 and docs/outbox/260413_cloning_agents_no_backing_data.md.
+See internal context notes (not in public release).
 
 Agents implemented in intermediate_agents.py (sections 5 and 6):
   FullFwdAgent       — prefer Forward, else random valid

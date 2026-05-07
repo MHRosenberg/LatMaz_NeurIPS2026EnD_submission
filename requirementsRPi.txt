@@ -1,0 +1,29 @@
+# LatMaz NeurIPS 2026 E&D — Apparatus-side Python dependencies
+#
+# These are the Python packages required for running the experiment-control
+# code in code/apparatus_control/. They are SEPARATE from the simulation /
+# analysis side (see requirements.txt at the repo root).
+#
+# These libraries are intended to run on a Raspberry Pi 3 Model B with
+# Raspberry Pi OS (Debian-based). pip install -r requirementsRPi.txt
+# from a non-RPi machine will fail at RPi.GPIO; this is expected. The
+# RPi-side runtime is distinct from the analysis pipeline.
+#
+# Tested with Python 3.11 on a Raspberry Pi 3 Model B running
+# Raspberry Pi OS.
+
+# ---- Raspberry Pi GPIO + hardware control ----
+RPi.GPIO
+
+# ---- numerics / data ----
+numpy
+pandas
+
+# ---- plotting + image I/O for live experiment displays ----
+matplotlib
+Pillow
+imageio
+plotly
+
+# ---- progress bars + utility ----
+tqdm

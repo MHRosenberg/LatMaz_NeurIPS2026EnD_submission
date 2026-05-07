@@ -4,7 +4,7 @@ Prior run (260328, greediness=0) → RPA=0.421.  WRONG params.
 oTmac paper params (timeout=1, greediness=3)  → RPA=0.573 (56% ceiling).
 This script verifies the oTmac result on ptonMac's canonical 60-session dataset.
 
-See docs/outbox/260331_fsc_bio_correct_params.txt for full context.
+See internal full-context notes (not in public release).
 
 Usage:
     conda run --no-capture-output -n latMaz_RL python -u \

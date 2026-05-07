@@ -182,9 +182,51 @@ def load_yoking_df():
             f"Expected `<root>/data_released/yoked_dfs/c*_yoked_sessions.csv` "
             f"OR `<root>/yoked_dfs/*animal_to_agent_yoking_info*.csv`.")
     yoking_df = pd.read_csv(yoking_path, dtype={'animal_ID': str})
-    yoking_df['exp_moment'] = yoking_df['csv_data_path'].apply(
-        lambda p: re.search(r'(\d{6}-\d{6})', str(p)).group(1)
-        if re.search(r'(\d{6}-\d{6})', str(p)) else None)
+
+    # 260507 v12 (Option B): prefer the explicit `exp_moment` column written
+    # by the release-converter (260504_create_released_yoked_df.py). For
+    # overnight 24h sessions, the file-write timestamp in csv_data_path's
+    # basename differs from the canonical session-START timestamp by
+    # 15-48 hours; the explicit exp_moment column captures the session-start
+    # so the regen recipe matches the HPO CSV's exp_moment column.
+    if 'exp_moment' in yoking_df.columns:
+        # Validate: column must be fully populated.
+        n_missing = yoking_df['exp_moment'].isna().sum()
+        if n_missing > 0:
+            import sys
+            print('=' * 70, file=sys.stderr)
+            print(f'!!! ERROR: {n_missing} rows have NaN exp_moment in yoking CSV     !!!',
+                  file=sys.stderr)
+            print(f'!!! ({yoking_path})                                              !!!',
+                  file=sys.stderr)
+            print('=' * 70, file=sys.stderr)
+            raise ValueError(
+                f'{n_missing} yoking rows have NaN exp_moment; '
+                f'cannot proceed with downstream session lookups.')
+    else:
+        # Fallback path: yoking CSV pre-dates v12 and has no explicit exp_moment.
+        # Extract via regex from csv_data_path. NOISY warning so downstream
+        # debugging is straightforward — this path mis-identifies overnight
+        # 24h sessions (file-write timestamp != session-start timestamp).
+        import sys
+        print('=' * 70, file=sys.stderr)
+        print('!!! WARNING: yoking CSV has no `exp_moment` column            !!!',
+              file=sys.stderr)
+        print('!!! (legacy file pre-dating v12). Falling back to regex       !!!',
+              file=sys.stderr)
+        print('!!! extraction from csv_data_path. This MIS-IDENTIFIES         !!!',
+              file=sys.stderr)
+        print('!!! 19+ overnight 24h sessions whose file-write timestamps    !!!',
+              file=sys.stderr)
+        print('!!! differ from their session-START timestamps. Regenerate     !!!',
+              file=sys.stderr)
+        print('!!! the yoking CSV via 260504_create_released_yoked_df.py.    !!!',
+              file=sys.stderr)
+        print('=' * 70, file=sys.stderr)
+        yoking_df['exp_moment'] = yoking_df['csv_data_path'].apply(
+            lambda p: re.search(r'(\d{6}-\d{6})', str(p)).group(1)
+            if re.search(r'(\d{6}-\d{6})', str(p)) else None)
+
     yoking_df['date_part'] = yoking_df['exp_moment'].str[:6].astype(int)
     return yoking_df
 

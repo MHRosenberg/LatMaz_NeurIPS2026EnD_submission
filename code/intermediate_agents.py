@@ -449,7 +449,7 @@ class OOIAgent:
     for egocentric maze navigation. Uses the option-observation initiation set concept
     (Steckelmacher et al. 2018): an option can only initiate if its initial direction
     is currently passable. NOT a faithful replication of either published OOI paper —
-    options are fixed/hand-crafted rather than discovered or learned. See GitHub issue #4.
+    options are fixed/hand-crafted rather than discovered or learned. See internal tracking notes.
 
     Egocentric only — no node IDs, no maze knowledge.
 
