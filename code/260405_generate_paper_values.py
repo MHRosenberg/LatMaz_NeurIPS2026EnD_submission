@@ -2,7 +2,7 @@
 """
 260405_generate_paper_values.py
 
-Generate paper/paper_values.tex — all \newcommand definitions for paper statistics.
+Generate data_released/paper_values.tex — all \newcommand definitions for paper statistics.
 Each statistic is computed from canonical CSVs (260316 master rerun, 60-session set).
 
 Usage:
@@ -10,8 +10,10 @@ Usage:
     python code/260405_generate_paper_values.py
 
 Outputs:
-    paper/paper_values.tex              — LaTeX \newcommand definitions (overwritten)
-    data_out/rl_sims/c{ts}_paper_values.json  — timestamped JSON of all values
+    data_released/paper_values.tex             — LaTeX \newcommand definitions (overwritten)
+    data_released/results/c{ts}_paper_values.json  — timestamped JSON snapshot
+    (in a dev layout without data_released/, falls back to paper/paper_values.tex
+     and data_out/rl_sims/c{ts}_paper_values.json respectively).
 
 Macro naming convention:
     CamelCase, letters only (no numbers, underscores, or symbols).
@@ -62,7 +64,11 @@ PROJECT_ROOT = _find_project_root(SCRIPT_DIR)
 RELEASED_DATA_DIR = PROJECT_ROOT / 'data_released' / 'results'
 DEV_DATA_DIR = PROJECT_ROOT / 'data_out' / 'rl_sims'
 DATA_DIR = RELEASED_DATA_DIR if RELEASED_DATA_DIR.exists() else DEV_DATA_DIR
-PAPER_DIR = PROJECT_ROOT / 'paper'
+# In the public submission repo paper_values.tex ships at
+# data_released/paper_values.tex (paper/ is not part of the public layout;
+# see README.md "Project structure"). In a dev checkout that has paper/ but
+# no data_released/, fall back to paper/paper_values.tex.
+PAPER_DIR = (PROJECT_ROOT / 'data_released') if (PROJECT_ROOT / 'data_released').is_dir() else (PROJECT_ROOT / 'paper')
 
 sys.path.insert(0, str(SCRIPT_DIR))
 from experiment_config import load_yoking_df, filter_sessions

@@ -1,6 +1,6 @@
 GOTCHA: GraphMazeEnv Rebait Order-of-Operations Issue
 ====================================================
-Fixed: 2026-03-05, commit a2e9c93
+Fixed: 2026-03-05
 Affects: ALL simulation CSVs in data_out/rl_sims/ generated before this date
 
 WHAT WAS WRONG
