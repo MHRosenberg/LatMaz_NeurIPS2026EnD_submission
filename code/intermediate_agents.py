@@ -31,9 +31,9 @@ import numpy as np
 
 # Path setup (same as advanced_agents.py)
 _this_dir = os.path.dirname(os.path.abspath(__file__))
-_code_in_mr = os.path.join(_this_dir, '..', '..', 'code')
-if _code_in_mr not in sys.path:
-    sys.path.insert(0, _code_in_mr)
+_code_dir = _this_dir
+if _code_dir not in sys.path:
+    sys.path.insert(0, _code_dir)
 
 from utils_latMaz import (
     get_adj_states,
@@ -1105,5 +1105,110 @@ class ConditionalCloningAgent:
                 action = rng.choice(valid) if valid else rng.randint(4)
 
             ego_obs, _, _ = sim.step(action)
+
+        return sim.total_reward
+
+
+# =============================================================================
+# Latent-State-Biased Agent (privileged baseline)
+# =============================================================================
+
+class LatentStateBiasedAgent:
+    """Markov-chain sampler over latent-state transitions observed in the yoked mouse session.
+
+    Builds a per-session count table c(s, s') from the mouse's `states_visited`
+    trajectory. At each step, samples the next latent node s' from
+        pi(s_{t+1} | s_t) = c(s_t, s_{t+1}) / sum_{s'} c(s_t, s')
+    restricted to the agent's currently-passable neighbors via the adjacency
+    matrix. Falls back to uniform over valid neighbors when no observed
+    mouse-transition from s_t has a valid target.
+
+    REQUIRES privileged latent-state access: at each step the agent must know
+    s_t (the current latent node), which is NOT part of the 4-bit egocentric
+    observation Omega. This makes it an explicitly-privileged baseline,
+    assessing the relative role of latent-state occupancy preference wholly
+    independent of reward representation (which is not provided to this agent).
+
+    The agent does NOT receive the reward state. Combined with privileged
+    latent-state access, this isolates "where the mouse tends to go" from
+    "where rewards currently are".
+
+    Args:
+        states_visited: list[int] of latent node IDs the mouse visited in
+            the yoked session. Self-loops (state == prev_state) are skipped
+            when building counts.
+
+    Returns: total_reward (float) from run_episode, same interface as the
+    other intermediate agents.
+
+    Reference: Rosenberg, Zhang, Perona, Meister (2021), where a related
+    transition-sampling baseline is used to test whether mouse occupancy
+    statistics alone explain navigation efficiency.
+    """
+
+    def __init__(self, states_visited):
+        self.transition_counts = {}  # s -> {s': count}
+        for i in range(len(states_visited) - 1):
+            s, s_next = int(states_visited[i]), int(states_visited[i + 1])
+            if s == s_next:
+                continue  # self-loop, skip (no movement)
+            self.transition_counts.setdefault(s, {})
+            self.transition_counts[s][s_next] = self.transition_counts[s].get(s_next, 0) + 1
+
+    def run_episode(
+        self,
+        adj_mat: np.ndarray,
+        node_positions: np.ndarray,
+        start_node: int,
+        rewarded_nodes: np.ndarray,
+        n_actions: int,
+        min_rewarded_states: int = 2,
+        seed: int = 42,
+        prevent_reverse: bool = False,
+        **kwargs,
+    ) -> float:
+        rng = np.random.RandomState(seed)
+        sim = _EgoSimulator(adj_mat, node_positions, start_node,
+                            rewarded_nodes, min_rewarded_states,
+                            prevent_reverse=prevent_reverse)
+        sim.reset()
+
+        for _ in range(n_actions):
+            current = sim.real_node
+            # Enumerate valid neighbors via the simulator's dir->neighbor map
+            dir_to_n = sim.dir_to_neighbor[current]
+            if not dir_to_n:
+                # Isolated node (no passable neighbors); step a no-op
+                sim.step(0)  # any action; will self-loop
+                continue
+            valid_neighbors = list(dir_to_n.values())
+            valid_dirs = list(dir_to_n.keys())  # parallel to valid_neighbors
+
+            # Apply prevent_reverse mask if active and not at a dead-end
+            if prevent_reverse and sim._prev_node is not None and len(valid_neighbors) > 1:
+                # Drop the prev-node reverse-target from candidates
+                keep = [(d, n) for d, n in zip(valid_dirs, valid_neighbors) if n != sim._prev_node]
+                if keep:
+                    valid_dirs, valid_neighbors = list(zip(*keep))
+                    valid_dirs, valid_neighbors = list(valid_dirs), list(valid_neighbors)
+
+            # Get mouse-observed transition counts from current state, restricted to valid
+            counts = self.transition_counts.get(current, {})
+            weights = np.array([counts.get(n, 0) for n in valid_neighbors], dtype=float)
+            total = weights.sum()
+
+            if total > 0:
+                probs = weights / total
+                idx = rng.choice(len(valid_neighbors), p=probs)
+            else:
+                # Mouse never transitioned from this state to any of the agent's
+                # currently-valid neighbors (or never visited this state at all).
+                # Uniform fallback over valid neighbors.
+                idx = rng.choice(len(valid_neighbors))
+
+            # Convert chosen next-node to ego action via the current heading
+            chosen_allo_dir = valid_dirs[idx]
+            ego_action = ALLO_TO_EGO[sim.real_heading_idx][chosen_allo_dir]
+            sim.step(ego_action)
 
         return sim.total_reward

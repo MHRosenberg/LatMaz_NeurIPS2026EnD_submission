@@ -44,9 +44,21 @@ from scipy import stats
 # Paths
 # ---------------------------------------------------------------------------
 SCRIPT_DIR = Path(__file__).resolve().parent
-PROJECT_ROOT = SCRIPT_DIR.parent.parent
+# Layout-agnostic project root: walk up looking for data_released/ or paper/.
+# Works for code/<script>.py (depth 2),
+# code/<script>.py (depth 1), and submission code/<script>.py (depth 1).
+def _find_project_root(start: Path) -> Path:
+    cur = start
+    for _ in range(5):
+        if (cur / 'data_released').is_dir() or (cur / 'paper').is_dir():
+            return cur
+        if cur.parent == cur:
+            break
+        cur = cur.parent
+    return start.parent.parent  # legacy fallback (depth-2 dev layout)
+PROJECT_ROOT = _find_project_root(SCRIPT_DIR)
 # Reviewers reproduce paper values from data_released/results/ first; falls
-# back to data_out/rl_sims/ for in-development re-runs (260505 cld).
+# back to data_out/rl_sims/ for in-development re-runs (260505).
 RELEASED_DATA_DIR = PROJECT_ROOT / 'data_released' / 'results'
 DEV_DATA_DIR = PROJECT_ROOT / 'data_out' / 'rl_sims'
 DATA_DIR = RELEASED_DATA_DIR if RELEASED_DATA_DIR.exists() else DEV_DATA_DIR
@@ -106,7 +118,7 @@ N_BONF = 7  # number of comparisons for Bonferroni correction
 def load_all():
     yoked = load_yoking_df()
     # Canonical-60 = exact HPO-tuning session set (a031, a033). Pinning here
-    # so paper values are reproducible after the yoking df grows (260505 cld;
+    # so paper values are reproducible after the yoking df grows (260505;
     # filter_sessions(>251001, n>50) had drifted to 166 sessions).
     hpo_path = FILES['hpo']
     if hpo_path.exists():
@@ -517,20 +529,34 @@ def compute_all(dfs):
     pre_stats = {}
     for model, cfg in MODEL_PRETRAIN_CONFIGS.items():
         m_df = pre_df[(pre_df['model'] == model) & (pre_df['hpo_config'] == cfg)]
+        # Display values: per-session mean total_reward (averaged across seeds)
         baseline_sess = m_df[m_df['pretrain_type'] == 'none'].groupby('exp_moment')['total_reward'].mean()
         pretrain_sess = m_df[m_df['pretrain_type'] == 'prior_sessions_same_maze'].groupby('exp_moment')['total_reward'].mean()
         common = baseline_sess.index.intersection(pretrain_sess.index)
-        b = baseline_sess.loc[common].values
-        p = pretrain_sess.loc[common].values
-        t, p_raw = stats.ttest_rel(p, b)
-        diff = p - b
-        d = float(diff.mean() / diff.std()) if diff.std() > 0 else 0.0
+        b_rew = baseline_sess.loc[common].values
+        p_rew = pretrain_sess.loc[common].values
+        diff_rew = p_rew - b_rew
+        # Statistical tests (t, p, Cohen's d): use per-session mean RPA so the
+        # paired-test treats sessions as the unit of replication regardless of
+        # action budget. (260506: the prior code used total_reward here, which
+        # weights longer-budget sessions more heavily and gives a different
+        # answer; the audit-fix in paper_values.tex flagged the discrepancy.)
+        m_df_rpa = add_rpa(m_df)
+        baseline_rpa_sess = per_session_stats(
+            m_df_rpa[m_df_rpa['pretrain_type'] == 'none'])
+        pretrain_rpa_sess = per_session_stats(
+            m_df_rpa[m_df_rpa['pretrain_type'] == 'prior_sessions_same_maze'])
+        b_rpa = baseline_rpa_sess.loc[common].values
+        p_rpa = pretrain_rpa_sess.loc[common].values
+        diff_rpa = p_rpa - b_rpa
+        t, p_raw = stats.ttest_rel(p_rpa, b_rpa)
+        d = float(diff_rpa.mean() / diff_rpa.std()) if diff_rpa.std() > 0 else 0.0
         p_bonf = min(float(p_raw) * N_BONF, 1.0)
-        pct_improve = (diff.mean() / baseline_sess.mean()) * 100  # use full-60 mean as denominator
+        pct_improve = (diff_rew.mean() / baseline_sess.mean()) * 100  # display: pct based on rewards
         pre_stats[model] = {
             'base_mean_rew': round(float(baseline_sess.mean()), 1),
             'pre_mean_rew': round(float(pretrain_sess.mean()), 1),
-            'delta': round(float(diff.mean()), 1),
+            'delta': round(float(diff_rew.mean()), 1),
             'pct': round(float(pct_improve), 0),
             'cohen_d': round(float(d), 2),
             't': round(float(t), 2),
@@ -652,19 +678,24 @@ def compute_all(dfs):
     V['NRecSacVsPomcp'] = n
 
     # 7. DQN pretrained vs baseline (positive t → pretrained > baseline)
-    dqn_pre_sess_rew = pre_df[(pre_df['model'] == 'DQN') & (pre_df['hpo_config'] == 'default') &
-                              (pre_df['pretrain_type'] == 'prior_sessions_same_maze')].groupby('exp_moment')['total_reward'].mean()
-    dqn_base_sess_rew = pre_df[(pre_df['model'] == 'DQN') & (pre_df['hpo_config'] == 'default') &
-                               (pre_df['pretrain_type'] == 'none')].groupby('exp_moment')['total_reward'].mean()
-    t, p_raw, p_bonf, d, n = ttest_paired(dqn_pre_sess_rew, dqn_base_sess_rew)
+    # Uses per-session-mean RPA, matching the rest of the paired tests in this
+    # file. (260506: prior code used total_reward here, weighting longer-budget
+    # sessions more heavily — see audit-fix in pre_stats above.)
+    dqn_pre_rpa_sess = per_session_stats(add_rpa(
+        pre_df[(pre_df['model'] == 'DQN') & (pre_df['hpo_config'] == 'default') &
+               (pre_df['pretrain_type'] == 'prior_sessions_same_maze')]))
+    dqn_base_rpa_sess = per_session_stats(add_rpa(
+        pre_df[(pre_df['model'] == 'DQN') & (pre_df['hpo_config'] == 'default') &
+               (pre_df['pretrain_type'] == 'none')]))
+    t, p_raw, p_bonf, d, n = ttest_paired(dqn_pre_rpa_sess, dqn_base_rpa_sess)
     V['TDqnPreVsBase'] = round(t, 2)
     V['PrawDqnPreVsBase'] = p_raw
     V['PbonfDqnPreVsBase'] = p_bonf
     V['DDqnPreVsBase'] = round(d, 2)
     V['NDqnPreVsBase'] = n
 
-    # DQN pretrained vs Mouse (additional, for prose line 275)
-    t, p_raw, _, d, n = ttest_paired(dqn_pre_sess_rew, mouse_rew_sess)
+    # DQN pretrained vs Mouse (additional, for prose line 275) — also RPA-based
+    t, p_raw, _, d, n = ttest_paired(dqn_pre_rpa_sess, mouse_rpa_sess)
     V['TDqnPreVsMouse'] = round(t, 2)
     V['PrawDqnPreVsMouse'] = p_raw
     V['DDqnPreVsMouse'] = round(d, 2)
@@ -758,7 +789,8 @@ def compute_all(dfs):
     for key, sess in table1_sess.items():
         V[f'{key}RpaCI'] = ci95(sess)
 
-    # NNS denominator: switched POMCP -> Greedy_oracle on 2026-05-04 per Author. # Greedy_oracle (BFS+replan with full graph access) is empirically the
+    # NNS denominator: switched POMCP -> Greedy_oracle on 2026-05-04 per Author.
+    # Greedy_oracle (BFS+replan with full graph access) is empirically the
     # strictest oracle on the canonical 60-session set (RPA 0.878 vs POMCP 0.820);
     # using it as the NNS denominator pins all bars in [0, 100%] and aligns the
     # ceiling with "best achievable with full info". POMCP is still cited as the

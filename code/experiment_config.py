@@ -37,7 +37,7 @@ from yoked_rl_runner import (
 # Best HPO config per model: {agent: (config_name, overrides_dict)}
 BEST_CONFIGS = {
     # Synced with HPO winners from c260316-171035_hpo_tuning_FIXED.csv
-    # (see docs/outbox/260505_rerun452_rpa_discrepancy_diagnosis.md).
+    # (see internal RPA-discrepancy diagnosis notes; not in public release).
     'DQN': ('aggressive_explore', {
         'learning_rate': 5e-4, 'learning_starts': 10, 'train_freq': 1,
         'target_update_interval': 100, 'batch_size': 32,
@@ -118,8 +118,30 @@ PRETRAIN_AGENTS = ['DQN', 'DRQN_seq', 'DRQN_rand']
 # =============================================================================
 
 def project_root():
-    """Return the project root directory."""
-    return os.path.normpath(os.path.join(os.path.dirname(__file__), '..', '..'))
+    """Return the project root directory.
+
+    Layout-agnostic: walks up from this file looking for a marker directory
+    (``data_released/`` or ``paper/``). This makes the same source file work
+    in three layouts:
+      - development:    ``<root>/code/experiment_config.py``  (depth 2)
+      - released stage: ``<root>/code/experiment_config.py``              (depth 1)
+      - submission:     ``<root>/code/experiment_config.py``                       (depth 1)
+
+    Falls back to the legacy ``..``/``..`` (depth-2) assumption if no marker
+    is found, preserving backward compatibility for unusual setups.
+    """
+    here = os.path.dirname(os.path.abspath(__file__))
+    cur = here
+    for _ in range(5):  # max 5 levels up
+        if (os.path.isdir(os.path.join(cur, 'data_released')) or
+                os.path.isdir(os.path.join(cur, 'paper'))):
+            return cur
+        parent = os.path.dirname(cur)
+        if parent == cur:
+            break
+        cur = parent
+    # Legacy fallback: dev layout's two-up ascent
+    return os.path.normpath(os.path.join(here, '..', '..'))
 
 
 def output_path(filename):
@@ -132,12 +154,34 @@ def output_path(filename):
 # =============================================================================
 
 def load_yoking_df():
-    """Load the yoking CSV and add ``exp_moment`` / ``date_part`` columns."""
+    """Load the yoking CSV and add ``exp_moment`` / ``date_part`` columns.
+
+    Searches two paths in priority order:
+      1. ``<root>/data_released/yoked_dfs/c*_yoked_sessions.csv``  (public release layout)
+      2. ``<root>/yoked_dfs/*animal_to_agent_yoking_info*.csv``    (development layout)
+
+    The first match wins. This makes the canonical replication recipe
+    (``python 260405_generate_paper_values.py``) runnable both in the
+    development environment and in the released artefact.
+    """
+    import glob as _glob
     root = project_root()
-    yoking_df = pd.read_csv(
-        get_most_recent_file(os.path.join(root, 'yoked_dfs',
-                                          '*animal_to_agent_yoking_info*.csv')),
-        dtype={'animal_ID': str})
+    candidates = [
+        os.path.join(root, 'data_released', 'yoked_dfs', 'c*_yoked_sessions.csv'),
+        os.path.join(root, 'yoked_dfs', '*animal_to_agent_yoking_info*.csv'),
+    ]
+    yoking_path = None
+    for pat in candidates:
+        matches = sorted(_glob.glob(pat))
+        if matches:
+            yoking_path = matches[-1]  # most-recent by lexicographic c{ts} sort
+            break
+    if yoking_path is None:
+        raise FileNotFoundError(
+            f"No yoking CSV found. Searched: {candidates}. "
+            f"Expected `<root>/data_released/yoked_dfs/c*_yoked_sessions.csv` "
+            f"OR `<root>/yoked_dfs/*animal_to_agent_yoking_info*.csv`.")
+    yoking_df = pd.read_csv(yoking_path, dtype={'animal_ID': str})
     yoking_df['exp_moment'] = yoking_df['csv_data_path'].apply(
         lambda p: re.search(r'(\d{6}-\d{6})', str(p)).group(1)
         if re.search(r'(\d{6}-\d{6})', str(p)) else None)

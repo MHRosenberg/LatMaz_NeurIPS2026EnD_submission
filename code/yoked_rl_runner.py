@@ -2,11 +2,11 @@
 Yoked RL Simulation Runner
 
 A minimal, modular interface for running RL simulations yoked to mouse behavior data.
-Integrates with existing utils_latMaz and utils_latMaz_RL modules from code/code.
+Integrates with existing utils_latMaz and utils_latMaz_RL modules from code/.
 
 Usage:
     import sys
-    sys.path.insert(0, '../../code/code')  # Add path to utils modules
+    sys.path.insert(0, os.path.dirname(__file__))  # Add path to utils modules
 
     from yoked_rl_runner import YokedRLRunner, SimConfig
 
@@ -23,11 +23,11 @@ import gc
 import resource
 import platform
 
-# Add code to path for utils imports
+# Add code/ to path for utils imports
 _this_dir = os.path.dirname(os.path.abspath(__file__))
-_code_in_mr = os.path.join(_this_dir, '..', '..', 'code')
-if _code_in_mr not in sys.path:
-    sys.path.insert(0, _code_in_mr)
+_code_dir = _this_dir
+if _code_dir not in sys.path:
+    sys.path.insert(0, _code_dir)
 from copy import deepcopy
 from datetime import datetime
 from dataclasses import dataclass, field
@@ -702,10 +702,10 @@ if _TORCH_AVAILABLE:
                              [0, max_start] (still temporally ordered, just
                              with gaps).
 
-            Issue history: prior to 260505 this method ignored `mode` entirely
+            Bug history: prior to 260505 this method ignored `mode` entirely
             and always used the random branch, producing bit-identical outputs
             for DRQN_seq and DRQN_rand under matched seeds (see
-            260505_drqn_replay_mode_fix.txt).
+            (internal note)).
             """
             max_start = len(self) - seq_len
             if mode == 'sequential':
