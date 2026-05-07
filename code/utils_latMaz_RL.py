@@ -24,7 +24,11 @@ from stable_baselines3.common.callbacks import BaseCallback
 
 import gymnasium as gym
 from gymnasium.spaces import Graph, MultiBinary, Discrete
-from gymnasium.wrappers import TransformAction, TransformObservation
+# Note: TransformAction was added in gymnasium 1.0; the paper-pinned
+# gymnasium==0.29.1 (requirements.txt) doesn't have it. These symbols
+# were imported but never used in this module (260507 audit). Removed
+# to align the code's actual gymnasium-API requirement with paper §5
+# and requirements.txt.
 
 from stable_baselines3.ppo import MlpPolicy
 from stable_baselines3.common.evaluation import evaluate_policy
@@ -36,7 +40,7 @@ from sb3_contrib import TRPO, CrossQ, RecurrentPPO, TQC
 from stable_baselines3 import A2C, DDPG, DQN, PPO, HER, HerReplayBuffer
 
 sys.path.append('../')
-print('251222 Author: assume utils_latMaz is in the same directory as the the utils_latMaz_analysis.py file. If false change the sys.path.append line accordingly.')
+print('251222: assume utils_latMaz is in the same directory as the the utils_latMaz_analysis.py file. If false change the sys.path.append line accordingly.')
 
 from utils_latMaz import (get_most_recent_file, deserialize_str, get_moment_strings, load_maze, get_now_str, get_adj_states, 
     displacement_to_compass_heading, get_direction_from_radian, allo_radian_map_dict, get_ego_direction, get_verified_st_traj, 
@@ -49,15 +53,15 @@ def parse_exp_csv_to_observations_WD(csv_data_path):
     data = pd.read_csv('data_in/1_experiment_csvs/' + os.path.basename(csv_data_path))
     adj_file = data.iloc[0]['adjacency_file']
     st_pos_file = data.iloc[0]['st_positions_file']
-    assert data.adjacency_file.nunique() == 1, 'Author: there should be only one adjacency file per experiment'
-    assert data.st_positions_file.nunique() == 1, 'Author: there should be only one state positions file per experiment'
+    assert data.adjacency_file.nunique() == 1, 'there should be only one adjacency file per experiment'
+    assert data.st_positions_file.nunique() == 1, 'there should be only one state positions file per experiment'
     data.lights_on = data.lights_on.apply(chk_type)
     data.choice = data.choice.apply(chk_type)
     data['obs_allo_via_lights'] = data.lights_on.apply(convert_lights_on_to_allo_real_chars)
     adj_mat, st_pos = load_maze('data_in/mazes/' + adj_file, 'data_in/mazes/' + st_pos_file)
     data['action_rewarded'] = False
     data.loc[data.reward_time.notna(), 'action_rewarded'] = data.reward_time.notna().astype(bool)
-    assert data.start_state.nunique() == 1, 'Author: there should be only one start state per experiment'
+    assert data.start_state.nunique() == 1, 'there should be only one start state per experiment'
     st = data.iloc[0]['start_state']
     adj_states = get_adj_states(st, adj_mat)
     heading_real = np.pi / 2
@@ -71,7 +75,7 @@ def parse_exp_csv_to_observations_WD(csv_data_path):
     try:
         reward_duration = data.iloc[0]['reward_duration']
     except KeyError:
-        print(f'Author: no reward_duration column found, setting to np.nan\n{csv_data_path}')
+        print(f'no reward_duration column found, setting to np.nan\n{csv_data_path}')
         reward_duration = np.nan
     start_row_df = pd.DataFrame([{'time': np.nan, 'action_idx': np.nan, 'lights_on': np.nan, 'state': st, 'rewarded_states': data.iloc[0].rewarded_states, 'choice': np.nan, 'action': np.nan, 'reward_time': np.nan, 'n_rewards': 0, 'mouse_rotation': np.nan, 'maze_rotation': np.nan, 'note': np.nan, 'adjacency_file': adj_file, 'st_positions_file': st_pos_file, 'start_state': st, 'reward_duration': reward_duration, 'action_rewarded': np.nan, 'obs_ego': obs_ego_col_list[0], 'obs_allo_real': obs_allo_real_col_list[0], 'obs_allo_latent': obs_allo_latent_col_list[0]}])
     st_prior = st
@@ -79,9 +83,9 @@ def parse_exp_csv_to_observations_WD(csv_data_path):
     action_allo_real_col_list = []
     action_allo_latent_col_list = []
     for _i, row in data.iterrows():
-        assert row.choice[0] in row.obs_allo_via_lights, f'Author: invalid choice in obs_allo_real at row {_i}\n{row}'
+        assert row.choice[0] in row.obs_allo_via_lights, f'invalid choice in obs_allo_real at row {_i}\n{row}'
         st = row['state']
-        assert st != st_prior, 'Author: this st should never equal st_prior; if failure occurs, consider pass by reference issue'
+        assert st != st_prior, 'this st should never equal st_prior; if failure occurs, consider pass by reference issue'
         action_ego_col_list.append(row['action'])
         action_allo_real_col_list.append(row['choice'])
         action_allo_latent_col_list.append(displacement_to_compass_heading(st_pos[st] - st_pos[st_prior]))
@@ -120,7 +124,7 @@ def parse_exp_csv_to_observations_WD(csv_data_path):
     a = [set(e) for e in exp_df_state_rows.obs_allo_real.to_list()]
     b = data.obs_allo_via_lights.to_list()
     for e_a, e_b in zip(a, b):
-        assert e_a == e_b, f'Author: {e_a} != {e_b}'
+        assert e_a == e_b, f'{e_a} != {e_b}'
     return (exp_df_state_rows, exp_df_action_rows)
 
 def convert_lights_on_to_allo_real_chars(lights_on_list):
@@ -163,11 +167,11 @@ def get_obs_action_prob_dict_MR(csv_data_path, representation, verbose=False):
     del exp_df_action_rows
     exp_df_state_rows['choice'] = exp_df_state_rows['choice'].apply(lambda x: chk_type(x))
     exp_df_state_rows['choice'] = exp_df_state_rows.choice.apply(lambda x: x[0] if type(x) == list else np.nan)
-    assert all(exp_df_state_rows['choice'].dropna().reset_index(drop=True) == exp_df_state_rows['action_allo_real'].dropna().reset_index(drop=True)), f"Author: choice and action_allo_real should be identical but got \n{exp_df_state_rows['choice']} \nvs \n{exp_df_state_rows['action_allo_real']}"
+    assert all(exp_df_state_rows['choice'].dropna().reset_index(drop=True) == exp_df_state_rows['action_allo_real'].dropna().reset_index(drop=True)), f"choice and action_allo_real should be identical but got \n{exp_df_state_rows['choice']} \nvs \n{exp_df_state_rows['action_allo_real']}"
     exp_df_state_rows[obs_str] = exp_df_state_rows[obs_str].apply(lambda x: frozenset(x) if type(x) == tuple else np.nan)
-    assert not exp_df_state_rows[obs_str].isna().any(), f'Author: unexpected non-tuple values in {obs_str}'
-    assert not exp_df_state_rows['choice'].iloc[:-1].isna().any(), 'Author: unexpected NaN values in choice column (excluding last row)'
-    assert pd.isna(exp_df_state_rows['choice'].iloc[-1]), 'Author: expected to find a NaN for the last state cuz no action was taken'
+    assert not exp_df_state_rows[obs_str].isna().any(), f'unexpected non-tuple values in {obs_str}'
+    assert not exp_df_state_rows['choice'].iloc[:-1].isna().any(), 'unexpected NaN values in choice column (excluding last row)'
+    assert pd.isna(exp_df_state_rows['choice'].iloc[-1]), 'expected to find a NaN for the last state cuz no action was taken'
     exp_df_state_rows = exp_df_state_rows.iloc[:-1].reset_index(drop=True)
     assert exp_df_state_rows[obs_str].map(is_hashable).all(), 'Non-hashable obs values remain'
     assert exp_df_state_rows[action_str].map(is_hashable).all(), f'Non-hashable action values remain: {action_str}; {exp_df_state_rows[action_str]}'
@@ -184,7 +188,7 @@ def get_obs_action_prob_dict_MR(csv_data_path, representation, verbose=False):
 
 def get_latent_state_counts_dict(mouse_latent_states_visited, adj_mat):
     all_states = np.arange(len(adj_mat))
-    assert type(mouse_latent_states_visited) == list, 'Author: mouse_latent_states_visited should be a list'
+    assert type(mouse_latent_states_visited) == list, 'mouse_latent_states_visited should be a list'
     return {int(s): mouse_latent_states_visited.count(s) for s in all_states}
 
 def get_policy_param_dict(yoke_row, sim_recipe_row, adj_mat, n_actions_shifted_bw_window):
@@ -205,10 +209,10 @@ def get_policy_param_dict(yoke_row, sim_recipe_row, adj_mat, n_actions_shifted_b
             obs_action_nested_dict = get_obs_action_prob_dict_MR(yoke_row.csv_data_path, 'allo_latent')
         prms_dict = {'obs_action_nested_dict': obs_action_nested_dict}
     elif policy_category == 'latent_state_biased':
-        assert type(yoke_row.states_visited) == list, 'Author: yoke_row.states_visited should be a list'
+        assert type(yoke_row.states_visited) == list, 'yoke_row.states_visited should be a list'
         prms_dict = {'node_counts_dict': get_latent_state_counts_dict(yoke_row.states_visited, adj_mat)}
     else:
-        raise NotImplementedError(f'Author: unexpected policy category: {policy_category}')
+        raise NotImplementedError(f'unexpected policy category: {policy_category}')
     prms_dict.update({'representation': representation})
     policy_dict_ = {'policy_category': policy_category, 'func': policy_func, 'prms': prms_dict, 'func_name': policy_func.__name__}
     return policy_dict_
@@ -507,7 +511,7 @@ class SaveOnBestTrainingRewardCallback_MR(BaseCallback):
         return True
     
 class StopAfterFirstEpisode(BaseCallback):
-    """ 251009 Author: newer and critical to ensure only a single episode."""
+    """ 251009: newer and critical to ensure only a single episode."""
     def __init__(self, verbose=0):
         super().__init__(verbose)  ## GPT: self.locals is a dict injected by the learner; it contains 'dones' in VecEnv mode
         self._episode_done = False
